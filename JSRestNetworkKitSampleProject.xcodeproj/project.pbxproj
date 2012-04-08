@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D8448AA1532443000F99DE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8448A91532443000F99DE1 /* UIKit.framework */; };
+		1D8448AC1532443000F99DE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8448AB1532443000F99DE1 /* Foundation.framework */; };
+		1D8448AE1532443000F99DE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8448AD1532443000F99DE1 /* CoreGraphics.framework */; };
+		1D8448B01532443000F99DE1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8448AF1532443000F99DE1 /* CoreData.framework */; };
+		1D8448B61532443000F99DE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D8448B41532443000F99DE1 /* InfoPlist.strings */; };
+		1D8448B81532443000F99DE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8448B71532443000F99DE1 /* main.m */; };
+		1D8448BC1532443000F99DE1 /* JSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8448BB1532443000F99DE1 /* JSAppDelegate.m */; };
+		1D8448BF1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D8448BD1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D8448A51532443000F99DE1 /* JSRestNetworkKitSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSRestNetworkKitSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8448A91532443000F99DE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1D8448AB1532443000F99DE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D8448AD1532443000F99DE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D8448AF1532443000F99DE1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1D8448B31532443000F99DE1 /* JSRestNetworkKitSampleProject-Info.plist */ = {isa = PBXFileReference; path = "JSRestNetworkKitSampleProject-Info.plist"; sourceTree = "<group>"; };
+		1D8448B51532443000F99DE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D8448B71532443000F99DE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D8448B91532443000F99DE1 /* JSRestNetworkKitSampleProject-Prefix.pch */ = {isa = PBXFileReference; path = "JSRestNetworkKitSampleProject-Prefix.pch"; sourceTree = "<group>"; };
+		1D8448BA1532443000F99DE1 /* JSAppDelegate.h */ = {isa = PBXFileReference; path = JSAppDelegate.h; sourceTree = "<group>"; };
+		1D8448BB1532443000F99DE1 /* JSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAppDelegate.m; sourceTree = "<group>"; };
+		1D8448BE1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JSRestNetworkKitSampleProject.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D8448A21532443000F99DE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8448AA1532443000F99DE1 /* UIKit.framework in Frameworks */,
+				1D8448AC1532443000F99DE1 /* Foundation.framework in Frameworks */,
+				1D8448AE1532443000F99DE1 /* CoreGraphics.framework in Frameworks */,
+				1D8448B01532443000F99DE1 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D84489A1532443000F99DE1 = {
+			isa = PBXGroup;
+			children = (
+				1D8448B11532443000F99DE1 /* JSRestNetworkKitSampleProject */,
+				1D8448A81532443000F99DE1 /* Frameworks */,
+				1D8448A61532443000F99DE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D8448A61532443000F99DE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D8448A51532443000F99DE1 /* JSRestNetworkKitSampleProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D8448A81532443000F99DE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D8448A91532443000F99DE1 /* UIKit.framework */,
+				1D8448AB1532443000F99DE1 /* Foundation.framework */,
+				1D8448AD1532443000F99DE1 /* CoreGraphics.framework */,
+				1D8448AF1532443000F99DE1 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D8448B11532443000F99DE1 /* JSRestNetworkKitSampleProject */ = {
+			isa = PBXGroup;
+			children = (
+				1D8448BA1532443000F99DE1 /* JSAppDelegate.h */,
+				1D8448BB1532443000F99DE1 /* JSAppDelegate.m */,
+				1D8448BD1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld */,
+				1D8448B21532443000F99DE1 /* Supporting Files */,
+			);
+			path = JSRestNetworkKitSampleProject;
+			sourceTree = "<group>";
+		};
+		1D8448B21532443000F99DE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D8448B31532443000F99DE1 /* JSRestNetworkKitSampleProject-Info.plist */,
+				1D8448B41532443000F99DE1 /* InfoPlist.strings */,
+				1D8448B71532443000F99DE1 /* main.m */,
+				1D8448B91532443000F99DE1 /* JSRestNetworkKitSampleProject-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D8448A41532443000F99DE1 /* JSRestNetworkKitSampleProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D8448C21532443000F99DE1 /* Build configuration list for PBXNativeTarget "JSRestNetworkKitSampleProject" */;
+			buildPhases = (
+				1D8448A11532443000F99DE1 /* Sources */,
+				1D8448A21532443000F99DE1 /* Frameworks */,
+				1D8448A31532443000F99DE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSRestNetworkKitSampleProject;
+			productName = JSRestNetworkKitSampleProject;
+			productReference = 1D8448A51532443000F99DE1 /* JSRestNetworkKitSampleProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D84489C1532443000F99DE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JS;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = MindSnacks;
+			};
+			buildConfigurationList = 1D84489F1532443000F99DE1 /* Build configuration list for PBXProject "JSRestNetworkKitSampleProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D84489A1532443000F99DE1;
+			productRefGroup = 1D8448A61532443000F99DE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D8448A41532443000F99DE1 /* JSRestNetworkKitSampleProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D8448A31532443000F99DE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8448B61532443000F99DE1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D8448A11532443000F99DE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D8448B81532443000F99DE1 /* main.m in Sources */,
+				1D8448BC1532443000F99DE1 /* JSAppDelegate.m in Sources */,
+				1D8448BF1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D8448B41532443000F99DE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D8448B51532443000F99DE1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D8448C01532443000F99DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D8448C11532443000F99DE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D8448C31532443000F99DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JSRestNetworkKitSampleProject/JSRestNetworkKitSampleProject-Prefix.pch";
+				INFOPLIST_FILE = "JSRestNetworkKitSampleProject/JSRestNetworkKitSampleProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D8448C41532443000F99DE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JSRestNetworkKitSampleProject/JSRestNetworkKitSampleProject-Prefix.pch";
+				INFOPLIST_FILE = "JSRestNetworkKitSampleProject/JSRestNetworkKitSampleProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D84489F1532443000F99DE1 /* Build configuration list for PBXProject "JSRestNetworkKitSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8448C01532443000F99DE1 /* Debug */,
+				1D8448C11532443000F99DE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D8448C21532443000F99DE1 /* Build configuration list for PBXNativeTarget "JSRestNetworkKitSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8448C31532443000F99DE1 /* Debug */,
+				1D8448C41532443000F99DE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1D8448BD1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1D8448BE1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodel */,
+			);
+			currentVersion = 1D8448BE1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodel */;
+			path = JSRestNetworkKitSampleProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1D84489C1532443000F99DE1 /* Project object */;
+}
