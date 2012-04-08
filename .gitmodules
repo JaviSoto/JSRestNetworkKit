@@ -1,0 +1,6 @@
+[submodule "JSRestNetworkKit/Vendor/AFNetworking"]
+	path = JSRestNetworkKit/Vendor/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "JSRestNetworkKit/Vendor/JSCache"]
+	path = JSRestNetworkKit/Vendor/JSCache
+	url = git@github.com:JaviSoto/JSCache.git
