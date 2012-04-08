@@ -23,11 +23,11 @@
 		1D8448AB1532443000F99DE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D8448AD1532443000F99DE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1D8448AF1532443000F99DE1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		1D8448B31532443000F99DE1 /* JSRestNetworkKitSampleProject-Info.plist */ = {isa = PBXFileReference; path = "JSRestNetworkKitSampleProject-Info.plist"; sourceTree = "<group>"; };
+		1D8448B31532443000F99DE1 /* JSRestNetworkKitSampleProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSRestNetworkKitSampleProject-Info.plist"; sourceTree = "<group>"; };
 		1D8448B51532443000F99DE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D8448B71532443000F99DE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1D8448B91532443000F99DE1 /* JSRestNetworkKitSampleProject-Prefix.pch */ = {isa = PBXFileReference; path = "JSRestNetworkKitSampleProject-Prefix.pch"; sourceTree = "<group>"; };
-		1D8448BA1532443000F99DE1 /* JSAppDelegate.h */ = {isa = PBXFileReference; path = JSAppDelegate.h; sourceTree = "<group>"; };
+		1D8448B91532443000F99DE1 /* JSRestNetworkKitSampleProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSRestNetworkKitSampleProject-Prefix.pch"; sourceTree = "<group>"; };
+		1D8448BA1532443000F99DE1 /* JSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAppDelegate.h; sourceTree = "<group>"; };
 		1D8448BB1532443000F99DE1 /* JSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAppDelegate.m; sourceTree = "<group>"; };
 		1D8448BE1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JSRestNetworkKitSampleProject.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
