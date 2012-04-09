@@ -69,12 +69,12 @@
             if (newConnectionAvailable)
             {
                 [[NSNotificationCenter defaultCenter] postNotificationName:kReachabilityConnectionBecomeAvailableNotification object:nil];
-                DebugLog(@"reachabilityChanged. connectionAvailable: YES");
+                NSLog(@"reachabilityChanged. connectionAvailable: YES");
             }
             else
             {
                 [[NSNotificationCenter defaultCenter] postNotificationName:kReachabilityConnectionBecomeUnAvailableNotification object:nil];
-                DebugLog(@"reachabilityChanged. connectionAvailable: NO");
+                NSLog(@"reachabilityChanged. connectionAvailable: NO");
             }
         }
     }];

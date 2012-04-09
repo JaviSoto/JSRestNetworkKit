@@ -26,9 +26,9 @@
 #define WebServiceRequestRetryQueueDebug 1
 
 #if WebServiceRequestRetryQueueDebug
-    #define WebServiceRequestRetryQueueDebugLog(s,...) DebugLog(s, ##__VA_ARGS__)
+    #define WebServiceRequestRetryQueueNSLog(s,...) NSLog(s, ##__VA_ARGS__)
 #else
-    #define WebServiceRequestRetryQueueDebugLog(s,...)
+    #define WebServiceRequestRetryQueueNSLog(s,...)
 #endif
 
 @interface WebServiceRequestRetryQueue()
@@ -72,7 +72,7 @@
 {    
     NSMutableArray *cachedRequests = [[[JSCache instance] cachedObjectForKey:kRequestsQueueCacheKey] mutableCopy];
     
-    WebServiceRequestRetryQueueDebugLog(@"Starting. Adding %d operations to the queue", self.queuedRequests.count);
+    WebServiceRequestRetryQueueNSLog(@"Starting. Adding %d operations to the queue", self.queuedRequests.count);
     
     if (cachedRequests)
     {
@@ -92,7 +92,7 @@
 - (void)addRequestToRetryQueue:(WebServiceRequest *)request
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        WebServiceRequestRetryQueueDebugLog(@"Adding request to URL %@ to the queue", request.url);
+        WebServiceRequestRetryQueueNSLog(@"Adding request to URL %@ to the queue", request.url);
         
         request.retryLaterOnFailure = NO; // So when this one is tried again, if it fails, it doesn't get added to the queue again.
         
@@ -106,7 +106,7 @@
             [self addRequestToRetryQueue:request]; // So that it gets queued again
         }];
         
-        [self.requestsRetryOperationQueue addOperation:operation];
+        [self.requestsRetryOperationQueue addOperation:(NSOperation *)operation];
     });
 }
 
@@ -114,7 +114,7 @@
 {
     @synchronized(self)
     {
-        WebServiceRequestRetryQueueDebugLog(@"Removing request to URL %@ from the queue", request.url);
+        WebServiceRequestRetryQueueNSLog(@"Removing request to URL %@ from the queue", request.url);
         [queuedRequests removeObject:request];
         [self cachePendingRequests];
     }
@@ -125,7 +125,7 @@
     @synchronized(self)
     {
         #if WebServiceRequestRetryQueueDebug
-            LogMethod();
+            NSLog(@"[RetryQueue] %s", (char *)_cmd);
         #endif
         
         [queuedRequests removeAllObjects];
@@ -150,7 +150,7 @@
 
 - (void)cachePendingRequests
 {
-    WebServiceRequestRetryQueueDebugLog(@"Persisting %d requests", self.queuedRequests.count);
+    WebServiceRequestRetryQueueNSLog(@"Persisting %d requests", self.queuedRequests.count);
     
     if (self.queuedRequests.count > 0)
     {

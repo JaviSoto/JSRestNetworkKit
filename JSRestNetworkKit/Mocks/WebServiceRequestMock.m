@@ -36,14 +36,14 @@
 
 - (void)runRequestWithSuccess:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure
 {    
-    DebugLog(@"%@", self.url);
+    NSLog(@"%@", self.url);
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSDictionary *response = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"ok", @"status", nil];
         
         NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
         
-        DebugLog(@"URL %@ not implemented.", url);
+        NSLog(@"URL %@ not implemented.", url);
         
         [pool drain];
         

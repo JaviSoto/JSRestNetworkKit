@@ -14,17 +14,25 @@
  limitations under the License. 
  */
 
-#import "JSClassDescendantOfClass.h"
+#import "EntityPropertyBool.h"
 
-#import <objc/objc-runtime.h>
+#import "NSNumber+RandomValues.h"
 
-BOOL classDescendsFromClass(Class classA, Class classB)
+@implementation EntityPropertyBool
+
+- (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    while(classA)
+    if (![object respondsToSelector:@selector(boolValue)])
     {
-        if(classA == classB) return YES;
-        classA = class_getSuperclass(classA);
+        return [NSNumber numberWithBool:NO];
     }
     
-    return NO;
+    return [NSNumber numberWithBool:[object boolValue]];
 }
+
+- (id)randomValueWithDepth:(NSInteger)depth
+{
+    return [NSNumber randomBoolNumber];
+}
+
+@end

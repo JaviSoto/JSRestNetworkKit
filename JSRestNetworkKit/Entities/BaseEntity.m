@@ -14,17 +14,12 @@
  limitations under the License. 
  */
 
-#import "JSClassDescendantOfClass.h"
+#import "BaseEntity.h"
 
-#import <objc/objc-runtime.h>
+#import "BaseEntityPrivate.h"
 
-BOOL classDescendsFromClass(Class classA, Class classB)
-{
-    while(classA)
-    {
-        if(classA == classB) return YES;
-        classA = class_getSuperclass(classA);
-    }
-    
-    return NO;
-}
+ImplementBaseEntity(BaseEntity);
+
+ImplementAutoDealloc();
+
+@end

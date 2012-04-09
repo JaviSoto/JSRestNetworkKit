@@ -25,13 +25,13 @@
 #define WebServiceRequestDetailDebug 0
 
 #if WebServiceRequestDebug
-    #define WebServiceRequestDebugLog(s,...)        DebugLog(s, ##__VA_ARGS__)
+    #define WebServiceRequestNSLog(s,...)        NSLog(s, ##__VA_ARGS__)
 #else
-    #define WebServiceRequestDebugLog(s,...)
+    #define WebServiceRequestNSLog(s,...)
 #endif
 
 #if WebServiceRequestDetailDebug
-    #define WebServiceRequestDebugDetailLog(s,...)  DebugLog(s, ##__VA_ARGS__)
+    #define WebServiceRequestDebugDetailLog(s,...)  NSLog(s, ##__VA_ARGS__)
 #else
     #define WebServiceRequestDebugDetailLog(s,...)
 #endif
@@ -207,7 +207,7 @@
     AFHTTPRequestOperation *operation = [self requestOperationWithSuccess:success failure:failure];   
     if (operation)
     {
-        WebServiceRequestDebugLog(@"Starting request to URL %@", self.url);
+        WebServiceRequestNSLog(@"Starting request to URL %@", self.url);
         
         [[WebServiceProxy instance].operationQueue addOperation:operation];
     }
@@ -222,7 +222,7 @@
         
         NSData *imageData = UIImageJPEGRepresentation(image, kImageJPEGCompressionFactor);
         
-        WebServiceRequestDebugLog(@"Uploading image of %.1fKB", [imageData length]/1024.0);
+        WebServiceRequestNSLog(@"Uploading image of %.1fKB", [imageData length]/1024.0);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             NSMutableURLRequest *request = [[WebServiceProxy instance] multipartFormRequestWithMethod:@"POST" path:self.url parameters:[parameters parametersDictionary] constructingBodyWithBlock: ^(id formData) {
@@ -252,7 +252,7 @@
                 progess(percentage, secondsRemaining);
             }];
             
-            WebServiceRequestDebugLog(@"Starting upload request to URL %@", self.url);
+            WebServiceRequestNSLog(@"Starting upload request to URL %@", self.url);
             [[WebServiceProxy instance].operationQueue addOperation:operation];
         });
     });

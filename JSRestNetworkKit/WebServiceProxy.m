@@ -33,9 +33,9 @@
 #define WebServiceProxyDebug 1
 
 #if WebServiceProxyDebug
-    #define WebServiceProxyDebugLog(s,...) DebugLog(s, ##__VA_ARGS__)
+    #define WebServiceProxyNSLog(s,...) NSLog(s, ##__VA_ARGS__)
 #else
-    #define WebServiceProxyDebugLog(s,...)
+    #define WebServiceProxyNSLog(s,...)
 #endif
 
 @interface WebServiceProxy ()

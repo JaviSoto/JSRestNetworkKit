@@ -64,7 +64,7 @@
     }
     else
     {
-        DebugLog(@"Tried to set a nil value for parameter %@", parameterName);
+        NSLog(@"Tried to set a nil value for parameter %@", parameterName);
     }
 }
 

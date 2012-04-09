@@ -14,17 +14,8 @@
  limitations under the License. 
  */
 
-#import "JSClassDescendantOfClass.h"
+#import "EntityProperty.h"
 
-#import <objc/objc-runtime.h>
+@interface EntityPropertyRelationshipOneToOne : EntityProperty
 
-BOOL classDescendsFromClass(Class classA, Class classB)
-{
-    while(classA)
-    {
-        if(classA == classB) return YES;
-        classA = class_getSuperclass(classA);
-    }
-    
-    return NO;
-}
+@end

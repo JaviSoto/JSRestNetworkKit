@@ -14,17 +14,32 @@
  limitations under the License. 
  */
 
-#import "JSClassDescendantOfClass.h"
+#import "EntityPropertyString.h"
 
-#import <objc/objc-runtime.h>
+#import "NSString+RandomValues.h"
 
-BOOL classDescendsFromClass(Class classA, Class classB)
+#define kRandomValueLength 15
+
+@implementation EntityPropertyString
+
+- (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    while(classA)
+    if (!object || [object isEqual:[NSNull null]])
     {
-        if(classA == classB) return YES;
-        classA = class_getSuperclass(classA);
+        return @"";
     }
     
-    return NO;
+    return [NSString stringWithFormat:@"%@", object];
 }
+
+- (id)randomValueWithDepth:(NSInteger)depth
+{
+    return [NSString randomStringWithLengthBetween:2 and:20];
+}
+
+- (BOOL)needsRelease
+{
+    return YES;
+}
+
+@end

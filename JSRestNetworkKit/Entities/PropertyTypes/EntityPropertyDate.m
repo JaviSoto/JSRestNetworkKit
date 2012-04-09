@@ -14,17 +14,30 @@
  limitations under the License. 
  */
 
-#import "JSClassDescendantOfClass.h"
+#import "EntityPropertyDate.h"
 
-#import <objc/objc-runtime.h>
+#import "NSNumber+RandomValues.h"
 
-BOOL classDescendsFromClass(Class classA, Class classB)
+@implementation EntityPropertyDate
+
+- (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    while(classA)
+    if ([object isEqual:[NSNull null]] || ![object respondsToSelector:@selector(intValue)])
     {
-        if(classA == classB) return YES;
-        classA = class_getSuperclass(classA);
+        return nil;
     }
     
-    return NO;
+    return [NSDate dateWithTimeIntervalSince1970:[object intValue]];
 }
+
+- (id)randomValueWithDepth:(NSInteger)depth
+{
+    return [NSNumber randomNumberBetweenNumber:0 andNumber:1300000000];
+}
+
+- (BOOL)needsRelease
+{
+    return YES;
+}
+
+@end

@@ -40,7 +40,7 @@
 {
     if ((self = [super initWithBaseURL:url]))
     {
-        DebugLog(@"Starting app with WebServiceProxyMock ENABLED");
+        NSLog(@"Starting app with WebServiceProxyMock ENABLED");
     }
     
     return self;

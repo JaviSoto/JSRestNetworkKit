@@ -14,20 +14,28 @@
  limitations under the License. 
  */
 
-#import "NSDate+RandomValues.h"
+#import "EntityPropertyInt.h"
 
 #import "NSNumber+RandomValues.h"
 
-@implementation NSDate (RandomValues)
+#define kEntityPropertyIntRandomMinNumber 0
+#define kEntityPropertyIntRandomMaxNumber 10 
 
-+ (NSDate *)randomPastDate
+@implementation EntityPropertyInt
+
+- (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    return [NSDate dateWithTimeIntervalSinceNow:[NSNumber randomIntBetweenNumber:0 andNumber:10000]];
+    if (![object respondsToSelector:@selector(intValue)])
+    {
+        return [NSNumber numberWithInt:0];
+    }
+    
+    return [NSNumber numberWithInt:[object intValue]];
 }
 
-+ (NSTimeInterval)randomUnixTimeOfPastDate
+- (id)randomValueWithDepth:(NSInteger)depth
 {
-    return [[self randomPastDate] timeIntervalSince1970];
+    return [NSNumber randomNumberBetweenNumber:kEntityPropertyIntRandomMinNumber andNumber:kEntityPropertyIntRandomMaxNumber];
 }
 
 @end
