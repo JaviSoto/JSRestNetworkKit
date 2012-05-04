@@ -14,11 +14,11 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyDate.h"
+#import "JSEntityPropertyDate.h"
 
 #import "NSNumber+RandomValues.h"
 
-@implementation EntityPropertyDate
+@implementation JSEntityPropertyDate
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {

@@ -14,8 +14,8 @@
  limitations under the License. 
  */
 
-#import "EntityProperty.h"
+#import "JSEntityProperty.h"
 
-@interface EntityPropertyRelationshipOneToOne : EntityProperty
+@interface JSEntityPropertyRelationshipOneToOne : JSEntityProperty
 
 @end

@@ -14,18 +14,18 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyRelationshipOneToMany.h"
+#import "JSEntityPropertyRelationshipOneToMany.h"
 
 #import "BaseEntity.h"
 
-#import "BaseCoreDataBackedEntity.h"
+#import "JSBaseCoreDataBackedEntity.h"
 
 #import "JSClassDescendantOfClass.h"
 #import "NSNumber+RandomValues.h"
 
 #define kMaxObjectsInArray 15
 
-@implementation EntityPropertyRelationshipOneToMany
+@implementation JSEntityPropertyRelationshipOneToMany
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
@@ -38,7 +38,7 @@
     [object enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         id entity;
         
-        BOOL isCoreDataEntity = classDescendsFromClass(self.entityRelationClass, [BaseCoreDataBackedEntity class]);
+        BOOL isCoreDataEntity = classDescendsFromClass(self.entityRelationClass, [JSBaseCoreDataBackedEntity class]);
         
         if (isCoreDataEntity && managedObjectContext != nil)
         {

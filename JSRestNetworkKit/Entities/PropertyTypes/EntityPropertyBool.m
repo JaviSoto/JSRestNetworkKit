@@ -14,11 +14,11 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyBool.h"
+#import "JSEntityPropertyBool.h"
 
 #import "NSNumber+RandomValues.h"
 
-@implementation EntityPropertyBool
+@implementation JSEntityPropertyBool
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {

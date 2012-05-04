@@ -14,8 +14,8 @@
  limitations under the License. 
  */
 
-#import "EntityProperty.h"
+#import "JSEntityProperty.h"
 
-@interface EntityPropertyString : EntityProperty
+@interface JSEntityPropertyString : JSEntityProperty
 
 @end

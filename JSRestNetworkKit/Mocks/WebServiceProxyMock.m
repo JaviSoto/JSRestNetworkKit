@@ -25,7 +25,7 @@
 
 @implementation WebServiceProxyMock
 
-+ (WebServiceProxy *)instance {
++ (JSBaseWebServiceProxy *)instance {
     static dispatch_once_t dispatchOncePredicate;
     static WebServiceProxyMock *myInstance = nil;
     
@@ -46,7 +46,7 @@
     return self;
 }
 
-- (void)makeRequest:(WebServiceRequest *)wsRequest withCacheKey:(NSString *)cacheKey parseBlock:(ProxyDataParsingBlock)parsingBlock success:(ProxySuccessCallback)successCallback error:(ProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSWebServiceRequest *)wsRequest withCacheKey:(NSString *)cacheKey parseBlock:(ProxyDataParsingBlock)parsingBlock success:(ProxySuccessCallback)successCallback error:(ProxyErrorCallback)errorCallback
 {
     static const CGFloat kMockRequestMaxDurationInSeconds = 1.4f;
     static const NSInteger kMockRequestFailuresPerHundred = 5;
@@ -82,7 +82,7 @@
                 
                 [requestMock runRequestWithSuccess:^(NSURLRequest *request, NSURLResponse *response, id JSON) {
                     [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
-                    WebServiceResponse *wsResponse = [[[WebServiceResponse alloc] initWithDictionary:JSON] autorelease];
+                    JSWebServiceResponse *wsResponse = [[[JSWebServiceResponse alloc] initWithDictionary:JSON] autorelease];
                     if (wsResponse.code == WSResponseNoError)
                     {
                         if (successCallback)
@@ -124,7 +124,7 @@
     });
 }
 
-- (void)makeRequest:(WebServiceRequest *)wsRequest success:(ProxySuccessCallback)successCallback error:(ProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSWebServiceRequest *)wsRequest success:(ProxySuccessCallback)successCallback error:(ProxyErrorCallback)errorCallback
 {
     [self makeRequest:wsRequest withCacheKey:nil parseBlock:NULL success:successCallback error:errorCallback];
 }

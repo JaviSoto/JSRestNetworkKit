@@ -14,13 +14,13 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyString.h"
+#import "JSEntityPropertyString.h"
 
 #import "NSString+RandomValues.h"
 
 #define kRandomValueLength 15
 
-@implementation EntityPropertyString
+@implementation JSEntityPropertyString
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {

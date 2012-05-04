@@ -14,23 +14,23 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyRelationshipOneToOne.h"
-#import "BaseEntity.h"
+#import "JSEntityPropertyRelationshipOneToOne.h"
+#import "JSBaseEntity.h"
 
-#import "BaseCoreDataBackedEntity.h"
+#import "JSBaseCoreDataBackedEntity.h"
 
 #import "JSClassDescendantOfClass.h"
 
-@implementation EntityPropertyRelationshipOneToOne
+@implementation JSEntityPropertyRelationshipOneToOne
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    if ([object isEqual:[NSNull null]] || ![self.entityRelationClass isSubclassOfClass:[BaseEntity class]])
+    if ([object isEqual:[NSNull null]] || ![self.entityRelationClass isSubclassOfClass:[JSBaseEntity class]])
     {
         return nil;
     }
     
-    BOOL isCoreDataEntity = classDescendsFromClass(self.entityRelationClass, [BaseCoreDataBackedEntity class]);
+    BOOL isCoreDataEntity = classDescendsFromClass(self.entityRelationClass, [JSBaseCoreDataBackedEntity class]);
     
     id entity;
     

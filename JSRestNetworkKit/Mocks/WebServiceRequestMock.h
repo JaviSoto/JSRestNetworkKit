@@ -14,10 +14,10 @@
  limitations under the License. 
  */
 
-#import "WebServiceRequest.h"
+#import "JSWebServiceRequest.h"
 
-@interface WebServiceRequestMock : WebServiceRequest
+@interface WebServiceRequestMock : JSWebServiceRequest
 
-+ (WebServiceRequestMock *)mockRequestWithRequest:(WebServiceRequest *)request;
++ (WebServiceRequestMock *)mockRequestWithRequest:(JSWebServiceRequest *)request;
 
 @end

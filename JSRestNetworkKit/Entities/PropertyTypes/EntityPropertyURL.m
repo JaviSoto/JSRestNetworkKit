@@ -14,11 +14,11 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyURL.h"
+#import "JSEntityPropertyURL.h"
 
 #import "NSNumber+RandomValues.h"
 
-@implementation EntityPropertyURL
+@implementation JSEntityPropertyURL
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {

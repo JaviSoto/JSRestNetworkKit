@@ -14,8 +14,16 @@
  limitations under the License. 
  */
 
-#import "JSEntityProperty.h"
+#import <Foundation/Foundation.h>
 
-@interface JSEntityPropertyURL : JSEntityProperty
+@class JSWebServiceRequest;
+
+@interface JSWebServiceRequestRetryQueue : NSObject
+
++ (JSWebServiceRequestRetryQueue *)sharedRetryQueue;
+- (void)start;
+
+- (void)addRequestToRetryQueue:(JSWebServiceRequest *)request;
+- (void)removeAllRequestsFromRetryQueue;
 
 @end

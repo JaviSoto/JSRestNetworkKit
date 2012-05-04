@@ -14,8 +14,12 @@
  limitations under the License. 
  */
 
-#import "JSEntityProperty.h"
+#import <Foundation/Foundation.h>
 
-@interface JSEntityPropertyURL : JSEntityProperty
+@interface JSWebServiceRequestParameters : NSObject <NSCoding>
+
+@property (nonatomic, readonly) NSDictionary *parametersDictionary;
+
++ (JSWebServiceRequestParameters *)emptyRequestParameters;
 
 @end

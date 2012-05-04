@@ -14,8 +14,8 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyInt.h"
+#import "JSEntityPropertyInt.h"
 
-@interface EntityPropertyFloat : EntityPropertyInt
+@interface JSEntityPropertyFloat : JSEntityPropertyInt
 
 @end

@@ -24,7 +24,7 @@
 
 @implementation WebServiceRequestMock
 
-+ (WebServiceRequestMock *)mockRequestWithRequest:(WebServiceRequest *)request
++ (WebServiceRequestMock *)mockRequestWithRequest:(JSWebServiceRequest *)request
 {
     WebServiceRequestMock *mockRequest = [[self alloc] init];
     

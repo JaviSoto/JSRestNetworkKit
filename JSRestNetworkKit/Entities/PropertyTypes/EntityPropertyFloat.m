@@ -14,11 +14,11 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyFloat.h"
+#import "JSEntityPropertyFloat.h"
 
 #import "NSNumber+RandomValues.h"
 
-@implementation EntityPropertyFloat
+@implementation JSEntityPropertyFloat
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {

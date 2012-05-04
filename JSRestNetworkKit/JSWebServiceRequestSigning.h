@@ -14,8 +14,14 @@
  limitations under the License. 
  */
 
-#import "JSEntityProperty.h"
+#import <Foundation/Foundation.h>
 
-@interface JSEntityPropertyURL : JSEntityProperty
+#import "JSWebServiceRequestParameters.h"
+
+@class JSWebServiceRequest;
+
+@protocol JSWebServiceRequestSigning <NSObject>
+
+- (void)signRequest:(JSWebServiceRequest *)request;
 
 @end

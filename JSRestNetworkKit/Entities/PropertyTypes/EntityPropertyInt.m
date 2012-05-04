@@ -14,14 +14,14 @@
  limitations under the License. 
  */
 
-#import "EntityPropertyInt.h"
+#import "JSEntityPropertyInt.h"
 
 #import "NSNumber+RandomValues.h"
 
-#define kEntityPropertyIntRandomMinNumber 0
-#define kEntityPropertyIntRandomMaxNumber 10 
+#define kJSEntityPropertyIntRandomMinNumber 0
+#define kJSEntityPropertyIntRandomMaxNumber 10 
 
-@implementation EntityPropertyInt
+@implementation JSEntityPropertyInt
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
@@ -35,7 +35,7 @@
 
 - (id)randomValueWithDepth:(NSInteger)depth
 {
-    return [NSNumber randomNumberBetweenNumber:kEntityPropertyIntRandomMinNumber andNumber:kEntityPropertyIntRandomMaxNumber];
+    return [NSNumber randomNumberBetweenNumber:kJSEntityPropertyIntRandomMinNumber andNumber:kJSEntityPropertyIntRandomMaxNumber];
 }
 
 @end
