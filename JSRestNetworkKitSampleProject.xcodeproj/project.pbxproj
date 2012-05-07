@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1780F9155768230011C13C /* TweetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1780F7155768220011C13C /* TweetsViewController.m */; };
+		1D1780FA155768230011C13C /* TweetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D1780F8155768230011C13C /* TweetsViewController.xib */; };
+		1D1780FF155768C80011C13C /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1780FE155768C80011C13C /* TweetCell.m */; };
+		1D178101155768DB0011C13C /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D178100155768DB0011C13C /* TweetCell.xib */; };
+		1D17810515576BC70011C13C /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D17810415576BC70011C13C /* Tweet.m */; };
 		1D44D07415324A3500BADD37 /* JSMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07315324A3500BADD37 /* JSMethodSwizzler.m */; };
 		1D44D07715324ABB00BADD37 /* JSClassDescendantOfClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07615324ABB00BADD37 /* JSClassDescendantOfClass.m */; };
 		1D44D07B153251CD00BADD37 /* NSNumber+JSRandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07A153251CD00BADD37 /* NSNumber+JSRandomValues.m */; };
@@ -51,6 +56,7 @@
 		1D8448B81532443000F99DE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8448B71532443000F99DE1 /* main.m */; };
 		1D8448BC1532443000F99DE1 /* JSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8448BB1532443000F99DE1 /* JSAppDelegate.m */; };
 		1D8448BF1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D8448BD1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld */; };
+		1D91E3F215576D8600532996 /* TwitterRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E3F115576D8600532996 /* TwitterRequestManager.m */; };
 		1D963230153248BC00501145 /* JSReachabilityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F2153248BC00501145 /* JSReachabilityService.m */; };
 		1D963231153248BC00501145 /* JSBaseWebServiceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F3153248BC00501145 /* JSBaseWebServiceProxy.m */; };
 		1D963232153248BC00501145 /* JSWebServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F4153248BC00501145 /* JSWebServiceRequest.m */; };
@@ -62,15 +68,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D1780F6155768220011C13C /* TweetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetsViewController.h; path = Classes/TweetsViewController.h; sourceTree = "<group>"; };
+		1D1780F7155768220011C13C /* TweetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetsViewController.m; path = Classes/TweetsViewController.m; sourceTree = "<group>"; };
+		1D1780F8155768230011C13C /* TweetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TweetsViewController.xib; path = Classes/TweetsViewController.xib; sourceTree = "<group>"; };
+		1D1780FD155768C80011C13C /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetCell.h; path = Classes/TweetCell.h; sourceTree = "<group>"; };
+		1D1780FE155768C80011C13C /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetCell.m; path = Classes/TweetCell.m; sourceTree = "<group>"; };
+		1D178100155768DB0011C13C /* TweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TweetCell.xib; path = Classes/TweetCell.xib; sourceTree = "<group>"; };
+		1D17810315576BC70011C13C /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tweet.h; path = Classes/Tweet.h; sourceTree = "<group>"; };
+		1D17810415576BC70011C13C /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tweet.m; path = Classes/Tweet.m; sourceTree = "<group>"; };
+		1D17810615576C5C0011C13C /* JSRestNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSRestNetworkKit.h; path = JSRestNetworkKit/JSRestNetworkKit.h; sourceTree = SOURCE_ROOT; };
 		1D44D07215324A3500BADD37 /* JSMethodSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSMethodSwizzler.h; path = JSRestNetworkKit/Support/JSMethodSwizzler.h; sourceTree = SOURCE_ROOT; };
 		1D44D07315324A3500BADD37 /* JSMethodSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSMethodSwizzler.m; path = JSRestNetworkKit/Support/JSMethodSwizzler.m; sourceTree = SOURCE_ROOT; };
 		1D44D07515324ABB00BADD37 /* JSClassDescendantOfClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSClassDescendantOfClass.h; path = JSRestNetworkKit/Support/JSClassDescendantOfClass.h; sourceTree = SOURCE_ROOT; };
 		1D44D07615324ABB00BADD37 /* JSClassDescendantOfClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSClassDescendantOfClass.m; path = JSRestNetworkKit/Support/JSClassDescendantOfClass.m; sourceTree = SOURCE_ROOT; };
-		1D44D079153251CD00BADD37 /* NSNumber+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "NSNumber+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSNumber+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
+		1D44D079153251CD00BADD37 /* NSNumber+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSNumber+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
 		1D44D07A153251CD00BADD37 /* NSNumber+JSRandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+JSRandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSNumber+JSRandomValues.m"; sourceTree = SOURCE_ROOT; };
-		1D44D07C1532520100BADD37 /* NSDate+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "NSDate+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSDate+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
+		1D44D07C1532520100BADD37 /* NSDate+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSDate+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
 		1D44D07D1532520100BADD37 /* NSDate+JSRandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JSRandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSDate+JSRandomValues.m"; sourceTree = SOURCE_ROOT; };
-		1D44D07F1532524F00BADD37 /* NSString+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "NSString+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSString+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
+		1D44D07F1532524F00BADD37 /* NSString+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSString+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
 		1D44D0801532524F00BADD37 /* NSString+JSRandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JSRandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSString+JSRandomValues.m"; sourceTree = SOURCE_ROOT; };
 		1D44D0841532553A00BADD37 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		1D44D0851532553A00BADD37 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -108,21 +123,21 @@
 		1D5EC76815327D7200C1D182 /* JSBaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseEntity.m; sourceTree = "<group>"; };
 		1D5EC76B15327D7200C1D182 /* JSEntityProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEntityProperty.h; sourceTree = "<group>"; };
 		1D5EC76C15327D7200C1D182 /* JSEntityProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityProperty.m; sourceTree = "<group>"; };
-		1D5EC76D15327D7200C1D182 /* JSEntityPropertyBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyBool.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC76D15327D7200C1D182 /* JSEntityPropertyBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JSEntityPropertyBool.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1D5EC76E15327D7200C1D182 /* JSEntityPropertyBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSEntityPropertyBool.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D5EC76F15327D7200C1D182 /* JSEntityPropertyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyDate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC76F15327D7200C1D182 /* JSEntityPropertyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JSEntityPropertyDate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1D5EC77015327D7200C1D182 /* JSEntityPropertyDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSEntityPropertyDate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D5EC77115327D7200C1D182 /* JSEntityPropertyFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyFloat.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC77115327D7200C1D182 /* JSEntityPropertyFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JSEntityPropertyFloat.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1D5EC77215327D7200C1D182 /* JSEntityPropertyFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSEntityPropertyFloat.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D5EC77315327D7200C1D182 /* JSEntityPropertyInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyInt.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC77315327D7200C1D182 /* JSEntityPropertyInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JSEntityPropertyInt.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1D5EC77415327D7200C1D182 /* JSEntityPropertyInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSEntityPropertyInt.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D5EC77515327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyRelationshipOneToMany.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC77515327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JSEntityPropertyRelationshipOneToMany.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1D5EC77615327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyRelationshipOneToMany.m; sourceTree = "<group>"; };
-		1D5EC77715327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSEntityPropertyRelationshipOneToOne.h; sourceTree = "<group>"; };
+		1D5EC77715327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEntityPropertyRelationshipOneToOne.h; sourceTree = "<group>"; };
 		1D5EC77815327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyRelationshipOneToOne.m; sourceTree = "<group>"; };
-		1D5EC77915327D7200C1D182 /* JSEntityPropertyString.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSEntityPropertyString.h; sourceTree = "<group>"; };
+		1D5EC77915327D7200C1D182 /* JSEntityPropertyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEntityPropertyString.h; sourceTree = "<group>"; };
 		1D5EC77A15327D7200C1D182 /* JSEntityPropertyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyString.m; sourceTree = "<group>"; };
-		1D5EC77B15327D7200C1D182 /* JSEntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSEntityPropertyURL.h; sourceTree = "<group>"; };
+		1D5EC77B15327D7200C1D182 /* JSEntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEntityPropertyURL.h; sourceTree = "<group>"; };
 		1D5EC77C15327D7200C1D182 /* JSEntityPropertyURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyURL.m; sourceTree = "<group>"; };
 		1D5EC78915327E6600C1D182 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1D5EC78A15327E6600C1D182 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -130,7 +145,7 @@
 		1D5EC78D1532825C00C1D182 /* JSEntityDictionaryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityDictionaryParser.m; sourceTree = "<group>"; };
 		1D5EC78F1532833700C1D182 /* JSRandomDictionaryGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRandomDictionaryGenerator.h; sourceTree = "<group>"; };
 		1D5EC7901532833700C1D182 /* JSRandomDictionaryGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRandomDictionaryGenerator.m; sourceTree = "<group>"; };
-		1D8448A51532443000F99DE1 /* JSRestNetworkKitSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSRestNetworkKitSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8448A51532443000F99DE1 /* iOS Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8448A91532443000F99DE1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1D8448AB1532443000F99DE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D8448AD1532443000F99DE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,15 +157,17 @@
 		1D8448BA1532443000F99DE1 /* JSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAppDelegate.h; sourceTree = "<group>"; };
 		1D8448BB1532443000F99DE1 /* JSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAppDelegate.m; sourceTree = "<group>"; };
 		1D8448BE1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JSRestNetworkKitSampleProject.xcdatamodel; sourceTree = "<group>"; };
+		1D91E3F015576D8600532996 /* TwitterRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterRequestManager.h; path = Classes/TwitterRequestManager.h; sourceTree = "<group>"; };
+		1D91E3F115576D8600532996 /* TwitterRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterRequestManager.m; path = Classes/TwitterRequestManager.m; sourceTree = "<group>"; };
 		1D9631F2153248BC00501145 /* JSReachabilityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSReachabilityService.m; path = JSRestNetworkKit/JSReachabilityService.m; sourceTree = SOURCE_ROOT; };
 		1D9631F3153248BC00501145 /* JSBaseWebServiceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSBaseWebServiceProxy.m; path = JSRestNetworkKit/JSBaseWebServiceProxy.m; sourceTree = SOURCE_ROOT; };
 		1D9631F4153248BC00501145 /* JSWebServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequest.m; path = JSRestNetworkKit/JSWebServiceRequest.m; sourceTree = SOURCE_ROOT; };
 		1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequestParameters.m; path = JSRestNetworkKit/JSWebServiceRequestParameters.m; sourceTree = SOURCE_ROOT; };
 		1D9631F7153248BC00501145 /* JSWebServiceRequestRetryQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequestRetryQueue.m; path = JSRestNetworkKit/JSWebServiceRequestRetryQueue.m; sourceTree = SOURCE_ROOT; };
 		1D9631F8153248BC00501145 /* JSWebServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceResponse.m; path = JSRestNetworkKit/JSWebServiceResponse.m; sourceTree = SOURCE_ROOT; };
-		1D963219153248BC00501145 /* JSWebServiceProxyMock.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSWebServiceProxyMock.h; sourceTree = "<group>"; };
+		1D963219153248BC00501145 /* JSWebServiceProxyMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebServiceProxyMock.h; sourceTree = "<group>"; };
 		1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebServiceProxyMock.m; sourceTree = "<group>"; };
-		1D96321B153248BC00501145 /* JSWebServiceRequestMock.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSWebServiceRequestMock.h; sourceTree = "<group>"; };
+		1D96321B153248BC00501145 /* JSWebServiceRequestMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebServiceRequestMock.h; sourceTree = "<group>"; };
 		1D96321C153248BC00501145 /* JSWebServiceRequestMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebServiceRequestMock.m; sourceTree = "<group>"; };
 		1D963228153248BC00501145 /* JSReachabilityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSReachabilityService.h; path = JSRestNetworkKit/JSReachabilityService.h; sourceTree = SOURCE_ROOT; };
 		1D963229153248BC00501145 /* JSBaseWebServiceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBaseWebServiceProxy.h; path = JSRestNetworkKit/JSBaseWebServiceProxy.h; sourceTree = SOURCE_ROOT; };
@@ -179,6 +196,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D1780FB155768490011C13C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D91E3EF15576D6A00532996 /* Request Manager */,
+				1D1780FC155768AA0011C13C /* Tweets */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1D1780FC155768AA0011C13C /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+				1D1780F6155768220011C13C /* TweetsViewController.h */,
+				1D1780F7155768220011C13C /* TweetsViewController.m */,
+				1D1780F8155768230011C13C /* TweetsViewController.xib */,
+				1D1780FD155768C80011C13C /* TweetCell.h */,
+				1D1780FE155768C80011C13C /* TweetCell.m */,
+				1D178100155768DB0011C13C /* TweetCell.xib */,
+			);
+			name = Tweets;
+			sourceTree = "<group>";
+		};
+		1D17810215576BAD0011C13C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D17810315576BC70011C13C /* Tweet.h */,
+				1D17810415576BC70011C13C /* Tweet.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		1D44D07115324A1400BADD37 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,7 +380,7 @@
 		1D8448A61532443000F99DE1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D8448A51532443000F99DE1 /* JSRestNetworkKitSampleProject.app */,
+				1D8448A51532443000F99DE1 /* iOS Sample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -354,10 +402,12 @@
 		1D8448B11532443000F99DE1 /* JSRestNetworkKitSampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				1D9631F0153248AF00501145 /* JSRestNetworkKit */,
 				1D8448BA1532443000F99DE1 /* JSAppDelegate.h */,
 				1D8448BB1532443000F99DE1 /* JSAppDelegate.m */,
 				1D8448BD1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld */,
+				1D1780FB155768490011C13C /* Views */,
+				1D17810215576BAD0011C13C /* Models */,
+				1D9631F0153248AF00501145 /* JSRestNetworkKit */,
 				1D8448B21532443000F99DE1 /* Supporting Files */,
 			);
 			path = JSRestNetworkKitSampleProject;
@@ -374,9 +424,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1D91E3EF15576D6A00532996 /* Request Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1D91E3F015576D8600532996 /* TwitterRequestManager.h */,
+				1D91E3F115576D8600532996 /* TwitterRequestManager.m */,
+			);
+			name = "Request Manager";
+			sourceTree = "<group>";
+		};
 		1D9631F0153248AF00501145 /* JSRestNetworkKit */ = {
 			isa = PBXGroup;
 			children = (
+				1D17810615576C5C0011C13C /* JSRestNetworkKit.h */,
 				1D963228153248BC00501145 /* JSReachabilityService.h */,
 				1D9631F2153248BC00501145 /* JSReachabilityService.m */,
 				1D963229153248BC00501145 /* JSBaseWebServiceProxy.h */,
@@ -424,9 +484,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D8448A41532443000F99DE1 /* JSRestNetworkKitSampleProject */ = {
+		1D8448A41532443000F99DE1 /* iOS Sample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D8448C21532443000F99DE1 /* Build configuration list for PBXNativeTarget "JSRestNetworkKitSampleProject" */;
+			buildConfigurationList = 1D8448C21532443000F99DE1 /* Build configuration list for PBXNativeTarget "iOS Sample" */;
 			buildPhases = (
 				1D8448A11532443000F99DE1 /* Sources */,
 				1D8448A21532443000F99DE1 /* Frameworks */,
@@ -436,9 +496,9 @@
 			);
 			dependencies = (
 			);
-			name = JSRestNetworkKitSampleProject;
+			name = "iOS Sample";
 			productName = JSRestNetworkKitSampleProject;
-			productReference = 1D8448A51532443000F99DE1 /* JSRestNetworkKitSampleProject.app */;
+			productReference = 1D8448A51532443000F99DE1 /* iOS Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -449,7 +509,7 @@
 			attributes = {
 				CLASSPREFIX = JS;
 				LastUpgradeCheck = 0440;
-				ORGANIZATIONNAME = MindSnacks;
+				ORGANIZATIONNAME = JavierSoto;
 			};
 			buildConfigurationList = 1D84489F1532443000F99DE1 /* Build configuration list for PBXProject "JSRestNetworkKitSampleProject" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -463,7 +523,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D8448A41532443000F99DE1 /* JSRestNetworkKitSampleProject */,
+				1D8448A41532443000F99DE1 /* iOS Sample */,
 			);
 		};
 /* End PBXProject section */
@@ -476,6 +536,8 @@
 				1D8448B61532443000F99DE1 /* InfoPlist.strings in Resources */,
 				1D44D1241532566500BADD37 /* .gitignore in Resources */,
 				1D44D1251532566500BADD37 /* .gitmodules in Resources */,
+				1D1780FA155768230011C13C /* TweetsViewController.xib in Resources */,
+				1D178101155768DB0011C13C /* TweetCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +590,10 @@
 				1D5EC78B15327E6600C1D182 /* Reachability.m in Sources */,
 				1D5EC78E1532825C00C1D182 /* JSEntityDictionaryParser.m in Sources */,
 				1D5EC7911532833700C1D182 /* JSRandomDictionaryGenerator.m in Sources */,
+				1D1780F9155768230011C13C /* TweetsViewController.m in Sources */,
+				1D1780FF155768C80011C13C /* TweetCell.m in Sources */,
+				1D17810515576BC70011C13C /* Tweet.m in Sources */,
+				1D91E3F215576D8600532996 /* TwitterRequestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D8448C21532443000F99DE1 /* Build configuration list for PBXNativeTarget "JSRestNetworkKitSampleProject" */ = {
+		1D8448C21532443000F99DE1 /* Build configuration list for PBXNativeTarget "iOS Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D8448C31532443000F99DE1 /* Debug */,

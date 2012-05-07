@@ -16,7 +16,7 @@
 
 #import "JSEntityPropertyBool.h"
 
-#import "NSNumber+RandomValues.h"
+#import "NSNumber+JSRandomValues.h"
 
 @implementation JSEntityPropertyBool
 

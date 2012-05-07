@@ -62,8 +62,8 @@
 - (void)makeRequest:(JSWebServiceRequest *)wsRequest
        withCacheKey:(NSString *)cacheKey
          parseBlock:(ProxyDataParsingBlock)parsingBlock
-            success:(ProxySuccessCallback)successCallback
-              error:(ProxyErrorCallback)errorCallback
+            success:(JSProxySuccessCallback)successCallback
+              error:(JSProxyErrorCallback)errorCallback
 {    
     dispatch_async(self.webProxyDispatchQueue, ^{
         if (cacheKey)
@@ -130,8 +130,8 @@
 }
 
 - (void)makeRequest:(JSWebServiceRequest *)wsRequest
-            success:(ProxySuccessCallback)successCallback 
-              error:(ProxyErrorCallback)errorCallback
+            success:(JSProxySuccessCallback)successCallback 
+              error:(JSProxyErrorCallback)errorCallback
 {
     [self makeRequest:wsRequest withCacheKey:nil parseBlock:NULL success:successCallback error:errorCallback];
 }

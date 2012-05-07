@@ -16,7 +16,7 @@
 
 #import "JSEntityPropertyInt.h"
 
-#import "NSNumber+RandomValues.h"
+#import "NSNumber+JSRandomValues.h"
 
 #define kJSEntityPropertyIntRandomMinNumber 0
 #define kJSEntityPropertyIntRandomMaxNumber 10 

@@ -19,8 +19,8 @@
 #import "JSWebServiceResponse.h"
 #import "AFHTTPClient.h"
 
-typedef void (^ProxySuccessCallback)(id data, BOOL cached);
-typedef void (^ProxyErrorCallback)();
+typedef void (^JSProxySuccessCallback)(id data, BOOL cached);
+typedef void (^JSProxyErrorCallback)();
 typedef id (^ProxyDataParsingBlock)(id data);
 
 @class JSWebServiceRequest;
@@ -34,14 +34,14 @@ typedef id (^ProxyDataParsingBlock)(id data);
 + (JSBaseWebServiceProxy *)instance;
 
 - (void)makeRequest:(JSWebServiceRequest *)wsRequest 
-            success:(ProxySuccessCallback)successCallback 
-              error:(ProxyErrorCallback)errorCallback;
+            success:(JSProxySuccessCallback)successCallback 
+              error:(JSProxyErrorCallback)errorCallback;
 
 - (void)makeRequest:(JSWebServiceRequest *)wsRequest 
        withCacheKey:(NSString *)cacheKey
          parseBlock:(ProxyDataParsingBlock)parsingBlock
-            success:(ProxySuccessCallback)successCallback 
-              error:(ProxyErrorCallback)errorCallback;
+            success:(JSProxySuccessCallback)successCallback 
+              error:(JSProxyErrorCallback)errorCallback;
 
 /* Required: implement this method in your own subclass */
 + (NSString *)webServiceBaseURL;

@@ -35,7 +35,7 @@
 {
     if ((self = [super init]))
     {
-        [[[self class] entityProperties] enumerateObjectsUsingBlock:^(EntityProperty *property, NSUInteger idx, BOOL *stop) {
+        [[[self class] entityProperties] enumerateObjectsUsingBlock:^(JSEntityProperty *property, NSUInteger idx, BOOL *stop) {
             NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
             [JSEntityDictionaryParser setSafeValue:[aDecoder decodeObjectForKey:property.localPropertyKey] forKey:property.localPropertyKey onEntityObject:self];
             [pool drain];
@@ -47,7 +47,7 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [[[self class] entityProperties] enumerateObjectsUsingBlock:^(EntityProperty *property, NSUInteger idx, BOOL *stop) {
+    [[[self class] entityProperties] enumerateObjectsUsingBlock:^(JSEntityProperty *property, NSUInteger idx, BOOL *stop) {
         NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
         NSString *propertyKey = property.localPropertyKey;
 
@@ -65,7 +65,7 @@
 {
     JSBaseEntity *copiedEntity = [[[self class] allocWithZone:zone] init];
 
-    [[[self class] entityProperties] enumerateObjectsUsingBlock:^(EntityProperty *property, NSUInteger idx, BOOL *stop) {
+    [[[self class] entityProperties] enumerateObjectsUsingBlock:^(JSEntityProperty *property, NSUInteger idx, BOOL *stop) {
         [copiedEntity setValue:[self valueForKey:property.localPropertyKey] forKey:property.localPropertyKey];
     }];
 
@@ -103,7 +103,7 @@
 #ifndef JSRestNetworkKitDisableAutoDeallocImplementationOfEntities
 - (void)dealloc
 {
-    [[[self class] entityProperties] enumerateObjectsUsingBlock:^(EntityProperty *property, NSUInteger idx, BOOL *stop) {
+    [[[self class] entityProperties] enumerateObjectsUsingBlock:^(JSEntityProperty *property, NSUInteger idx, BOOL *stop) {
         if ([property needsRelease])
         {
             [self setValue:nil forKey:property.localPropertyKey];

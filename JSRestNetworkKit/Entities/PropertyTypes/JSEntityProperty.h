@@ -34,18 +34,18 @@ typedef enum
 @property (nonatomic, copy) NSString *localPropertyKey;
 @property (nonatomic, assign) Class entityRelationClass;
 
-+ (JSEntityProperty *)JSEntityPropertyWithKey:(NSString *)key
++ (JSEntityProperty *)entityPropertyWithKey:(NSString *)key
                              propertyType:(JSEntityPropertyType)propertyType;
 
-+ (JSEntityProperty *)JSEntityPropertyWithApiKey:(NSString *)apiKey
++ (JSEntityProperty *)entityPropertyWithApiKey:(NSString *)apiKey
                                  andLocalKey:(NSString *)localKey
                                 propertyType:(JSEntityPropertyType)propertyType;
 
-+ (JSEntityProperty *)JSEntityPropertyWithKey:(NSString *)key
++ (JSEntityProperty *)entityPropertyWithKey:(NSString *)key
                             relationClass:(Class)relationClass
                              propertyType:(JSEntityPropertyType)propertyType;
 
-+ (JSEntityProperty *)JSEntityPropertyWithApiKey:(NSString *)apiKey
++ (JSEntityProperty *)entityPropertyWithApiKey:(NSString *)apiKey
                                  andLocalKey:(NSString *)localKey
                                relationClass:(Class)relationClass
                                 propertyType:(JSEntityPropertyType)propertyType;

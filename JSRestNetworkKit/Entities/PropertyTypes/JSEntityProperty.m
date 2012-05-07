@@ -32,24 +32,25 @@
 @synthesize entityRelationClass = _entityRelationClass;
 
 
-+ (JSEntityProperty *)JSEntityPropertyWithKey:(NSString *)key propertyType:(JSEntityPropertyType)propertyType
++ (JSEntityProperty *)entityPropertyWithKey:(NSString *)key propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self JSEntityPropertyWithApiKey:key andLocalKey:key relationClass:nil propertyType:propertyType];
+    return [self entityPropertyWithApiKey:key andLocalKey:key relationClass:nil propertyType:propertyType];
 }
 
-+ (JSEntityProperty *)JSEntityPropertyWithApiKey:(NSString *)apiKey andLocalKey:(NSString *)localKey propertyType:(JSEntityPropertyType)propertyType
++ (JSEntityProperty *)entityPropertyWithApiKey:(NSString *)apiKey andLocalKey:(NSString *)localKey propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self JSEntityPropertyWithApiKey:apiKey andLocalKey:localKey relationClass:nil propertyType:propertyType];
+    return [self entityPropertyWithApiKey:apiKey andLocalKey:localKey relationClass:nil propertyType:propertyType];
 }
 
-+ (JSEntityProperty *)JSEntityPropertyWithKey:(NSString *)key relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
++ (JSEntityProperty *)entityPropertyWithKey:(NSString *)key relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self JSEntityPropertyWithApiKey:key andLocalKey:key relationClass:relationClass propertyType:propertyType];
+    return [self entityPropertyWithApiKey:key andLocalKey:key relationClass:relationClass propertyType:propertyType];
 }
 
-+ (JSEntityProperty *)JSEntityPropertyWithApiKey:(NSString *)apiKey andLocalKey:(NSString *)localKey relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
++ (JSEntityProperty *)entityPropertyWithApiKey:(NSString *)apiKey andLocalKey:(NSString *)localKey relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
 {
     JSEntityProperty *property = nil;
+    
     switch (propertyType) {
         case JSEntityPropertyTypeInt:
             property = [[JSEntityPropertyInt alloc] init];

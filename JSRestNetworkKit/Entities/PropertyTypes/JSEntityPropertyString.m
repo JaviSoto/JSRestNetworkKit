@@ -16,7 +16,7 @@
 
 #import "JSEntityPropertyString.h"
 
-#import "NSString+RandomValues.h"
+#import "NSString+JSRandomValues.h"
 
 #define kRandomValueLength 15
 

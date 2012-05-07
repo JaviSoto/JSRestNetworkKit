@@ -16,12 +16,12 @@
 
 #import "JSEntityPropertyRelationshipOneToMany.h"
 
-#import "BaseEntity.h"
+#import "JSBaseEntity.h"
 
 #import "JSBaseCoreDataBackedEntity.h"
 
 #import "JSClassDescendantOfClass.h"
-#import "NSNumber+RandomValues.h"
+#import "NSNumber+JSRandomValues.h"
 
 #define kMaxObjectsInArray 15
 
@@ -29,7 +29,7 @@
 
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    if (!object || [object isEqual:[NSNull null]] || ![self.entityRelationClass conformsToProtocol:@protocol(BaseEntity)] || ![object isKindOfClass:[NSArray class]])
+    if (!object || [object isEqual:[NSNull null]] || ![self.entityRelationClass conformsToProtocol:@protocol(JSBaseEntity)] || ![object isKindOfClass:[NSArray class]])
     {
         return nil;
     }

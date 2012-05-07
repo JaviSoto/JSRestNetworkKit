@@ -46,7 +46,7 @@
     return self;
 }
 
-- (void)makeRequest:(JSWebServiceRequest *)wsRequest withCacheKey:(NSString *)cacheKey parseBlock:(ProxyDataParsingBlock)parsingBlock success:(ProxySuccessCallback)successCallback error:(ProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSWebServiceRequest *)wsRequest withCacheKey:(NSString *)cacheKey parseBlock:(ProxyDataParsingBlock)parsingBlock success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
 {
     static const CGFloat kMockRequestMaxDurationInSeconds = 1.4f;
     static const NSInteger kMockRequestFailuresPerHundred = 5;
@@ -124,7 +124,7 @@
     });
 }
 
-- (void)makeRequest:(JSWebServiceRequest *)wsRequest success:(ProxySuccessCallback)successCallback error:(ProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSWebServiceRequest *)wsRequest success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
 {
     [self makeRequest:wsRequest withCacheKey:nil parseBlock:NULL success:successCallback error:errorCallback];
 }

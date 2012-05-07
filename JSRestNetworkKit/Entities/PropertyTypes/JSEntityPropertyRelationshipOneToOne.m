@@ -48,7 +48,7 @@
 
 - (id)randomValueWithDepth:(NSInteger)depth
 {
-    if (self.entityRelationClass && [self.entityRelationClass conformsToProtocol:@protocol(BaseEntity)])
+    if (self.entityRelationClass && [self.entityRelationClass conformsToProtocol:@protocol(JSBaseEntity)])
     {
         return [self.entityRelationClass randomEntityDictionaryWithDepth:depth];
     }

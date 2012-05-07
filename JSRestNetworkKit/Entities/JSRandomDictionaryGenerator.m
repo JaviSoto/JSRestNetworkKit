@@ -3,12 +3,12 @@
 //  JSRestNetworkKitSampleProject
 //
 //  Created by Javier Soto on 4/8/12.
-//  Copyright (c) 2012 MindSnacks. All rights reserved.
+//  Copyright (c) 2012 JavierSoto. All rights reserved.
 //
 
 #import "JSRandomDictionaryGenerator.h"
 
-#import "BaseEntity.h"
+#import "JSBaseEntity.h"
 
 @implementation JSRandomDictionaryGenerator
 

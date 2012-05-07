@@ -14,9 +14,9 @@
  limitations under the License. 
  */
 
-#import "JSNSString+RandomValues.h"
+#import "NSString+JSRandomValues.h"
 
-#import "JSNSNumber+RandomValues.h"
+#import "NSNumber+JSRandomValues.h"
 
 @implementation NSString (JSRandomValues)
 
