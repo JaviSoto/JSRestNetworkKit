@@ -43,10 +43,16 @@
     JSWebServiceRequestParameters *parameters = [JSWebServiceRequestParameters emptyRequestParameters];
     [parameters setValue:search forKey:@"q"];
     
+    // I create a GET request object with the path and parameters.
     JSWebServiceRequest *request = [[JSWebServiceRequest alloc] initWithType:JSWebServiceRequestTypeGET path:@"search.json" parameters:parameters];
     
+    /* - I make the request passing a cache key. If another request is made with the same cache key, the successCallback will be called inmediately with the last saved cached data
+     - The parse block has to be implemented so that, taking the raw dictionary, it returns parsed data ready to be cached and returned
+     - This is where most of the code is saved, as I only need to call - initWithDictionary: and the model class knows how to instantiate itself just because the attributes are defined (see Tweet.m) */
     [_webProxy makeRequest:request withCacheKey:@"tweets" parseBlock:^id(NSArray *tweetDictionaries) {
+        
         NSMutableArray *tweets = [NSMutableArray array];
+        
         for (NSDictionary *tweetDictionary in tweetDictionaries)
         {
             Tweet *tweet = [[Tweet alloc] initWithDictionary:tweetDictionary];

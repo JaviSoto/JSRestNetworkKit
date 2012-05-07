@@ -52,7 +52,7 @@
         self.tweets = data;
         [self.tableView reloadData];
     } errorCallback:^{
-        
+        [[[[UIAlertView alloc] initWithTitle:@"Error" message:@"Error loading tweets" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
     }];
 }
 
@@ -70,9 +70,7 @@
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     if (!cell)
-    {
         cell = [[self.cellNib instantiateWithOwner:self options:nil] objectAtIndex:0];
-    }
     
     [cell setTweet:[self.tweets objectAtIndex:indexPath.row]];
     
@@ -84,11 +82,17 @@
 - (UINib *)cellNib
 {
     if (!_cellNib)
-    {
         _cellNib = [[UINib nibWithNibName:NSStringFromClass([TweetCell class]) bundle:nil] retain];
-    }
     
     return _cellNib;
+}
+
+
+- (void)viewDidUnload {
+    self.tableView = nil;
+    self.cellNib = nil;
+    
+    [super viewDidUnload];
 }
 
 - (void)dealloc
@@ -96,13 +100,9 @@
     [_cellNib release];
     [_twitterReqManager release];
     [_tweets release];
-    
     [_tableView release];
+    
     [super dealloc];
 }
 
-- (void)viewDidUnload {
-    [self setTableView:nil];
-    [super viewDidUnload];
-}
 @end
