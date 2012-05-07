@@ -23,12 +23,17 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    if ((self = [self init]))
+    if ((self = [super init]))
     {
         [self parseDictionary:dictionary inManagedObjectContext:managedObjectContext];
     }
     
     return self;
+}
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+    return [self initWithDictionary:dictionary inManagedObjectContext:nil];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder

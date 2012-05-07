@@ -27,7 +27,7 @@ typedef enum {
 
 @property (atomic, assign) JSWebServiceRequestType type;
 @property (nonatomic, copy) NSString *path;
-@property (atomic, copy) JSWebServiceRequestParameters *parameters;
+@property (atomic, retain) JSWebServiceRequestParameters *parameters;
 @property (atomic, retain) NSMutableDictionary *headerFields;
 
 - (id)initWithType:(JSWebServiceRequestType)method

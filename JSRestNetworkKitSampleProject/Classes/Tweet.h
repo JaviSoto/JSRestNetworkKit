@@ -8,4 +8,8 @@
 
 @interface Tweet : JSBaseEntity
 
+@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *text;
+@property (nonatomic, copy) NSURL *profileImageURL;
+
 @end

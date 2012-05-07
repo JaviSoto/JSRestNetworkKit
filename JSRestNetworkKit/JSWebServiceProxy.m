@@ -33,8 +33,9 @@
 #endif
 
 @interface JSWebServiceProxy ()
-@property (nonatomic, assign) dispatch_queue_t webProxyDispatchQueue;
-
+{
+    dispatch_queue_t _webProxyDispatchQueue;
+}
 - (AFHTTPRequestOperation *)operationForRequest:(JSWebServiceRequest *)request
                                         success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success
                                         failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure;
@@ -45,8 +46,8 @@
 @end
 
 @implementation JSWebServiceProxy
-@synthesize webProxyDispatchQueue;
-@synthesize requestSigner;
+@synthesize requestSigner = _requestSigner;
+@synthesize responseParser = _responseParser;
 
 #pragma mark - Singleton
 
@@ -54,13 +55,32 @@
 {
     if ((self = [super initWithBaseURL:url]))
     {
-        self.webProxyDispatchQueue = dispatch_queue_create("JSWebProxyDispatchQueue", DISPATCH_QUEUE_CONCURRENT);
+        _webProxyDispatchQueue = dispatch_queue_create("JSWebProxyDispatchQueue", DISPATCH_QUEUE_CONCURRENT);
+    }
+    
+    return self;
+}
+
+- (id)initWithBaseURL:(NSURL *)baseURL
+        requestSigner:(id<JSWebServiceRequestSigning>)requestSigner
+       responseParser:(id<JSWebServiceResponseParser>)responseParser
+{
+    if ((self = [self initWithBaseURL:baseURL]))
+    {
+        self.requestSigner = requestSigner;
+        self.responseParser = responseParser;
         
         #warning TODO: make optional?
         [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     }
     
     return self;
+}
+
+- (id)initWithBaseURL:(NSURL *)baseURL
+       responseParser:(id<JSWebServiceResponseParser>)responseParser
+{
+    return [self initWithBaseURL:baseURL requestSigner:nil responseParser:responseParser];
 }
 
 #pragma mark - Request
@@ -71,7 +91,7 @@
             success:(JSProxySuccessCallback)successCallback
               error:(JSProxyErrorCallback)errorCallback
 {    
-    dispatch_async(self.webProxyDispatchQueue, ^{
+    dispatch_async(_webProxyDispatchQueue, ^{
         if (cacheKey)
         {
             id cachedData = [[JSCache instance] cachedObjectForKey:cacheKey];
@@ -85,45 +105,31 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             if (self.requestSigner)
-            {
                 [self.requestSigner signRequest:request];
-            }
             
-            // run the request
             [self runRequest:request success:^(NSURLRequest *request, NSURLResponse *urlResponse, id JSON) {
-                JSWebServiceResponse *response = [[[JSWebServiceResponse alloc] initWithDictionary:JSON] autorelease];
-                if (![response hasError])
-                {                
+                if (!self.responseParser || [self.responseParser responseIsSuccessfulWithDictionary:JSON])
+                {
+                    id parsedData = (self.responseParser != nil && [self.responseParser respondsToSelector:@selector(dataFromResponseDictionary:)]) ? [self.responseParser dataFromResponseDictionary:JSON] : JSON;
+                    
+                    if (parsingBlock)
+                        parsedData = parsingBlock(parsedData);
+                    
+                    if (cacheKey)
+                        [[JSCache instance] cacheObject:parsedData forKey:cacheKey];
+
                     if (successCallback)
-                    {
-                        id parsedData = response.body;
-                        
-                        if (parsingBlock)
-                        {
-                            parsedData = parsingBlock(parsedData);
-                        }
-                        
-                        if (cacheKey)
-                        {
-                            [[JSCache instance] cacheObject:parsedData forKey:cacheKey];
-                        }
-                        
                         successCallback(parsedData, NO);            
-                    }
                 }
                 else
                 { 
                     if (errorCallback)
-                    {
                         errorCallback();
-                    }
                 }
                 
             } failure:^(NSURLRequest *request, NSURLResponse *response, NSError *error) {
                 if (errorCallback)
-                {
                     errorCallback();
-                }
             }];
         });
     });
@@ -182,8 +188,9 @@
 
 - (void)dealloc
 {
-    dispatch_release(self.webProxyDispatchQueue);
-    [requestSigner release];
+    dispatch_release(_webProxyDispatchQueue);
+    [_requestSigner release];
+    [_responseParser release];
     
     [super dealloc];
 }

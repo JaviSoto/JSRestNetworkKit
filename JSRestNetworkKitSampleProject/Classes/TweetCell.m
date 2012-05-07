@@ -8,6 +8,10 @@
 
 #import "TweetCell.h"
 
+#import "UIImageView+AFNetworking.h"
+
+#import "Tweet.h"
+
 @interface TweetCell ()
 @property (retain, nonatomic) IBOutlet UIImageView *userAvatar;
 @property (retain, nonatomic) IBOutlet UILabel *username;
@@ -21,7 +25,9 @@
 
 - (void)setTweet:(Tweet *)tweet
 {
-    
+    [self.userAvatar setImageWithURL:tweet.profileImageURL];
+    self.username.text = tweet.username;
+    self.tweetText.text = tweet.text;
 }
 
 - (void)dealloc {

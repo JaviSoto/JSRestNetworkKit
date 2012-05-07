@@ -18,7 +18,7 @@
 
 @protocol JSBaseEntity <NSObject>
 
-// Takes the dictionary and sets the corresponding properties of the entity object according to the values in it. Second param is optional.
+// Takes the dictionary and sets the corresponding properties of the entity object according to the values in it.
 - (void)parseDictionary:(NSDictionary *)feed inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 // Returns a dictionary filled with random data, like the one the API would return for this entity.
@@ -37,7 +37,9 @@
 
 @interface JSBaseEntity : NSObject <JSBaseEntity, NSCoding, NSCopying>
 
-// Initializes the entity parsing the dictionary with the parseDictionary: method. Second parameter is optional.
+// Initializes the entity parsing the dictionary with the parseDictionary: method
 - (id)initWithDictionary:(NSDictionary *)dictionary inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -11,3 +11,4 @@
 #import "JSWebServiceProxy.h"
 #import "JSWebServiceRequest.h"
 #import "JSWebServiceRequestParameters.h"
+#import "JSWebServiceResponseParser.h"

@@ -10,6 +10,10 @@
 #import "JSWebServiceRequest.h"
 #import "JSWebServiceRequestParameters.h"
 
+#import "TwitterResponseParser.h"
+
+#import "Tweet.h"
+
 @interface TwitterRequestManager ()
 {
     JSWebServiceProxy *_webProxy;
@@ -22,7 +26,11 @@
 {
     if ((self = [super init]))
     {
-        _webProxy = [[JSWebServiceProxy alloc] initWithBaseURL:[NSURL URLWithString:@"http://search.twitter.com"]];
+        TwitterResponseParser *responseParser = [[TwitterResponseParser alloc] init];
+        
+        _webProxy = [[JSWebServiceProxy alloc] initWithBaseURL:[NSURL URLWithString:@"http://search.twitter.com"] responseParser:responseParser];
+        
+        [responseParser release];
     }
         
     return self;
@@ -35,9 +43,16 @@
     
     JSWebServiceRequest *request = [[JSWebServiceRequest alloc] initWithType:JSWebServiceRequestTypeGET path:@"search.json" parameters:parameters];
     
-    [_webProxy makeRequest:request success:^(id data, BOOL cached) {
-        NSLog(@"data %@", data);
-    } error:error];
+    [_webProxy makeRequest:request withCacheKey:@"tweets" parseBlock:^id(NSArray *tweetDictionaries) {
+        NSMutableArray *tweets = [NSMutableArray array];
+        for (NSDictionary *tweetDictionary in tweetDictionaries)
+        {
+            Tweet *tweet = [[Tweet alloc] initWithDictionary:tweetDictionary];
+            [tweets addObject:tweet];
+        }
+            
+        return tweets;
+    } success:success error:error];
 }
 
 #pragma mark - Memory Management

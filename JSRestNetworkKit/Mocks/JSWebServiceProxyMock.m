@@ -57,15 +57,11 @@
             if (cachedObject)
             {
                 if (successCallback)
-                {
                     successCallback(cachedObject, YES);
-                }
             }
         }
         if (kShouldSleepBeforeReturningData)
-        {
             usleep((arc4random() % kMilisecondsInASecond) * (kMockRequestMaxDurationInSeconds));
-        }
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             BOOL failure = ((arc4random() % 100) < kMockRequestFailuresPerHundred);
@@ -74,32 +70,15 @@
             {               
                 [self runRequest:request success:^(NSURLRequest *request, NSURLResponse *response, id JSON) {
                     [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
-                    JSWebServiceResponse *wsResponse = [[[JSWebServiceResponse alloc] initWithDictionary:JSON] autorelease];
-                    if (wsResponse.code == WSResponseNoError)
-                    {
-                        if (successCallback)
-                        {
-                            id parsedData = wsResponse.body;
-                            if (parsingBlock)
-                            {
-                                parsedData = parsingBlock(parsedData);
-                            }
-                            
-                            if (cacheKey)
-                            {
-                                [[JSCache instance] cacheObject:parsedData forKey:cacheKey];
-                            }
-                            
-                            successCallback(parsedData, NO);            
-                        }
-                    }
-                    else
-                    {
-                        if (errorCallback)
-                        {
-                            errorCallback(wsResponse, nil);
-                        }
-                    }
+                    id parsedData = JSON;
+                    if (parsingBlock)
+                        parsedData = parsingBlock(parsedData);
+                    
+                    if (cacheKey)
+                        [[JSCache instance] cacheObject:parsedData forKey:cacheKey];
+                    
+                    if (successCallback)
+                        successCallback(parsedData, NO);            
                 } failure:^(NSURLRequest *request, NSURLResponse *response, NSError *error) {
                     [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
                     if (errorCallback)

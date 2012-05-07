@@ -14,9 +14,7 @@
  limitations under the License. 
  */
 
-#import <Foundation/Foundation.h>
-
-#import "JSWebServiceResponse.h"
+#import "JSWebServiceResponseParser.h"
 #import "AFHTTPClient.h"
 
 typedef void (^JSProxySuccessCallback)(id data, BOOL cached);
@@ -29,7 +27,17 @@ typedef id (^JSProxyDataParsingBlock)(id data);
 @interface JSWebServiceProxy : AFHTTPClient
 
 /* Optional: set to be able to sign a request (by modifying its headers) before it's performed */
-@property (nonatomic, retain) id<JSWebServiceRequestSigning> requestSigner;
+@property (nonatomic, retain) id<JSWebServiceRequestSigning>requestSigner;
+
+/* Optional: set to be able to distinguish a successful and a failing request according to the response content */
+@property (nonatomic, retain) id<JSWebServiceResponseParser>responseParser;
+
+- (id)initWithBaseURL:(NSURL *)baseURL
+        requestSigner:(id<JSWebServiceRequestSigning>)requestSigner
+       responseParser:(id<JSWebServiceResponseParser>)responseParser;
+
+- (id)initWithBaseURL:(NSURL *)baseURL
+       responseParser:(id<JSWebServiceResponseParser>)responseParser;
 
 - (void)makeRequest:(JSWebServiceRequest *)request
             success:(JSProxySuccessCallback)successCallback 

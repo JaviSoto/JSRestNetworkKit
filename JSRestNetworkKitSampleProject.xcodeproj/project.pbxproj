@@ -31,6 +31,7 @@
 		1D44D1251532566500BADD37 /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 1D44D11D1532566500BADD37 /* .gitmodules */; };
 		1D44D1261532566500BADD37 /* JSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D11F1532566500BADD37 /* JSCache.m */; };
 		1D44D1271532566500BADD37 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D1231532566500BADD37 /* EGOCache.m */; };
+		1D56F5451557831C00D77BD9 /* TwitterResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D56F5441557831C00D77BD9 /* TwitterResponseParser.m */; };
 		1D5EC6A015327A5200C1D182 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5EC69F15327A5200C1D182 /* CFNetwork.framework */; };
 		1D5EC6A315327A6200C1D182 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5EC6A215327A6200C1D182 /* MobileCoreServices.framework */; };
 		1D5EC6A515327BC800C1D182 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5EC6A415327BC800C1D182 /* SystemConfiguration.framework */; };
@@ -61,7 +62,6 @@
 		1D963231153248BC00501145 /* JSWebServiceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F3153248BC00501145 /* JSWebServiceProxy.m */; };
 		1D963232153248BC00501145 /* JSWebServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F4153248BC00501145 /* JSWebServiceRequest.m */; };
 		1D963234153248BC00501145 /* JSWebServiceRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */; };
-		1D963236153248BC00501145 /* JSWebServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F8153248BC00501145 /* JSWebServiceResponse.m */; };
 		1D963245153248BC00501145 /* JSWebServiceProxyMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +112,8 @@
 		1D44D11F1532566500BADD37 /* JSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCache.m; sourceTree = "<group>"; };
 		1D44D1221532566500BADD37 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		1D44D1231532566500BADD37 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		1D56F5431557831C00D77BD9 /* TwitterResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterResponseParser.h; path = Classes/TwitterResponseParser.h; sourceTree = "<group>"; };
+		1D56F5441557831C00D77BD9 /* TwitterResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterResponseParser.m; path = Classes/TwitterResponseParser.m; sourceTree = "<group>"; };
 		1D5EC69F15327A5200C1D182 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1D5EC6A215327A6200C1D182 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1D5EC6A415327BC800C1D182 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -161,7 +163,6 @@
 		1D9631F3153248BC00501145 /* JSWebServiceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceProxy.m; path = JSRestNetworkKit/JSWebServiceProxy.m; sourceTree = SOURCE_ROOT; };
 		1D9631F4153248BC00501145 /* JSWebServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequest.m; path = JSRestNetworkKit/JSWebServiceRequest.m; sourceTree = SOURCE_ROOT; };
 		1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequestParameters.m; path = JSRestNetworkKit/JSWebServiceRequestParameters.m; sourceTree = SOURCE_ROOT; };
-		1D9631F8153248BC00501145 /* JSWebServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceResponse.m; path = JSRestNetworkKit/JSWebServiceResponse.m; sourceTree = SOURCE_ROOT; };
 		1D963219153248BC00501145 /* JSWebServiceProxyMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebServiceProxyMock.h; sourceTree = "<group>"; };
 		1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebServiceProxyMock.m; sourceTree = "<group>"; };
 		1D963228153248BC00501145 /* JSReachabilityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSReachabilityService.h; path = JSRestNetworkKit/JSReachabilityService.h; sourceTree = SOURCE_ROOT; };
@@ -169,7 +170,7 @@
 		1D96322A153248BC00501145 /* JSWebServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceRequest.h; path = JSRestNetworkKit/JSWebServiceRequest.h; sourceTree = SOURCE_ROOT; };
 		1D96322C153248BC00501145 /* JSWebServiceRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceRequestParameters.h; path = JSRestNetworkKit/JSWebServiceRequestParameters.h; sourceTree = SOURCE_ROOT; };
 		1D96322E153248BC00501145 /* JSWebServiceRequestSigning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceRequestSigning.h; path = JSRestNetworkKit/JSWebServiceRequestSigning.h; sourceTree = SOURCE_ROOT; };
-		1D96322F153248BC00501145 /* JSWebServiceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceResponse.h; path = JSRestNetworkKit/JSWebServiceResponse.h; sourceTree = SOURCE_ROOT; };
+		1D96322F153248BC00501145 /* JSWebServiceResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; name = JSWebServiceResponseParser.h; path = JSRestNetworkKit/JSWebServiceResponseParser.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +194,6 @@
 		1D1780FB155768490011C13C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D91E3EF15576D6A00532996 /* Request Manager */,
 				1D1780FC155768AA0011C13C /* Tweets */,
 			);
 			name = Views;
@@ -215,6 +215,7 @@
 		1D17810215576BAD0011C13C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1D91E3EF15576D6A00532996 /* Request Manager */,
 				1D17810315576BC70011C13C /* Tweet.h */,
 				1D17810415576BC70011C13C /* Tweet.m */,
 			);
@@ -421,6 +422,8 @@
 		1D91E3EF15576D6A00532996 /* Request Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1D56F5431557831C00D77BD9 /* TwitterResponseParser.h */,
+				1D56F5441557831C00D77BD9 /* TwitterResponseParser.m */,
 				1D91E3F015576D8600532996 /* TwitterRequestManager.h */,
 				1D91E3F115576D8600532996 /* TwitterRequestManager.m */,
 			);
@@ -440,8 +443,7 @@
 				1D96322C153248BC00501145 /* JSWebServiceRequestParameters.h */,
 				1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */,
 				1D96322E153248BC00501145 /* JSWebServiceRequestSigning.h */,
-				1D96322F153248BC00501145 /* JSWebServiceResponse.h */,
-				1D9631F8153248BC00501145 /* JSWebServiceResponse.m */,
+				1D96322F153248BC00501145 /* JSWebServiceResponseParser.h */,
 				1D5EC76415327D6C00C1D182 /* Entities */,
 				1D963218153248BC00501145 /* Mocks */,
 				1D44D07115324A1400BADD37 /* Support */,
@@ -545,7 +547,6 @@
 				1D963231153248BC00501145 /* JSWebServiceProxy.m in Sources */,
 				1D963232153248BC00501145 /* JSWebServiceRequest.m in Sources */,
 				1D963234153248BC00501145 /* JSWebServiceRequestParameters.m in Sources */,
-				1D963236153248BC00501145 /* JSWebServiceResponse.m in Sources */,
 				1D963245153248BC00501145 /* JSWebServiceProxyMock.m in Sources */,
 				1D44D07415324A3500BADD37 /* JSMethodSwizzler.m in Sources */,
 				1D44D07715324ABB00BADD37 /* JSClassDescendantOfClass.m in Sources */,
@@ -582,6 +583,7 @@
 				1D1780FF155768C80011C13C /* TweetCell.m in Sources */,
 				1D17810515576BC70011C13C /* Tweet.m in Sources */,
 				1D91E3F215576D8600532996 /* TwitterRequestManager.m in Sources */,
+				1D56F5451557831C00D77BD9 /* TwitterResponseParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
