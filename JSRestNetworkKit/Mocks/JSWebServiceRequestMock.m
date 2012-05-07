@@ -14,19 +14,19 @@
  limitations under the License. 
  */
 
-#import "WebServiceRequestMock.h"
+#import "JSWebServiceRequestMock.h"
 
 #define kCreationOfObjectsMaxDepth 2
 
-@interface WebServiceRequestMock()
+@interface JSWebServiceRequestMock()
 - (BOOL)urlContains:(NSString *)subStringInURL;
 @end
 
-@implementation WebServiceRequestMock
+@implementation JSWebServiceRequestMock
 
-+ (WebServiceRequestMock *)mockRequestWithRequest:(JSWebServiceRequest *)request
++ (JSWebServiceRequestMock *)mockRequestWithRequest:(JSWebServiceRequest *)request
 {
-    WebServiceRequestMock *mockRequest = [[self alloc] init];
+    JSWebServiceRequestMock *mockRequest = [[self alloc] init];
     
     mockRequest.url = request.url;
     mockRequest.parameters = request.parameters;

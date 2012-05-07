@@ -14,9 +14,9 @@
  limitations under the License. 
  */
 
-#import "NSNumber+RandomValues.h"
+#import "NSNumber+JSRandomValues.h"
 
-@implementation NSNumber (RandomValues)
+@implementation NSNumber (JSRandomValues)
 
 + (NSUInteger)randomIntBetweenNumber:(NSUInteger)minNumber andNumber:(NSUInteger)maxNumber
 {

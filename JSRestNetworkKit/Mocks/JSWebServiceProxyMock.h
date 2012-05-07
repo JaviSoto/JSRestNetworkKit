@@ -14,10 +14,8 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceRequest.h"
+#import "JSBaseWebServiceProxy.h"
 
-@interface WebServiceRequestMock : JSWebServiceRequest
-
-+ (WebServiceRequestMock *)mockRequestWithRequest:(JSWebServiceRequest *)request;
+@interface JSWebServiceProxyMock : JSBaseWebServiceProxy
 
 @end

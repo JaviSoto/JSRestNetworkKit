@@ -14,11 +14,11 @@
  limitations under the License. 
  */
 
-#import "NSString+RandomValues.h"
+#import "JSNSString+RandomValues.h"
 
-#import "NSNumber+RandomValues.h"
+#import "JSNSNumber+RandomValues.h"
 
-@implementation NSString (RandomValues)
+@implementation NSString (JSRandomValues)
 
 + (NSString *)randomStringWithLength:(int)length
 {

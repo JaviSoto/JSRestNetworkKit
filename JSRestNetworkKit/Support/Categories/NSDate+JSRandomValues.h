@@ -16,7 +16,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (RandomValues)
+@interface NSDate (JSRandomValues)
 
 + (NSDate *)randomPastDate;
 + (NSTimeInterval)randomUnixTimeOfPastDate;

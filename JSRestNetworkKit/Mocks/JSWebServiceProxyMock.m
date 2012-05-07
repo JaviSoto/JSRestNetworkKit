@@ -14,8 +14,8 @@
  limitations under the License. 
  */
 
-#import "WebServiceProxyMock.h"
-#import "WebServiceRequestMock.h"
+#import "JSWebServiceProxyMock.h"
+#import "JSWebServiceRequestMock.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
 
@@ -23,14 +23,14 @@
 
 #define kShouldSleepBeforeReturningData YES
 
-@implementation WebServiceProxyMock
+@implementation JSWebServiceProxyMock
 
 + (JSBaseWebServiceProxy *)instance {
     static dispatch_once_t dispatchOncePredicate;
-    static WebServiceProxyMock *myInstance = nil;
+    static JSWebServiceProxyMock *myInstance = nil;
     
     dispatch_once(&dispatchOncePredicate, ^{
-        myInstance = [[WebServiceProxyMock alloc] initWithBaseURL:[NSURL URLWithString:@"http://dummy"]];
+        myInstance = [[JSWebServiceProxyMock alloc] initWithBaseURL:[NSURL URLWithString:@"http://dummy"]];
 	});
     
     return myInstance;
@@ -78,7 +78,7 @@
             
             if (!failure)
             {    
-                WebServiceRequestMock *requestMock = [WebServiceRequestMock mockRequestWithRequest:wsRequest];                
+                JSWebServiceRequestMock *requestMock = [JSWebServiceRequestMock mockRequestWithRequest:wsRequest];                
                 
                 [requestMock runRequestWithSuccess:^(NSURLRequest *request, NSURLResponse *response, id JSON) {
                     [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];

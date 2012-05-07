@@ -14,11 +14,10 @@
  limitations under the License. 
  */
 
-#import <Foundation/Foundation.h>
+#import "JSWebServiceRequest.h"
 
-@interface NSString (RandomValues)
+@interface JSWebServiceRequestMock : JSWebServiceRequest
 
-+ (NSString *)randomStringWithLength:(int)length;
-+ (NSString *)randomStringWithLengthBetween:(int)minLength and:(int)maxLength;
++ (JSWebServiceRequestMock *)mockRequestWithRequest:(JSWebServiceRequest *)request;
 
 @end

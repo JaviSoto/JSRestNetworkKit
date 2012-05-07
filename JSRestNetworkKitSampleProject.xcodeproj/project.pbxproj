@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1D44D07415324A3500BADD37 /* JSMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07315324A3500BADD37 /* JSMethodSwizzler.m */; };
 		1D44D07715324ABB00BADD37 /* JSClassDescendantOfClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07615324ABB00BADD37 /* JSClassDescendantOfClass.m */; };
-		1D44D07B153251CD00BADD37 /* NSNumber+RandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07A153251CD00BADD37 /* NSNumber+RandomValues.m */; };
-		1D44D07E1532520100BADD37 /* NSDate+RandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07D1532520100BADD37 /* NSDate+RandomValues.m */; };
-		1D44D0811532524F00BADD37 /* NSString+RandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D0801532524F00BADD37 /* NSString+RandomValues.m */; };
+		1D44D07B153251CD00BADD37 /* NSNumber+JSRandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07A153251CD00BADD37 /* NSNumber+JSRandomValues.m */; };
+		1D44D07E1532520100BADD37 /* NSDate+JSRandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07D1532520100BADD37 /* NSDate+JSRandomValues.m */; };
+		1D44D0811532524F00BADD37 /* NSString+JSRandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D0801532524F00BADD37 /* NSString+JSRandomValues.m */; };
 		1D44D0EA1532553A00BADD37 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D0851532553A00BADD37 /* AFHTTPClient.m */; };
 		1D44D0EB1532553A00BADD37 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D0871532553A00BADD37 /* AFHTTPRequestOperation.m */; };
 		1D44D0EC1532553A00BADD37 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D0891532553A00BADD37 /* AFImageRequestOperation.m */; };
@@ -32,14 +32,14 @@
 		1D5EC77D15327D7200C1D182 /* JSBaseCoreDataBackedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76615327D7200C1D182 /* JSBaseCoreDataBackedEntity.m */; };
 		1D5EC77E15327D7200C1D182 /* JSBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76815327D7200C1D182 /* JSBaseEntity.m */; };
 		1D5EC77F15327D7200C1D182 /* JSEntityProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76C15327D7200C1D182 /* JSEntityProperty.m */; };
-		1D5EC78015327D7200C1D182 /* EntityPropertyBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76E15327D7200C1D182 /* EntityPropertyBool.m */; };
-		1D5EC78115327D7200C1D182 /* EntityPropertyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77015327D7200C1D182 /* EntityPropertyDate.m */; };
-		1D5EC78215327D7200C1D182 /* EntityPropertyFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77215327D7200C1D182 /* EntityPropertyFloat.m */; };
-		1D5EC78315327D7200C1D182 /* EntityPropertyInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77415327D7200C1D182 /* EntityPropertyInt.m */; };
-		1D5EC78415327D7200C1D182 /* EntityPropertyRelationshipOneToMany.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77615327D7200C1D182 /* EntityPropertyRelationshipOneToMany.m */; };
-		1D5EC78515327D7200C1D182 /* EntityPropertyRelationshipOneToOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77815327D7200C1D182 /* EntityPropertyRelationshipOneToOne.m */; };
-		1D5EC78615327D7200C1D182 /* EntityPropertyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77A15327D7200C1D182 /* EntityPropertyString.m */; };
-		1D5EC78715327D7200C1D182 /* EntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77C15327D7200C1D182 /* EntityPropertyURL.m */; };
+		1D5EC78015327D7200C1D182 /* JSEntityPropertyBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76E15327D7200C1D182 /* JSEntityPropertyBool.m */; };
+		1D5EC78115327D7200C1D182 /* JSEntityPropertyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77015327D7200C1D182 /* JSEntityPropertyDate.m */; };
+		1D5EC78215327D7200C1D182 /* JSEntityPropertyFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77215327D7200C1D182 /* JSEntityPropertyFloat.m */; };
+		1D5EC78315327D7200C1D182 /* JSEntityPropertyInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77415327D7200C1D182 /* JSEntityPropertyInt.m */; };
+		1D5EC78415327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77615327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.m */; };
+		1D5EC78515327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77815327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m */; };
+		1D5EC78615327D7200C1D182 /* JSEntityPropertyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77A15327D7200C1D182 /* JSEntityPropertyString.m */; };
+		1D5EC78715327D7200C1D182 /* JSEntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77C15327D7200C1D182 /* JSEntityPropertyURL.m */; };
 		1D5EC78B15327E6600C1D182 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC78A15327E6600C1D182 /* Reachability.m */; };
 		1D5EC78E1532825C00C1D182 /* JSEntityDictionaryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC78D1532825C00C1D182 /* JSEntityDictionaryParser.m */; };
 		1D5EC7911532833700C1D182 /* JSRandomDictionaryGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC7901532833700C1D182 /* JSRandomDictionaryGenerator.m */; };
@@ -57,8 +57,8 @@
 		1D963234153248BC00501145 /* JSWebServiceRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */; };
 		1D963235153248BC00501145 /* JSWebServiceRequestRetryQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F7153248BC00501145 /* JSWebServiceRequestRetryQueue.m */; };
 		1D963236153248BC00501145 /* JSWebServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F8153248BC00501145 /* JSWebServiceResponse.m */; };
-		1D963245153248BC00501145 /* WebServiceProxyMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321A153248BC00501145 /* WebServiceProxyMock.m */; };
-		1D963246153248BC00501145 /* WebServiceRequestMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321C153248BC00501145 /* WebServiceRequestMock.m */; };
+		1D963245153248BC00501145 /* JSWebServiceProxyMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */; };
+		1D963246153248BC00501145 /* JSWebServiceRequestMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321C153248BC00501145 /* JSWebServiceRequestMock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,12 +66,12 @@
 		1D44D07315324A3500BADD37 /* JSMethodSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSMethodSwizzler.m; path = JSRestNetworkKit/Support/JSMethodSwizzler.m; sourceTree = SOURCE_ROOT; };
 		1D44D07515324ABB00BADD37 /* JSClassDescendantOfClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSClassDescendantOfClass.h; path = JSRestNetworkKit/Support/JSClassDescendantOfClass.h; sourceTree = SOURCE_ROOT; };
 		1D44D07615324ABB00BADD37 /* JSClassDescendantOfClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSClassDescendantOfClass.m; path = JSRestNetworkKit/Support/JSClassDescendantOfClass.m; sourceTree = SOURCE_ROOT; };
-		1D44D079153251CD00BADD37 /* NSNumber+RandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+RandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSNumber+RandomValues.h"; sourceTree = SOURCE_ROOT; };
-		1D44D07A153251CD00BADD37 /* NSNumber+RandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+RandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSNumber+RandomValues.m"; sourceTree = SOURCE_ROOT; };
-		1D44D07C1532520100BADD37 /* NSDate+RandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+RandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSDate+RandomValues.h"; sourceTree = SOURCE_ROOT; };
-		1D44D07D1532520100BADD37 /* NSDate+RandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+RandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSDate+RandomValues.m"; sourceTree = SOURCE_ROOT; };
-		1D44D07F1532524F00BADD37 /* NSString+RandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+RandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSString+RandomValues.h"; sourceTree = SOURCE_ROOT; };
-		1D44D0801532524F00BADD37 /* NSString+RandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSString+RandomValues.m"; sourceTree = SOURCE_ROOT; };
+		1D44D079153251CD00BADD37 /* NSNumber+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "NSNumber+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSNumber+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
+		1D44D07A153251CD00BADD37 /* NSNumber+JSRandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+JSRandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSNumber+JSRandomValues.m"; sourceTree = SOURCE_ROOT; };
+		1D44D07C1532520100BADD37 /* NSDate+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "NSDate+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSDate+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
+		1D44D07D1532520100BADD37 /* NSDate+JSRandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JSRandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSDate+JSRandomValues.m"; sourceTree = SOURCE_ROOT; };
+		1D44D07F1532524F00BADD37 /* NSString+JSRandomValues.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "NSString+JSRandomValues.h"; path = "JSRestNetworkKit/Support/Categories/NSString+JSRandomValues.h"; sourceTree = SOURCE_ROOT; };
+		1D44D0801532524F00BADD37 /* NSString+JSRandomValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JSRandomValues.m"; path = "JSRestNetworkKit/Support/Categories/NSString+JSRandomValues.m"; sourceTree = SOURCE_ROOT; };
 		1D44D0841532553A00BADD37 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		1D44D0851532553A00BADD37 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		1D44D0861532553A00BADD37 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -102,28 +102,28 @@
 		1D5EC69F15327A5200C1D182 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1D5EC6A215327A6200C1D182 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1D5EC6A415327BC800C1D182 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		1D5EC76515327D7200C1D182 /* JSBaseCoreDataBackedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSBaseCoreDataBackedEntity.h; sourceTree = "<group>"; };
+		1D5EC76515327D7200C1D182 /* JSBaseCoreDataBackedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseCoreDataBackedEntity.h; sourceTree = "<group>"; };
 		1D5EC76615327D7200C1D182 /* JSBaseCoreDataBackedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseCoreDataBackedEntity.m; sourceTree = "<group>"; };
-		1D5EC76715327D7200C1D182 /* JSBaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSBaseEntity.h; sourceTree = "<group>"; };
+		1D5EC76715327D7200C1D182 /* JSBaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseEntity.h; sourceTree = "<group>"; };
 		1D5EC76815327D7200C1D182 /* JSBaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseEntity.m; sourceTree = "<group>"; };
-		1D5EC76B15327D7200C1D182 /* JSEntityProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSEntityProperty.h; sourceTree = "<group>"; };
+		1D5EC76B15327D7200C1D182 /* JSEntityProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEntityProperty.h; sourceTree = "<group>"; };
 		1D5EC76C15327D7200C1D182 /* JSEntityProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityProperty.m; sourceTree = "<group>"; };
-		1D5EC76D15327D7200C1D182 /* EntityPropertyBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EntityPropertyBool.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		1D5EC76E15327D7200C1D182 /* EntityPropertyBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EntityPropertyBool.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D5EC76F15327D7200C1D182 /* EntityPropertyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EntityPropertyDate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		1D5EC77015327D7200C1D182 /* EntityPropertyDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EntityPropertyDate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D5EC77115327D7200C1D182 /* EntityPropertyFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EntityPropertyFloat.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		1D5EC77215327D7200C1D182 /* EntityPropertyFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EntityPropertyFloat.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D5EC77315327D7200C1D182 /* EntityPropertyInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EntityPropertyInt.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		1D5EC77415327D7200C1D182 /* EntityPropertyInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EntityPropertyInt.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D5EC77515327D7200C1D182 /* EntityPropertyRelationshipOneToMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EntityPropertyRelationshipOneToMany.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		1D5EC77615327D7200C1D182 /* EntityPropertyRelationshipOneToMany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyRelationshipOneToMany.m; sourceTree = "<group>"; };
-		1D5EC77715327D7200C1D182 /* EntityPropertyRelationshipOneToOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyRelationshipOneToOne.h; sourceTree = "<group>"; };
-		1D5EC77815327D7200C1D182 /* EntityPropertyRelationshipOneToOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyRelationshipOneToOne.m; sourceTree = "<group>"; };
-		1D5EC77915327D7200C1D182 /* EntityPropertyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyString.h; sourceTree = "<group>"; };
-		1D5EC77A15327D7200C1D182 /* EntityPropertyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyString.m; sourceTree = "<group>"; };
-		1D5EC77B15327D7200C1D182 /* EntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyURL.h; sourceTree = "<group>"; };
-		1D5EC77C15327D7200C1D182 /* EntityPropertyURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyURL.m; sourceTree = "<group>"; };
+		1D5EC76D15327D7200C1D182 /* JSEntityPropertyBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyBool.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC76E15327D7200C1D182 /* JSEntityPropertyBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSEntityPropertyBool.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D5EC76F15327D7200C1D182 /* JSEntityPropertyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyDate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC77015327D7200C1D182 /* JSEntityPropertyDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSEntityPropertyDate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D5EC77115327D7200C1D182 /* JSEntityPropertyFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyFloat.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC77215327D7200C1D182 /* JSEntityPropertyFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSEntityPropertyFloat.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D5EC77315327D7200C1D182 /* JSEntityPropertyInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyInt.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC77415327D7200C1D182 /* JSEntityPropertyInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSEntityPropertyInt.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D5EC77515327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSEntityPropertyRelationshipOneToMany.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D5EC77615327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyRelationshipOneToMany.m; sourceTree = "<group>"; };
+		1D5EC77715327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSEntityPropertyRelationshipOneToOne.h; sourceTree = "<group>"; };
+		1D5EC77815327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyRelationshipOneToOne.m; sourceTree = "<group>"; };
+		1D5EC77915327D7200C1D182 /* JSEntityPropertyString.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSEntityPropertyString.h; sourceTree = "<group>"; };
+		1D5EC77A15327D7200C1D182 /* JSEntityPropertyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyString.m; sourceTree = "<group>"; };
+		1D5EC77B15327D7200C1D182 /* JSEntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSEntityPropertyURL.h; sourceTree = "<group>"; };
+		1D5EC77C15327D7200C1D182 /* JSEntityPropertyURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyURL.m; sourceTree = "<group>"; };
 		1D5EC78915327E6600C1D182 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1D5EC78A15327E6600C1D182 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1D5EC78C1532825C00C1D182 /* JSEntityDictionaryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEntityDictionaryParser.h; sourceTree = "<group>"; };
@@ -148,10 +148,10 @@
 		1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequestParameters.m; path = JSRestNetworkKit/JSWebServiceRequestParameters.m; sourceTree = SOURCE_ROOT; };
 		1D9631F7153248BC00501145 /* JSWebServiceRequestRetryQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequestRetryQueue.m; path = JSRestNetworkKit/JSWebServiceRequestRetryQueue.m; sourceTree = SOURCE_ROOT; };
 		1D9631F8153248BC00501145 /* JSWebServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceResponse.m; path = JSRestNetworkKit/JSWebServiceResponse.m; sourceTree = SOURCE_ROOT; };
-		1D963219153248BC00501145 /* WebServiceProxyMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceProxyMock.h; sourceTree = "<group>"; };
-		1D96321A153248BC00501145 /* WebServiceProxyMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceProxyMock.m; sourceTree = "<group>"; };
-		1D96321B153248BC00501145 /* WebServiceRequestMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceRequestMock.h; sourceTree = "<group>"; };
-		1D96321C153248BC00501145 /* WebServiceRequestMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceRequestMock.m; sourceTree = "<group>"; };
+		1D963219153248BC00501145 /* JSWebServiceProxyMock.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSWebServiceProxyMock.h; sourceTree = "<group>"; };
+		1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebServiceProxyMock.m; sourceTree = "<group>"; };
+		1D96321B153248BC00501145 /* JSWebServiceRequestMock.h */ = {isa = PBXFileReference; fileEncoding = 4; path = JSWebServiceRequestMock.h; sourceTree = "<group>"; };
+		1D96321C153248BC00501145 /* JSWebServiceRequestMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebServiceRequestMock.m; sourceTree = "<group>"; };
 		1D963228153248BC00501145 /* JSReachabilityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSReachabilityService.h; path = JSRestNetworkKit/JSReachabilityService.h; sourceTree = SOURCE_ROOT; };
 		1D963229153248BC00501145 /* JSBaseWebServiceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBaseWebServiceProxy.h; path = JSRestNetworkKit/JSBaseWebServiceProxy.h; sourceTree = SOURCE_ROOT; };
 		1D96322A153248BC00501145 /* JSWebServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceRequest.h; path = JSRestNetworkKit/JSWebServiceRequest.h; sourceTree = SOURCE_ROOT; };
@@ -194,12 +194,12 @@
 		1D44D078153251B200BADD37 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				1D44D079153251CD00BADD37 /* NSNumber+RandomValues.h */,
-				1D44D07A153251CD00BADD37 /* NSNumber+RandomValues.m */,
-				1D44D07C1532520100BADD37 /* NSDate+RandomValues.h */,
-				1D44D07D1532520100BADD37 /* NSDate+RandomValues.m */,
-				1D44D07F1532524F00BADD37 /* NSString+RandomValues.h */,
-				1D44D0801532524F00BADD37 /* NSString+RandomValues.m */,
+				1D44D079153251CD00BADD37 /* NSNumber+JSRandomValues.h */,
+				1D44D07A153251CD00BADD37 /* NSNumber+JSRandomValues.m */,
+				1D44D07C1532520100BADD37 /* NSDate+JSRandomValues.h */,
+				1D44D07D1532520100BADD37 /* NSDate+JSRandomValues.m */,
+				1D44D07F1532524F00BADD37 /* NSString+JSRandomValues.h */,
+				1D44D0801532524F00BADD37 /* NSString+JSRandomValues.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -291,22 +291,22 @@
 			children = (
 				1D5EC76B15327D7200C1D182 /* JSEntityProperty.h */,
 				1D5EC76C15327D7200C1D182 /* JSEntityProperty.m */,
-				1D5EC76D15327D7200C1D182 /* EntityPropertyBool.h */,
-				1D5EC76E15327D7200C1D182 /* EntityPropertyBool.m */,
-				1D5EC76F15327D7200C1D182 /* EntityPropertyDate.h */,
-				1D5EC77015327D7200C1D182 /* EntityPropertyDate.m */,
-				1D5EC77115327D7200C1D182 /* EntityPropertyFloat.h */,
-				1D5EC77215327D7200C1D182 /* EntityPropertyFloat.m */,
-				1D5EC77315327D7200C1D182 /* EntityPropertyInt.h */,
-				1D5EC77415327D7200C1D182 /* EntityPropertyInt.m */,
-				1D5EC77515327D7200C1D182 /* EntityPropertyRelationshipOneToMany.h */,
-				1D5EC77615327D7200C1D182 /* EntityPropertyRelationshipOneToMany.m */,
-				1D5EC77715327D7200C1D182 /* EntityPropertyRelationshipOneToOne.h */,
-				1D5EC77815327D7200C1D182 /* EntityPropertyRelationshipOneToOne.m */,
-				1D5EC77915327D7200C1D182 /* EntityPropertyString.h */,
-				1D5EC77A15327D7200C1D182 /* EntityPropertyString.m */,
-				1D5EC77B15327D7200C1D182 /* EntityPropertyURL.h */,
-				1D5EC77C15327D7200C1D182 /* EntityPropertyURL.m */,
+				1D5EC76D15327D7200C1D182 /* JSEntityPropertyBool.h */,
+				1D5EC76E15327D7200C1D182 /* JSEntityPropertyBool.m */,
+				1D5EC76F15327D7200C1D182 /* JSEntityPropertyDate.h */,
+				1D5EC77015327D7200C1D182 /* JSEntityPropertyDate.m */,
+				1D5EC77115327D7200C1D182 /* JSEntityPropertyFloat.h */,
+				1D5EC77215327D7200C1D182 /* JSEntityPropertyFloat.m */,
+				1D5EC77315327D7200C1D182 /* JSEntityPropertyInt.h */,
+				1D5EC77415327D7200C1D182 /* JSEntityPropertyInt.m */,
+				1D5EC77515327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.h */,
+				1D5EC77615327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.m */,
+				1D5EC77715327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.h */,
+				1D5EC77815327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m */,
+				1D5EC77915327D7200C1D182 /* JSEntityPropertyString.h */,
+				1D5EC77A15327D7200C1D182 /* JSEntityPropertyString.m */,
+				1D5EC77B15327D7200C1D182 /* JSEntityPropertyURL.h */,
+				1D5EC77C15327D7200C1D182 /* JSEntityPropertyURL.m */,
 			);
 			path = PropertyTypes;
 			sourceTree = "<group>";
@@ -401,10 +401,10 @@
 		1D963218153248BC00501145 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				1D963219153248BC00501145 /* WebServiceProxyMock.h */,
-				1D96321A153248BC00501145 /* WebServiceProxyMock.m */,
-				1D96321B153248BC00501145 /* WebServiceRequestMock.h */,
-				1D96321C153248BC00501145 /* WebServiceRequestMock.m */,
+				1D963219153248BC00501145 /* JSWebServiceProxyMock.h */,
+				1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */,
+				1D96321B153248BC00501145 /* JSWebServiceRequestMock.h */,
+				1D96321C153248BC00501145 /* JSWebServiceRequestMock.m */,
 			);
 			name = Mocks;
 			path = JSRestNetworkKit/Mocks;
@@ -495,13 +495,13 @@
 				1D963234153248BC00501145 /* JSWebServiceRequestParameters.m in Sources */,
 				1D963235153248BC00501145 /* JSWebServiceRequestRetryQueue.m in Sources */,
 				1D963236153248BC00501145 /* JSWebServiceResponse.m in Sources */,
-				1D963245153248BC00501145 /* WebServiceProxyMock.m in Sources */,
-				1D963246153248BC00501145 /* WebServiceRequestMock.m in Sources */,
+				1D963245153248BC00501145 /* JSWebServiceProxyMock.m in Sources */,
+				1D963246153248BC00501145 /* JSWebServiceRequestMock.m in Sources */,
 				1D44D07415324A3500BADD37 /* JSMethodSwizzler.m in Sources */,
 				1D44D07715324ABB00BADD37 /* JSClassDescendantOfClass.m in Sources */,
-				1D44D07B153251CD00BADD37 /* NSNumber+RandomValues.m in Sources */,
-				1D44D07E1532520100BADD37 /* NSDate+RandomValues.m in Sources */,
-				1D44D0811532524F00BADD37 /* NSString+RandomValues.m in Sources */,
+				1D44D07B153251CD00BADD37 /* NSNumber+JSRandomValues.m in Sources */,
+				1D44D07E1532520100BADD37 /* NSDate+JSRandomValues.m in Sources */,
+				1D44D0811532524F00BADD37 /* NSString+JSRandomValues.m in Sources */,
 				1D44D0EA1532553A00BADD37 /* AFHTTPClient.m in Sources */,
 				1D44D0EB1532553A00BADD37 /* AFHTTPRequestOperation.m in Sources */,
 				1D44D0EC1532553A00BADD37 /* AFImageRequestOperation.m in Sources */,
@@ -517,14 +517,14 @@
 				1D5EC77D15327D7200C1D182 /* JSBaseCoreDataBackedEntity.m in Sources */,
 				1D5EC77E15327D7200C1D182 /* JSBaseEntity.m in Sources */,
 				1D5EC77F15327D7200C1D182 /* JSEntityProperty.m in Sources */,
-				1D5EC78015327D7200C1D182 /* EntityPropertyBool.m in Sources */,
-				1D5EC78115327D7200C1D182 /* EntityPropertyDate.m in Sources */,
-				1D5EC78215327D7200C1D182 /* EntityPropertyFloat.m in Sources */,
-				1D5EC78315327D7200C1D182 /* EntityPropertyInt.m in Sources */,
-				1D5EC78415327D7200C1D182 /* EntityPropertyRelationshipOneToMany.m in Sources */,
-				1D5EC78515327D7200C1D182 /* EntityPropertyRelationshipOneToOne.m in Sources */,
-				1D5EC78615327D7200C1D182 /* EntityPropertyString.m in Sources */,
-				1D5EC78715327D7200C1D182 /* EntityPropertyURL.m in Sources */,
+				1D5EC78015327D7200C1D182 /* JSEntityPropertyBool.m in Sources */,
+				1D5EC78115327D7200C1D182 /* JSEntityPropertyDate.m in Sources */,
+				1D5EC78215327D7200C1D182 /* JSEntityPropertyFloat.m in Sources */,
+				1D5EC78315327D7200C1D182 /* JSEntityPropertyInt.m in Sources */,
+				1D5EC78415327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.m in Sources */,
+				1D5EC78515327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m in Sources */,
+				1D5EC78615327D7200C1D182 /* JSEntityPropertyString.m in Sources */,
+				1D5EC78715327D7200C1D182 /* JSEntityPropertyURL.m in Sources */,
 				1D5EC78B15327E6600C1D182 /* Reachability.m in Sources */,
 				1D5EC78E1532825C00C1D182 /* JSEntityDictionaryParser.m in Sources */,
 				1D5EC7911532833700C1D182 /* JSRandomDictionaryGenerator.m in Sources */,

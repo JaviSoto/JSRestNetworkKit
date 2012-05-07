@@ -14,20 +14,11 @@
  limitations under the License. 
  */
 
-#import "NSDate+RandomValues.h"
+#import <Foundation/Foundation.h>
 
-#import "NSNumber+RandomValues.h"
+@interface NSString (JSRandomValues)
 
-@implementation NSDate (RandomValues)
-
-+ (NSDate *)randomPastDate
-{
-    return [NSDate dateWithTimeIntervalSinceNow:[NSNumber randomIntBetweenNumber:0 andNumber:10000]];
-}
-
-+ (NSTimeInterval)randomUnixTimeOfPastDate
-{
-    return [[self randomPastDate] timeIntervalSince1970];
-}
++ (NSString *)randomStringWithLength:(int)length;
++ (NSString *)randomStringWithLengthBetween:(int)minLength and:(int)maxLength;
 
 @end

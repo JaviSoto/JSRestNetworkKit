@@ -14,8 +14,13 @@
  limitations under the License. 
  */
 
-#import "JSBaseWebServiceProxy.h"
+#import <Foundation/Foundation.h>
 
-@interface WebServiceProxyMock : JSBaseWebServiceProxy
+@interface NSNumber (JSRandomValues)
+
++ (NSUInteger)randomIntBetweenNumber:(NSUInteger)minNumber andNumber:(NSUInteger)maxNumber;
++ (NSNumber *)randomNumberBetweenNumber:(NSUInteger)minNumber andNumber:(NSUInteger)maxNumber;
++ (BOOL)randomBool;
++ (NSNumber *)randomBoolNumber;
 
 @end
