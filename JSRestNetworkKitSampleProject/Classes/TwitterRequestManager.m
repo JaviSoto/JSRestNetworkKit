@@ -36,6 +36,8 @@
     return self;
 }
 
+/* https://dev.twitter.com/docs/api/1/get/search */
+
 - (void)requestTweetsWithSearch:(NSString *)search successCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error
 {
     JSWebServiceRequestParameters *parameters = [JSWebServiceRequestParameters emptyRequestParameters];
