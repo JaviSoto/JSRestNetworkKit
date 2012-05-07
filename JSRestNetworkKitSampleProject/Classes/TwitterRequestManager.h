@@ -13,6 +13,6 @@ typedef JSProxyErrorCallback TwitterRequestManagerErrorCallback;
 
 - (id)init;
 
-- (void)requestTimelineWithSuccessCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error;
+- (void)requestTweetsWithSearch:(NSString *)search successCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error;
 
 @end

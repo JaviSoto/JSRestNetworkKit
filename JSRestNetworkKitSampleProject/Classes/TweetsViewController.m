@@ -48,7 +48,7 @@
 
 - (void)loadTweets
 {
-    [_twitterReqManager requestTimelineWithSuccessCallback:^(id data, BOOL cached) {
+    [_twitterReqManager requestTweetsWithSearch:@"iphone" successCallback:^(id data, BOOL cached) {
         self.tweets = data;
         [self.tableView reloadData];
     } errorCallback:^{

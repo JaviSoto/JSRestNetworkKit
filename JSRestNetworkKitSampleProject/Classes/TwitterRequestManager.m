@@ -36,10 +36,10 @@
     return self;
 }
 
-- (void)requestTimelineWithSuccessCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error
+- (void)requestTweetsWithSearch:(NSString *)search successCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error
 {
     JSWebServiceRequestParameters *parameters = [JSWebServiceRequestParameters emptyRequestParameters];
-    [parameters setValue:@"iphone" forKey:@"q"];
+    [parameters setValue:search forKey:@"q"];
     
     JSWebServiceRequest *request = [[JSWebServiceRequest alloc] initWithType:JSWebServiceRequestTypeGET path:@"search.json" parameters:parameters];
     
