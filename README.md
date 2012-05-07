@@ -1,6 +1,6 @@
 #Description:
 
-JSRestNetworkKit is a light weight library to manage the backend of your iOS / Mac OSX applications perfect to work against a model-based REST backend.
+JSRestNetworkKit is a lightweight library to manage the backend of your iOS / Mac OSX applications perfect to work against a model-based REST backend.
 It's a framework written on top of AFNetworking that allows to write the backend code of apps with very little code.
 
 #Features:
