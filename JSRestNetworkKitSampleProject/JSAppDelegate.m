@@ -29,6 +29,7 @@
     tabBar.viewControllers = tabBarControllers;
     
     self.window.rootViewController = tabBar;
+    [tabBar release];
     
     [self.window makeKeyAndVisible];
     return YES;

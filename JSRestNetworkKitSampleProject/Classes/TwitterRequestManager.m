@@ -57,10 +57,13 @@
         {
             Tweet *tweet = [[Tweet alloc] initWithDictionary:tweetDictionary];
             [tweets addObject:tweet];
+            [tweet release];
         }
             
         return tweets;
     } success:success error:error];
+    
+    [request release];
 }
 
 #pragma mark - Memory Management
