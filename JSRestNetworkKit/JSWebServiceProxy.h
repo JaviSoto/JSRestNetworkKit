@@ -21,29 +21,24 @@
 
 typedef void (^JSProxySuccessCallback)(id data, BOOL cached);
 typedef void (^JSProxyErrorCallback)();
-typedef id (^ProxyDataParsingBlock)(id data);
+typedef id (^JSProxyDataParsingBlock)(id data);
 
 @class JSWebServiceRequest;
 @protocol JSWebServiceRequestSigning;
 
-@interface JSBaseWebServiceProxy : AFHTTPClient
+@interface JSWebServiceProxy : AFHTTPClient
 
 /* Optional: set to be able to sign a request (by modifying its headers) before it's performed */
 @property (nonatomic, retain) id<JSWebServiceRequestSigning> requestSigner;
 
-+ (JSBaseWebServiceProxy *)instance;
-
-- (void)makeRequest:(JSWebServiceRequest *)wsRequest 
+- (void)makeRequest:(JSWebServiceRequest *)request
             success:(JSProxySuccessCallback)successCallback 
               error:(JSProxyErrorCallback)errorCallback;
 
-- (void)makeRequest:(JSWebServiceRequest *)wsRequest 
+- (void)makeRequest:(JSWebServiceRequest *)request
        withCacheKey:(NSString *)cacheKey
-         parseBlock:(ProxyDataParsingBlock)parsingBlock
+         parseBlock:(JSProxyDataParsingBlock)parsingBlock
             success:(JSProxySuccessCallback)successCallback 
               error:(JSProxyErrorCallback)errorCallback;
-
-/* Required: implement this method in your own subclass */
-+ (NSString *)webServiceBaseURL;
 
 @end

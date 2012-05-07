@@ -58,13 +58,11 @@
 		1D8448BF1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D8448BD1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld */; };
 		1D91E3F215576D8600532996 /* TwitterRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E3F115576D8600532996 /* TwitterRequestManager.m */; };
 		1D963230153248BC00501145 /* JSReachabilityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F2153248BC00501145 /* JSReachabilityService.m */; };
-		1D963231153248BC00501145 /* JSBaseWebServiceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F3153248BC00501145 /* JSBaseWebServiceProxy.m */; };
+		1D963231153248BC00501145 /* JSWebServiceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F3153248BC00501145 /* JSWebServiceProxy.m */; };
 		1D963232153248BC00501145 /* JSWebServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F4153248BC00501145 /* JSWebServiceRequest.m */; };
 		1D963234153248BC00501145 /* JSWebServiceRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */; };
-		1D963235153248BC00501145 /* JSWebServiceRequestRetryQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F7153248BC00501145 /* JSWebServiceRequestRetryQueue.m */; };
 		1D963236153248BC00501145 /* JSWebServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F8153248BC00501145 /* JSWebServiceResponse.m */; };
 		1D963245153248BC00501145 /* JSWebServiceProxyMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */; };
-		1D963246153248BC00501145 /* JSWebServiceRequestMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321C153248BC00501145 /* JSWebServiceRequestMock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,20 +158,16 @@
 		1D91E3F015576D8600532996 /* TwitterRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterRequestManager.h; path = Classes/TwitterRequestManager.h; sourceTree = "<group>"; };
 		1D91E3F115576D8600532996 /* TwitterRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterRequestManager.m; path = Classes/TwitterRequestManager.m; sourceTree = "<group>"; };
 		1D9631F2153248BC00501145 /* JSReachabilityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSReachabilityService.m; path = JSRestNetworkKit/JSReachabilityService.m; sourceTree = SOURCE_ROOT; };
-		1D9631F3153248BC00501145 /* JSBaseWebServiceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSBaseWebServiceProxy.m; path = JSRestNetworkKit/JSBaseWebServiceProxy.m; sourceTree = SOURCE_ROOT; };
+		1D9631F3153248BC00501145 /* JSWebServiceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceProxy.m; path = JSRestNetworkKit/JSWebServiceProxy.m; sourceTree = SOURCE_ROOT; };
 		1D9631F4153248BC00501145 /* JSWebServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequest.m; path = JSRestNetworkKit/JSWebServiceRequest.m; sourceTree = SOURCE_ROOT; };
 		1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequestParameters.m; path = JSRestNetworkKit/JSWebServiceRequestParameters.m; sourceTree = SOURCE_ROOT; };
-		1D9631F7153248BC00501145 /* JSWebServiceRequestRetryQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceRequestRetryQueue.m; path = JSRestNetworkKit/JSWebServiceRequestRetryQueue.m; sourceTree = SOURCE_ROOT; };
 		1D9631F8153248BC00501145 /* JSWebServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSWebServiceResponse.m; path = JSRestNetworkKit/JSWebServiceResponse.m; sourceTree = SOURCE_ROOT; };
 		1D963219153248BC00501145 /* JSWebServiceProxyMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebServiceProxyMock.h; sourceTree = "<group>"; };
 		1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebServiceProxyMock.m; sourceTree = "<group>"; };
-		1D96321B153248BC00501145 /* JSWebServiceRequestMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebServiceRequestMock.h; sourceTree = "<group>"; };
-		1D96321C153248BC00501145 /* JSWebServiceRequestMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebServiceRequestMock.m; sourceTree = "<group>"; };
 		1D963228153248BC00501145 /* JSReachabilityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSReachabilityService.h; path = JSRestNetworkKit/JSReachabilityService.h; sourceTree = SOURCE_ROOT; };
-		1D963229153248BC00501145 /* JSBaseWebServiceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSBaseWebServiceProxy.h; path = JSRestNetworkKit/JSBaseWebServiceProxy.h; sourceTree = SOURCE_ROOT; };
+		1D963229153248BC00501145 /* JSWebServiceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceProxy.h; path = JSRestNetworkKit/JSWebServiceProxy.h; sourceTree = SOURCE_ROOT; };
 		1D96322A153248BC00501145 /* JSWebServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceRequest.h; path = JSRestNetworkKit/JSWebServiceRequest.h; sourceTree = SOURCE_ROOT; };
 		1D96322C153248BC00501145 /* JSWebServiceRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceRequestParameters.h; path = JSRestNetworkKit/JSWebServiceRequestParameters.h; sourceTree = SOURCE_ROOT; };
-		1D96322D153248BC00501145 /* JSWebServiceRequestRetryQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceRequestRetryQueue.h; path = JSRestNetworkKit/JSWebServiceRequestRetryQueue.h; sourceTree = SOURCE_ROOT; };
 		1D96322E153248BC00501145 /* JSWebServiceRequestSigning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceRequestSigning.h; path = JSRestNetworkKit/JSWebServiceRequestSigning.h; sourceTree = SOURCE_ROOT; };
 		1D96322F153248BC00501145 /* JSWebServiceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSWebServiceResponse.h; path = JSRestNetworkKit/JSWebServiceResponse.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -439,14 +433,12 @@
 				1D17810615576C5C0011C13C /* JSRestNetworkKit.h */,
 				1D963228153248BC00501145 /* JSReachabilityService.h */,
 				1D9631F2153248BC00501145 /* JSReachabilityService.m */,
-				1D963229153248BC00501145 /* JSBaseWebServiceProxy.h */,
-				1D9631F3153248BC00501145 /* JSBaseWebServiceProxy.m */,
+				1D963229153248BC00501145 /* JSWebServiceProxy.h */,
+				1D9631F3153248BC00501145 /* JSWebServiceProxy.m */,
 				1D96322A153248BC00501145 /* JSWebServiceRequest.h */,
 				1D9631F4153248BC00501145 /* JSWebServiceRequest.m */,
 				1D96322C153248BC00501145 /* JSWebServiceRequestParameters.h */,
 				1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */,
-				1D96322D153248BC00501145 /* JSWebServiceRequestRetryQueue.h */,
-				1D9631F7153248BC00501145 /* JSWebServiceRequestRetryQueue.m */,
 				1D96322E153248BC00501145 /* JSWebServiceRequestSigning.h */,
 				1D96322F153248BC00501145 /* JSWebServiceResponse.h */,
 				1D9631F8153248BC00501145 /* JSWebServiceResponse.m */,
@@ -463,8 +455,6 @@
 			children = (
 				1D963219153248BC00501145 /* JSWebServiceProxyMock.h */,
 				1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */,
-				1D96321B153248BC00501145 /* JSWebServiceRequestMock.h */,
-				1D96321C153248BC00501145 /* JSWebServiceRequestMock.m */,
 			);
 			name = Mocks;
 			path = JSRestNetworkKit/Mocks;
@@ -552,13 +542,11 @@
 				1D8448BC1532443000F99DE1 /* JSAppDelegate.m in Sources */,
 				1D8448BF1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld in Sources */,
 				1D963230153248BC00501145 /* JSReachabilityService.m in Sources */,
-				1D963231153248BC00501145 /* JSBaseWebServiceProxy.m in Sources */,
+				1D963231153248BC00501145 /* JSWebServiceProxy.m in Sources */,
 				1D963232153248BC00501145 /* JSWebServiceRequest.m in Sources */,
 				1D963234153248BC00501145 /* JSWebServiceRequestParameters.m in Sources */,
-				1D963235153248BC00501145 /* JSWebServiceRequestRetryQueue.m in Sources */,
 				1D963236153248BC00501145 /* JSWebServiceResponse.m in Sources */,
 				1D963245153248BC00501145 /* JSWebServiceProxyMock.m in Sources */,
-				1D963246153248BC00501145 /* JSWebServiceRequestMock.m in Sources */,
 				1D44D07415324A3500BADD37 /* JSMethodSwizzler.m in Sources */,
 				1D44D07715324ABB00BADD37 /* JSClassDescendantOfClass.m in Sources */,
 				1D44D07B153251CD00BADD37 /* NSNumber+JSRandomValues.m in Sources */,

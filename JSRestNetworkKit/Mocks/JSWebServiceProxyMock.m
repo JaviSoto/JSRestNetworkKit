@@ -15,7 +15,6 @@
  */
 
 #import "JSWebServiceProxyMock.h"
-#import "JSWebServiceRequestMock.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
 
@@ -25,28 +24,23 @@
 
 @implementation JSWebServiceProxyMock
 
-+ (JSBaseWebServiceProxy *)instance {
-    static dispatch_once_t dispatchOncePredicate;
-    static JSWebServiceProxyMock *myInstance = nil;
-    
-    dispatch_once(&dispatchOncePredicate, ^{
-        myInstance = [[JSWebServiceProxyMock alloc] initWithBaseURL:[NSURL URLWithString:@"http://dummy"]];
-	});
-    
-    return myInstance;
-}
-
-- (id)initWithBaseURL:(NSURL *)url
+- (void)runRequest:(JSWebServiceRequest *)request
+           success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success
+           failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure
 {
-    if ((self = [super initWithBaseURL:url]))
-    {
-        NSLog(@"Starting app with WebServiceProxyMock ENABLED");
-    }
+    NSString *path = request.path;
+    #pragma unused(path)
     
-    return self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            
+            // Return random data depending on url
+            
+        });
+    });
 }
 
-- (void)makeRequest:(JSWebServiceRequest *)wsRequest withCacheKey:(NSString *)cacheKey parseBlock:(ProxyDataParsingBlock)parsingBlock success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSWebServiceRequest *)request withCacheKey:(NSString *)cacheKey parseBlock:(JSProxyDataParsingBlock)parsingBlock success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
 {
     static const CGFloat kMockRequestMaxDurationInSeconds = 1.4f;
     static const NSInteger kMockRequestFailuresPerHundred = 5;
@@ -77,10 +71,8 @@
             BOOL failure = ((arc4random() % 100) < kMockRequestFailuresPerHundred);
             
             if (!failure)
-            {    
-                JSWebServiceRequestMock *requestMock = [JSWebServiceRequestMock mockRequestWithRequest:wsRequest];                
-                
-                [requestMock runRequestWithSuccess:^(NSURLRequest *request, NSURLResponse *response, id JSON) {
+            {               
+                [self runRequest:request success:^(NSURLRequest *request, NSURLResponse *response, id JSON) {
                     [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
                     JSWebServiceResponse *wsResponse = [[[JSWebServiceResponse alloc] initWithDictionary:JSON] autorelease];
                     if (wsResponse.code == WSResponseNoError)

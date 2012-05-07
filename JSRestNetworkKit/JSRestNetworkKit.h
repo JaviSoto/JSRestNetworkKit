@@ -8,4 +8,6 @@
 
 #import "JSBaseEntity.h"
 #import "JSEntityProperty.h"
-#import "JSBaseWebServiceProxy.h"
+#import "JSWebServiceProxy.h"
+#import "JSWebServiceRequest.h"
+#import "JSWebServiceRequestParameters.h"
