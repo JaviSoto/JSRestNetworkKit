@@ -8,7 +8,7 @@
 
 #import "TweetCell.h"
 
-#import "UIImageView+AFNetworking.h"
+#import "UIImageView+AFNetworkingJSAdditions.h"
 
 #import "Tweet.h"
 

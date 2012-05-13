@@ -10,6 +10,8 @@
 
 @implementation Tweet
 
+@synthesize username, text, profileImageURL;
+
 + (NSArray *)entityProperties
 {
     static NSMutableArray *entityProperties = nil;
