@@ -6,13 +6,15 @@
 //  Copyright (c) 2012 JavierSoto. All rights reserved.
 //
 
-#import "TweetsViewController.h"
+#import "TimelineViewController.h"
 
 #import "TweetCell.h"
+#import "TwitterUserViewController.h"
 
 #import "TwitterRequestManager.h"
+#import "Tweet.h"
 
-@interface TweetsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TimelineViewController () <UITableViewDelegate, UITableViewDataSource>
 {
     TwitterRequestManager *_twitterReqManager;
 }
@@ -22,7 +24,7 @@
 @property (nonatomic, retain) NSArray *tweets;
 @end
 
-@implementation TweetsViewController
+@implementation TimelineViewController
 
 @synthesize tableView = _tableView;
 @synthesize cellNib = _cellNib;
@@ -34,6 +36,8 @@
     if ((self = [super init]))
     {
         _twitterReqManager = [[TwitterRequestManager alloc] init];
+        
+        self.title = @"Timeline";
     }
     
     return self;
@@ -48,7 +52,7 @@
 
 - (void)loadTweets
 {
-    [_twitterReqManager requestTweetsWithSearch:@"iphone" successCallback:^(id data, BOOL cached) {
+    [_twitterReqManager requestTimelineWithSuccessCallback:^(id data, BOOL cached) {
         self.tweets = data;
         [self.tableView reloadData];
     } errorCallback:^{
@@ -58,7 +62,7 @@
 
 #pragma mark - Table View Methods
 
-- (NSInteger)tableView:(UITableView *)tableview numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.tweets.count;
 }
@@ -77,6 +81,15 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Tweet *tweet = [self.tweets objectAtIndex:indexPath.row];
+    
+    TwitterUserViewController *userVC = [[TwitterUserViewController alloc] initWithUser:tweet.user requestManager:_twitterReqManager];
+    [self.navigationController pushViewController:userVC animated:YES];
+    [userVC release];
+}
+
 #pragma mark - Memory management
                 
 - (UINib *)cellNib
@@ -86,7 +99,6 @@
     
     return _cellNib;
 }
-
 
 - (void)viewDidUnload {
     self.tableView = nil;

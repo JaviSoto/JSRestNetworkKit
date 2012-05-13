@@ -82,6 +82,11 @@
     [JSEntityDictionaryParser parseDictionary:feed inManagedObjectContext:managedObjectContext inEntityObject:self];
 }
 
+- (void)parseDictionary:(NSDictionary *)feed
+{
+    [self parseDictionary:feed inManagedObjectContext:nil];
+}
+
 + (NSArray *)entityProperties
 {
     NSLog(@"+ entityProperties not implemented for %@ class!", NSStringFromClass([self class]));

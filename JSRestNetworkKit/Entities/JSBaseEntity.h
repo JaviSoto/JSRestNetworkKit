@@ -42,4 +42,6 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
+- (void)parseDictionary:(NSDictionary *)dictionary;
+
 @end

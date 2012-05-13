@@ -17,7 +17,7 @@
 
 - (id)dataFromResponseDictionary:(NSDictionary *)dictionary
 {
-    return [dictionary valueForKey:@"results"];
+    return dictionary;
 }
 
 @end

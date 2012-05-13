@@ -9,6 +9,8 @@
 #import "JSBaseEntity.h"
 #import "JSEntityProperty.h"
 #import "JSWebServiceProxy.h"
+#import "JSWebServiceProxyMock.h"
 #import "JSWebServiceRequest.h"
 #import "JSWebServiceRequestParameters.h"
+#import "JSWebServiceRequestSigning.h"
 #import "JSWebServiceResponseParser.h"

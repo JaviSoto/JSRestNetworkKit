@@ -9,10 +9,21 @@
 typedef JSProxySuccessCallback TwitterRequestManagerSucessCallback;
 typedef JSProxyErrorCallback TwitterRequestManagerErrorCallback;
 
+@class TwitterUser;
+
 @interface TwitterRequestManager : NSObject
 
 - (id)init;
 
-- (void)requestTweetsWithSearch:(NSString *)search successCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error;
+- (void)requestTimelineWithSuccessCallback:(TwitterRequestManagerSucessCallback)success
+                             errorCallback:(TwitterRequestManagerErrorCallback)error;
+
+- (void)requestUser:(TwitterUser *)user
+    successCallback:(TwitterRequestManagerSucessCallback)success
+      errorCallback:(TwitterRequestManagerErrorCallback)error;
+
+- (void)requestUserTimeline:(TwitterUser *)user
+            successCallback:(TwitterRequestManagerSucessCallback)success
+              errorCallback:(TwitterRequestManagerErrorCallback)error;
 
 @end

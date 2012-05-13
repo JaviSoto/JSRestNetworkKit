@@ -6,10 +6,11 @@
 //  Copyright (c) 2012 JavierSoto. All rights reserved.
 //
 
+@class TwitterUser;
+
 @interface Tweet : JSBaseEntity
 
-@property (nonatomic, copy) NSString *username;
+@property (nonatomic, retain) TwitterUser *user;
 @property (nonatomic, copy) NSString *text;
-@property (nonatomic, copy) NSURL *profileImageURL;
 
 @end

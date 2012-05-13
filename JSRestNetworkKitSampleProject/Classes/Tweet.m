@@ -8,9 +8,11 @@
 
 #import "Tweet.h"
 
+#import "TwitterUser.h"
+
 @implementation Tweet
 
-@synthesize username, text, profileImageURL;
+@synthesize user, text;
 
 + (NSArray *)entityProperties
 {
@@ -20,9 +22,8 @@
     dispatch_once(&onceToken, ^{
         entityProperties = [[NSMutableArray alloc] init];
         
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"from_user_name" andLocalKey:@"username" propertyType:JSEntityPropertyTypeString]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithKey:@"user" relationClass:[TwitterUser class] propertyType:JSEntityPropertyTypeRelationshipOneToOne]];
         [entityProperties addObject:[JSEntityProperty entityPropertyWithKey:@"text" propertyType:JSEntityPropertyTypeString]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"profile_image_url" andLocalKey:@"profileImageURL" propertyType:JSEntityPropertyTypeURL]];
     });
     
     return entityProperties;

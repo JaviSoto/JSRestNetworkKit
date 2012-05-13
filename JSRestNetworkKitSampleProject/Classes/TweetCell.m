@@ -11,6 +11,7 @@
 #import "UIImageView+AFNetworkingJSAdditions.h"
 
 #import "Tweet.h"
+#import "TwitterUser.h"
 
 @interface TweetCell ()
 @property (retain, nonatomic) IBOutlet UIImageView *userAvatar;
@@ -25,8 +26,8 @@
 
 - (void)setTweet:(Tweet *)tweet
 {
-    [self.userAvatar setImageWithURL:tweet.profileImageURL];
-    self.username.text = tweet.username;
+    [self.userAvatar setImageWithURL:tweet.user.avatarURL];
+    self.username.text = [NSString stringWithFormat:@"@%@", tweet.user.screenName]  ;
     self.tweetText.text = tweet.text;
 }
 

@@ -8,7 +8,7 @@
 
 #import "JSAppDelegate.h"
 
-#import "TweetsViewController.h"
+#import "TimelineViewController.h"
 
 @implementation JSAppDelegate
 
@@ -24,7 +24,7 @@
     UITabBarController *tabBar = [[UITabBarController alloc] init];
     NSMutableArray *tabBarControllers = [NSMutableArray array];
     
-    [tabBarControllers addObject:[[[TweetsViewController alloc] init] autorelease]];
+    [tabBarControllers addObject:[[[UINavigationController alloc] initWithRootViewController:[[[TimelineViewController alloc] init] autorelease]] autorelease]];
     
     tabBar.viewControllers = tabBarControllers;
     
