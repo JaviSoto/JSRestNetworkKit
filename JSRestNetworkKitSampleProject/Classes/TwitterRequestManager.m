@@ -55,6 +55,7 @@
         
         for (NSDictionary *tweetDictionary in tweetDictionaries)
         {
+            // This is where all the magic happens: initWithDictionary works out of the box, just because we defined the properties of the class Tweet in the method +entityProperties
             Tweet *tweet = [[Tweet alloc] initWithDictionary:tweetDictionary];
             [tweets addObject:tweet];
             [tweet release];
