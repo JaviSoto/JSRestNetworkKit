@@ -13,6 +13,10 @@ It's a framework written on top of AFNetworking that allows to write the backend
 
 #Components:
 
+#ARC:
+
+JSRestNetworkKit doesn't support ARC at the moment. If you want to integrate it in your ARC project, simply add the ```-fno-objc-arc``` linker option to each of the implementation files. [Quick tutorial](http://maniacdev.com/2012/01/easily-get-non-arc-enabled-open-source-libraries-working-in-arc-enabled-projects/)
+
 #Examples:
 
 #Thanks to:
