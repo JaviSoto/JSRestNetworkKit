@@ -12,6 +12,8 @@
 		1D1780FF155768C80011C13C /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1780FE155768C80011C13C /* TweetCell.m */; };
 		1D178101155768DB0011C13C /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D178100155768DB0011C13C /* TweetCell.xib */; };
 		1D17810515576BC70011C13C /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D17810415576BC70011C13C /* Tweet.m */; };
+		1D40F3CE156082CD00FDADF3 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393F8155F3DF000ECB907 /* EGOCache.m */; };
+		1D40F3D11560831100FDADF3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D40F3D01560831100FDADF3 /* SystemConfiguration.framework */; };
 		1D44D07415324A3500BADD37 /* JSMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07315324A3500BADD37 /* JSMethodSwizzler.m */; };
 		1D44D07715324ABB00BADD37 /* JSClassDescendantOfClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07615324ABB00BADD37 /* JSClassDescendantOfClass.m */; };
 		1D44D07B153251CD00BADD37 /* NSNumber+JSRandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07A153251CD00BADD37 /* NSNumber+JSRandomValues.m */; };
@@ -56,6 +58,57 @@
 		1DA302C615603C0D001E6F46 /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302C515603C0C001E6F46 /* TwitterUser.m */; };
 		1DA302CA15603DB1001E6F46 /* TwitterUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302C915603DB1001E6F46 /* TwitterUserViewController.m */; };
 		1DA302CC15603DC0001E6F46 /* TwitterUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA302CB15603DC0001E6F46 /* TwitterUserViewController.xib */; };
+		1DB75BCF15607CDD004BA39C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB75BCE15607CDD004BA39C /* Cocoa.framework */; };
+		1DB75BD915607CDD004BA39C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DB75BD715607CDD004BA39C /* InfoPlist.strings */; };
+		1DB75BDB15607CDD004BA39C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB75BDA15607CDD004BA39C /* main.m */; };
+		1DB75BDF15607CDD004BA39C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DB75BDD15607CDD004BA39C /* Credits.rtf */; };
+		1DB75BE215607CDD004BA39C /* JSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB75BE115607CDD004BA39C /* JSAppDelegate.m */; };
+		1DB75BE515607CDD004BA39C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB75BE315607CDD004BA39C /* MainMenu.xib */; };
+		1DB75BE815607CDD004BA39C /* MacOSX_Sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DB75BE615607CDD004BA39C /* MacOSX_Sample.xcdatamodeld */; };
+		1DB75BEF15607DD9004BA39C /* TwitterRequestSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D905313156027B100999226 /* TwitterRequestSigner.m */; };
+		1DB75BF015607DD9004BA39C /* TwitterResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D56F5441557831C00D77BD9 /* TwitterResponseParser.m */; };
+		1DB75BF115607DD9004BA39C /* TwitterRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E3F115576D8600532996 /* TwitterRequestManager.m */; };
+		1DB75BF215607DD9004BA39C /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D17810415576BC70011C13C /* Tweet.m */; };
+		1DB75BF315607DD9004BA39C /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302C515603C0C001E6F46 /* TwitterUser.m */; };
+		1DB75BF415607DE1004BA39C /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302BC15602FF9001E6F46 /* hmac.c */; };
+		1DB75BF515607DE1004BA39C /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302BF1560304F001E6F46 /* sha1.c */; };
+		1DB75BF615607DE1004BA39C /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302C115603092001E6F46 /* Base64Transcoder.c */; };
+		1DB75BFA15607DFF004BA39C /* TimelineWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB75BF815607DFF004BA39C /* TimelineWindowController.m */; };
+		1DB75BFB15607DFF004BA39C /* TimelineWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB75BF915607DFF004BA39C /* TimelineWindowController.xib */; };
+		1DFC9AE915607F4500FFE3D9 /* JSReachabilityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F2153248BC00501145 /* JSReachabilityService.m */; };
+		1DFC9AEA15607F4500FFE3D9 /* JSWebServiceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F3153248BC00501145 /* JSWebServiceProxy.m */; };
+		1DFC9AEB15607F4500FFE3D9 /* JSWebServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F4153248BC00501145 /* JSWebServiceRequest.m */; };
+		1DFC9AEC15607F4500FFE3D9 /* JSWebServiceRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F6153248BC00501145 /* JSWebServiceRequestParameters.m */; };
+		1DFC9AEE1560804700FFE3D9 /* JSBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76815327D7200C1D182 /* JSBaseEntity.m */; };
+		1DFC9AEF1560804700FFE3D9 /* JSBaseCoreDataBackedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76615327D7200C1D182 /* JSBaseCoreDataBackedEntity.m */; };
+		1DFC9AF01560804700FFE3D9 /* JSEntityDictionaryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC78D1532825C00C1D182 /* JSEntityDictionaryParser.m */; };
+		1DFC9AF11560804700FFE3D9 /* JSRandomDictionaryGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC7901532833700C1D182 /* JSRandomDictionaryGenerator.m */; };
+		1DFC9AF21560805600FFE3D9 /* JSEntityProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76C15327D7200C1D182 /* JSEntityProperty.m */; };
+		1DFC9AF31560805600FFE3D9 /* JSEntityPropertyBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC76E15327D7200C1D182 /* JSEntityPropertyBool.m */; };
+		1DFC9AF41560805600FFE3D9 /* JSEntityPropertyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77015327D7200C1D182 /* JSEntityPropertyDate.m */; };
+		1DFC9AF51560805600FFE3D9 /* JSEntityPropertyFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77215327D7200C1D182 /* JSEntityPropertyFloat.m */; };
+		1DFC9AF61560805600FFE3D9 /* JSEntityPropertyInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77415327D7200C1D182 /* JSEntityPropertyInt.m */; };
+		1DFC9AF71560805600FFE3D9 /* JSEntityPropertyRelationshipOneToMany.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77615327D7200C1D182 /* JSEntityPropertyRelationshipOneToMany.m */; };
+		1DFC9AF81560805600FFE3D9 /* JSEntityPropertyRelationshipOneToOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77815327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m */; };
+		1DFC9AF91560805600FFE3D9 /* JSEntityPropertyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77A15327D7200C1D182 /* JSEntityPropertyString.m */; };
+		1DFC9AFA1560805600FFE3D9 /* JSEntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77C15327D7200C1D182 /* JSEntityPropertyURL.m */; };
+		1DFC9AFB1560817A00FFE3D9 /* JSMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07315324A3500BADD37 /* JSMethodSwizzler.m */; };
+		1DFC9AFC1560817A00FFE3D9 /* JSClassDescendantOfClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07615324ABB00BADD37 /* JSClassDescendantOfClass.m */; };
+		1DFC9AFD1560817F00FFE3D9 /* NSNumber+JSRandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07A153251CD00BADD37 /* NSNumber+JSRandomValues.m */; };
+		1DFC9AFE1560817F00FFE3D9 /* NSDate+JSRandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D07D1532520100BADD37 /* NSDate+JSRandomValues.m */; };
+		1DFC9AFF1560817F00FFE3D9 /* NSString+JSRandomValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D44D0801532524F00BADD37 /* NSString+JSRandomValues.m */; };
+		1DFC9B001560818400FFE3D9 /* JSWebServiceProxyMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321A153248BC00501145 /* JSWebServiceProxyMock.m */; };
+		1DFC9B01156081D900FFE3D9 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393DE155F3DF000ECB907 /* AFHTTPClient.m */; };
+		1DFC9B02156081D900FFE3D9 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393E0155F3DF000ECB907 /* AFHTTPRequestOperation.m */; };
+		1DFC9B03156081D900FFE3D9 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393E2155F3DF000ECB907 /* AFImageRequestOperation.m */; };
+		1DFC9B04156081D900FFE3D9 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393E4155F3DF000ECB907 /* AFJSONRequestOperation.m */; };
+		1DFC9B05156081D900FFE3D9 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393E6155F3DF000ECB907 /* AFJSONUtilities.m */; };
+		1DFC9B06156081D900FFE3D9 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393E8155F3DF000ECB907 /* AFNetworkActivityIndicatorManager.m */; };
+		1DFC9B07156081D900FFE3D9 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393EB155F3DF000ECB907 /* AFPropertyListRequestOperation.m */; };
+		1DFC9B08156081D900FFE3D9 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393ED155F3DF000ECB907 /* AFURLConnectionOperation.m */; };
+		1DFC9B09156081D900FFE3D9 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393EF155F3DF000ECB907 /* AFXMLRequestOperation.m */; };
+		1DFC9B0A1560826000FFE3D9 /* JSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D07394BC155F3F2300ECB907 /* JSCache.m */; };
+		1DFC9B0B1560826400FFE3D9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC78A15327E6600C1D182 /* Reachability.m */; };
 		D073947F155F3DF000ECB907 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393DE155F3DF000ECB907 /* AFHTTPClient.m */; };
 		D0739480155F3DF000ECB907 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393E0155F3DF000ECB907 /* AFHTTPRequestOperation.m */; };
 		D0739481155F3DF000ECB907 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D07393E2155F3DF000ECB907 /* AFImageRequestOperation.m */; };
@@ -73,7 +126,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D1780F6155768220011C13C /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = TimelineViewController.h; path = Classes/TimelineViewController.h; sourceTree = "<group>"; };
+		1D1780F6155768220011C13C /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineViewController.h; path = Classes/TimelineViewController.h; sourceTree = "<group>"; };
 		1D1780F7155768220011C13C /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineViewController.m; path = Classes/TimelineViewController.m; sourceTree = "<group>"; };
 		1D1780F8155768230011C13C /* TimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TimelineViewController.xib; path = Classes/TimelineViewController.xib; sourceTree = "<group>"; };
 		1D1780FD155768C80011C13C /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetCell.h; path = Classes/TweetCell.h; sourceTree = "<group>"; };
@@ -82,6 +135,7 @@
 		1D17810315576BC70011C13C /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tweet.h; path = Classes/Tweet.h; sourceTree = "<group>"; };
 		1D17810415576BC70011C13C /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tweet.m; path = Classes/Tweet.m; sourceTree = "<group>"; };
 		1D17810615576C5C0011C13C /* JSRestNetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSRestNetworkKit.h; path = JSRestNetworkKit/JSRestNetworkKit.h; sourceTree = SOURCE_ROOT; };
+		1D40F3D01560831100FDADF3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		1D44D07215324A3500BADD37 /* JSMethodSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSMethodSwizzler.h; path = JSRestNetworkKit/Support/JSMethodSwizzler.h; sourceTree = SOURCE_ROOT; };
 		1D44D07315324A3500BADD37 /* JSMethodSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSMethodSwizzler.m; path = JSRestNetworkKit/Support/JSMethodSwizzler.m; sourceTree = SOURCE_ROOT; };
 		1D44D07515324ABB00BADD37 /* JSClassDescendantOfClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSClassDescendantOfClass.h; path = JSRestNetworkKit/Support/JSClassDescendantOfClass.h; sourceTree = SOURCE_ROOT; };
@@ -164,6 +218,23 @@
 		1DA302C815603DB1001E6F46 /* TwitterUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterUserViewController.h; path = Classes/TwitterUserViewController.h; sourceTree = "<group>"; };
 		1DA302C915603DB1001E6F46 /* TwitterUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterUserViewController.m; path = Classes/TwitterUserViewController.m; sourceTree = "<group>"; };
 		1DA302CB15603DC0001E6F46 /* TwitterUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterUserViewController.xib; path = Classes/TwitterUserViewController.xib; sourceTree = "<group>"; };
+		1DB75BCC15607CDD004BA39C /* MacOSX Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacOSX Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DB75BCE15607CDD004BA39C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		1DB75BD115607CDD004BA39C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1DB75BD215607CDD004BA39C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1DB75BD315607CDD004BA39C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DB75BD615607CDD004BA39C /* MacOSX Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacOSX Sample-Info.plist"; sourceTree = "<group>"; };
+		1DB75BD815607CDD004BA39C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DB75BDA15607CDD004BA39C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DB75BDC15607CDD004BA39C /* MacOSX Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacOSX Sample-Prefix.pch"; sourceTree = "<group>"; };
+		1DB75BDE15607CDD004BA39C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1DB75BE015607CDD004BA39C /* JSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAppDelegate.h; sourceTree = "<group>"; };
+		1DB75BE115607CDD004BA39C /* JSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAppDelegate.m; sourceTree = "<group>"; };
+		1DB75BE415607CDD004BA39C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1DB75BE715607CDD004BA39C /* MacOSX_Sample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacOSX_Sample.xcdatamodel; sourceTree = "<group>"; };
+		1DB75BF715607DFF004BA39C /* TimelineWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineWindowController.h; path = Classes/TimelineWindowController.h; sourceTree = "<group>"; };
+		1DB75BF815607DFF004BA39C /* TimelineWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineWindowController.m; path = Classes/TimelineWindowController.m; sourceTree = "<group>"; };
+		1DB75BF915607DFF004BA39C /* TimelineWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TimelineWindowController.xib; path = Classes/TimelineWindowController.xib; sourceTree = "<group>"; };
 		D07393DD155F3DF000ECB907 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		D07393DE155F3DF000ECB907 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		D07393DF155F3DF000ECB907 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -210,6 +281,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DB75BC915607CDD004BA39C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D40F3D11560831100FDADF3 /* SystemConfiguration.framework in Frameworks */,
+				1DB75BCF15607CDD004BA39C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -245,6 +325,7 @@
 				1DA302C515603C0C001E6F46 /* TwitterUser.m */,
 			);
 			name = Models;
+			path = JSRestNetworkKitSampleProject;
 			sourceTree = "<group>";
 		};
 		1D44D07115324A1400BADD37 /* Support */ = {
@@ -326,7 +407,9 @@
 		1D84489A1532443000F99DE1 = {
 			isa = PBXGroup;
 			children = (
+				1DB75BEE15607DCB004BA39C /* Shared */,
 				1D8448B11532443000F99DE1 /* JSRestNetworkKitSampleProject */,
+				1DB75BD415607CDD004BA39C /* MacOSX Sample */,
 				1D8448A81532443000F99DE1 /* Frameworks */,
 				1D8448A61532443000F99DE1 /* Products */,
 			);
@@ -336,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				1D8448A51532443000F99DE1 /* iOS Sample.app */,
+				1DB75BCC15607CDD004BA39C /* MacOSX Sample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,6 +427,7 @@
 		1D8448A81532443000F99DE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D40F3D01560831100FDADF3 /* SystemConfiguration.framework */,
 				1D5EC6A415327BC800C1D182 /* SystemConfiguration.framework */,
 				1D5EC6A215327A6200C1D182 /* MobileCoreServices.framework */,
 				1D5EC69F15327A5200C1D182 /* CFNetwork.framework */,
@@ -350,6 +435,8 @@
 				1D8448AB1532443000F99DE1 /* Foundation.framework */,
 				1D8448AD1532443000F99DE1 /* CoreGraphics.framework */,
 				1D8448AF1532443000F99DE1 /* CoreData.framework */,
+				1DB75BCE15607CDD004BA39C /* Cocoa.framework */,
+				1DB75BD015607CDD004BA39C /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -361,7 +448,6 @@
 				1D8448BB1532443000F99DE1 /* JSAppDelegate.m */,
 				1D8448BD1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld */,
 				1D1780FB155768490011C13C /* Views */,
-				1D17810215576BAD0011C13C /* Models */,
 				1D9631F0153248AF00501145 /* JSRestNetworkKit */,
 				1D8448B21532443000F99DE1 /* Supporting Files */,
 			);
@@ -443,8 +529,8 @@
 				1DA302BC15602FF9001E6F46 /* hmac.c */,
 				1DA302BE15603044001E6F46 /* sha1.h */,
 				1DA302BF1560304F001E6F46 /* sha1.c */,
-				1DA302C115603092001E6F46 /* Base64Transcoder.c */,
 				1DA302C3156030A2001E6F46 /* Base64Transcoder.h */,
+				1DA302C115603092001E6F46 /* Base64Transcoder.c */,
 			);
 			name = crypto;
 			sourceTree = "<group>";
@@ -457,6 +543,59 @@
 				1DA302CB15603DC0001E6F46 /* TwitterUserViewController.xib */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		1DB75BD015607CDD004BA39C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DB75BD115607CDD004BA39C /* AppKit.framework */,
+				1DB75BD215607CDD004BA39C /* CoreData.framework */,
+				1DB75BD315607CDD004BA39C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1DB75BD415607CDD004BA39C /* MacOSX Sample */ = {
+			isa = PBXGroup;
+			children = (
+				1DB75BE015607CDD004BA39C /* JSAppDelegate.h */,
+				1DB75BE115607CDD004BA39C /* JSAppDelegate.m */,
+				1DB75BE315607CDD004BA39C /* MainMenu.xib */,
+				1DB75BED15607DB6004BA39C /* Views */,
+				1DB75BE615607CDD004BA39C /* MacOSX_Sample.xcdatamodeld */,
+				1DB75BD515607CDD004BA39C /* Supporting Files */,
+			);
+			path = "MacOSX Sample";
+			sourceTree = "<group>";
+		};
+		1DB75BD515607CDD004BA39C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DB75BD615607CDD004BA39C /* MacOSX Sample-Info.plist */,
+				1DB75BD715607CDD004BA39C /* InfoPlist.strings */,
+				1DB75BDA15607CDD004BA39C /* main.m */,
+				1DB75BDC15607CDD004BA39C /* MacOSX Sample-Prefix.pch */,
+				1DB75BDD15607CDD004BA39C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1DB75BED15607DB6004BA39C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DB75BF715607DFF004BA39C /* TimelineWindowController.h */,
+				1DB75BF815607DFF004BA39C /* TimelineWindowController.m */,
+				1DB75BF915607DFF004BA39C /* TimelineWindowController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1DB75BEE15607DCB004BA39C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1D17810215576BAD0011C13C /* Models */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		D07393D6155F3DF000ECB907 /* UIImageView-AFNetworkingJSAdditions */ = {
@@ -562,6 +701,23 @@
 			productReference = 1D8448A51532443000F99DE1 /* iOS Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1DB75BCB15607CDD004BA39C /* MacOSX Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DB75BEB15607CDD004BA39C /* Build configuration list for PBXNativeTarget "MacOSX Sample" */;
+			buildPhases = (
+				1DB75BC815607CDD004BA39C /* Sources */,
+				1DB75BC915607CDD004BA39C /* Frameworks */,
+				1DB75BCA15607CDD004BA39C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MacOSX Sample";
+			productName = "MacOSX Sample";
+			productReference = 1DB75BCC15607CDD004BA39C /* MacOSX Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -585,6 +741,7 @@
 			projectRoot = "";
 			targets = (
 				1D8448A41532443000F99DE1 /* iOS Sample */,
+				1DB75BCB15607CDD004BA39C /* MacOSX Sample */,
 			);
 		};
 /* End PBXProject section */
@@ -598,6 +755,17 @@
 				1D1780FA155768230011C13C /* TimelineViewController.xib in Resources */,
 				1D178101155768DB0011C13C /* TweetCell.xib in Resources */,
 				1DA302CC15603DC0001E6F46 /* TwitterUserViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB75BCA15607CDD004BA39C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DB75BD915607CDD004BA39C /* InfoPlist.strings in Resources */,
+				1DB75BDF15607CDD004BA39C /* Credits.rtf in Resources */,
+				1DB75BE515607CDD004BA39C /* MainMenu.xib in Resources */,
+				1DB75BFB15607DFF004BA39C /* TimelineWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +831,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DB75BC815607CDD004BA39C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DB75BDB15607CDD004BA39C /* main.m in Sources */,
+				1DB75BE215607CDD004BA39C /* JSAppDelegate.m in Sources */,
+				1DB75BE815607CDD004BA39C /* MacOSX_Sample.xcdatamodeld in Sources */,
+				1DB75BEF15607DD9004BA39C /* TwitterRequestSigner.m in Sources */,
+				1DB75BF015607DD9004BA39C /* TwitterResponseParser.m in Sources */,
+				1DB75BF115607DD9004BA39C /* TwitterRequestManager.m in Sources */,
+				1DB75BF215607DD9004BA39C /* Tweet.m in Sources */,
+				1DB75BF315607DD9004BA39C /* TwitterUser.m in Sources */,
+				1DB75BF415607DE1004BA39C /* hmac.c in Sources */,
+				1DB75BF515607DE1004BA39C /* sha1.c in Sources */,
+				1DB75BF615607DE1004BA39C /* Base64Transcoder.c in Sources */,
+				1DB75BFA15607DFF004BA39C /* TimelineWindowController.m in Sources */,
+				1DFC9AE915607F4500FFE3D9 /* JSReachabilityService.m in Sources */,
+				1DFC9AEA15607F4500FFE3D9 /* JSWebServiceProxy.m in Sources */,
+				1DFC9AEB15607F4500FFE3D9 /* JSWebServiceRequest.m in Sources */,
+				1DFC9AEC15607F4500FFE3D9 /* JSWebServiceRequestParameters.m in Sources */,
+				1DFC9AEE1560804700FFE3D9 /* JSBaseEntity.m in Sources */,
+				1DFC9AEF1560804700FFE3D9 /* JSBaseCoreDataBackedEntity.m in Sources */,
+				1DFC9AF01560804700FFE3D9 /* JSEntityDictionaryParser.m in Sources */,
+				1DFC9AF11560804700FFE3D9 /* JSRandomDictionaryGenerator.m in Sources */,
+				1DFC9AF21560805600FFE3D9 /* JSEntityProperty.m in Sources */,
+				1DFC9AF31560805600FFE3D9 /* JSEntityPropertyBool.m in Sources */,
+				1DFC9AF41560805600FFE3D9 /* JSEntityPropertyDate.m in Sources */,
+				1DFC9AF51560805600FFE3D9 /* JSEntityPropertyFloat.m in Sources */,
+				1DFC9AF61560805600FFE3D9 /* JSEntityPropertyInt.m in Sources */,
+				1DFC9AF71560805600FFE3D9 /* JSEntityPropertyRelationshipOneToMany.m in Sources */,
+				1DFC9AF81560805600FFE3D9 /* JSEntityPropertyRelationshipOneToOne.m in Sources */,
+				1DFC9AF91560805600FFE3D9 /* JSEntityPropertyString.m in Sources */,
+				1DFC9AFA1560805600FFE3D9 /* JSEntityPropertyURL.m in Sources */,
+				1DFC9AFB1560817A00FFE3D9 /* JSMethodSwizzler.m in Sources */,
+				1DFC9AFC1560817A00FFE3D9 /* JSClassDescendantOfClass.m in Sources */,
+				1DFC9AFD1560817F00FFE3D9 /* NSNumber+JSRandomValues.m in Sources */,
+				1DFC9AFE1560817F00FFE3D9 /* NSDate+JSRandomValues.m in Sources */,
+				1DFC9AFF1560817F00FFE3D9 /* NSString+JSRandomValues.m in Sources */,
+				1DFC9B001560818400FFE3D9 /* JSWebServiceProxyMock.m in Sources */,
+				1DFC9B01156081D900FFE3D9 /* AFHTTPClient.m in Sources */,
+				1DFC9B02156081D900FFE3D9 /* AFHTTPRequestOperation.m in Sources */,
+				1DFC9B03156081D900FFE3D9 /* AFImageRequestOperation.m in Sources */,
+				1DFC9B04156081D900FFE3D9 /* AFJSONRequestOperation.m in Sources */,
+				1DFC9B05156081D900FFE3D9 /* AFJSONUtilities.m in Sources */,
+				1DFC9B06156081D900FFE3D9 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				1DFC9B07156081D900FFE3D9 /* AFPropertyListRequestOperation.m in Sources */,
+				1DFC9B08156081D900FFE3D9 /* AFURLConnectionOperation.m in Sources */,
+				1DFC9B09156081D900FFE3D9 /* AFXMLRequestOperation.m in Sources */,
+				1DFC9B0A1560826000FFE3D9 /* JSCache.m in Sources */,
+				1DFC9B0B1560826400FFE3D9 /* Reachability.m in Sources */,
+				1D40F3CE156082CD00FDADF3 /* EGOCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -672,6 +894,30 @@
 				1D8448B51532443000F99DE1 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DB75BD715607CDD004BA39C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DB75BD815607CDD004BA39C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DB75BDD15607CDD004BA39C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DB75BDE15607CDD004BA39C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1DB75BE315607CDD004BA39C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DB75BE415607CDD004BA39C /* en */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -746,6 +992,48 @@
 			};
 			name = Release;
 		};
+		1DB75BE915607CDD004BA39C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacOSX Sample/MacOSX Sample-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "MacOSX Sample/MacOSX Sample-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1DB75BEA15607CDD004BA39C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacOSX Sample/MacOSX Sample-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "MacOSX Sample/MacOSX Sample-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -767,6 +1055,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1DB75BEB15607CDD004BA39C /* Build configuration list for PBXNativeTarget "MacOSX Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DB75BE915607CDD004BA39C /* Debug */,
+				1DB75BEA15607CDD004BA39C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
@@ -777,6 +1074,16 @@
 			);
 			currentVersion = 1D8448BE1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodel */;
 			path = JSRestNetworkKitSampleProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		1DB75BE615607CDD004BA39C /* MacOSX_Sample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DB75BE715607CDD004BA39C /* MacOSX_Sample.xcdatamodel */,
+			);
+			currentVersion = 1DB75BE715607CDD004BA39C /* MacOSX_Sample.xcdatamodel */;
+			path = MacOSX_Sample.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

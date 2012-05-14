@@ -17,6 +17,10 @@
 #import "JSWebServiceResponseParser.h"
 #import "AFHTTPClient.h"
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+    #define kJSWebServiceProxyEnableActivityIndicatorDuringRequests 1
+#endif
+
 typedef void (^JSProxySuccessCallback)(id data, BOOL cached);
 typedef void (^JSProxyErrorCallback)();
 typedef id (^JSProxyDataParsingBlock)(id data);

@@ -29,4 +29,9 @@
     return entityProperties;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@> %@: %@", NSStringFromClass([self class]), self.user.screenName, self.text];
+}
+
 @end

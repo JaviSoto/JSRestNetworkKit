@@ -232,12 +232,15 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
         }
     }
 	
+    #if TARGET_OS_IPHONE
 	if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN)
 	{
 		// ... but WWAN connections are OK if the calling application
 		//     is using the CFNetwork (CFSocketStream?) APIs.
 		retVal = ReachableViaWWAN;
 	}
+    #endif
+    
 	return retVal;
 }
 

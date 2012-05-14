@@ -47,7 +47,9 @@
 //    static const NSInteger kMockRequestFailuresPerHundred = 0;
     static const NSInteger kMilisecondsInASecond = 1000000;
     
+#if kJSWebServiceProxyEnableActivityIndicatorDuringRequests
     [[AFNetworkActivityIndicatorManager sharedManager] incrementActivityCount];
+#endif
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if (cacheKey)
@@ -69,7 +71,9 @@
             if (!failure)
             {               
                 [self runRequest:request success:^(NSURLRequest *request, NSURLResponse *response, id JSON) {
+                    #if kJSWebServiceProxyEnableActivityIndicatorDuringRequests
                     [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
+                    #endif
                     id parsedData = JSON;
                     if (parsingBlock)
                         parsedData = parsingBlock(parsedData);
@@ -80,14 +84,18 @@
                     if (successCallback)
                         successCallback(parsedData, NO);            
                 } failure:^(NSURLRequest *request, NSURLResponse *response, NSError *error) {
+                    #if kJSWebServiceProxyEnableActivityIndicatorDuringRequests
                     [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
+                    #endif
                     if (errorCallback)
                         errorCallback(nil, error);
                 }];
             }
             else
             {
+                #if kJSWebServiceProxyEnableActivityIndicatorDuringRequests
                 [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
+                #endif
                 if (errorCallback)
                     errorCallback(nil, nil);
             }

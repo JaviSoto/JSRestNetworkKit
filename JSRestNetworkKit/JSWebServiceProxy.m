@@ -70,8 +70,9 @@
         self.requestSigner = requestSigner;
         self.responseParser = responseParser;
         
-        #warning TODO: make optional?
+        #if kJSWebServiceProxyEnableActivityIndicatorDuringRequests
         [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+        #endif
     }
     
     return self;
@@ -94,7 +95,7 @@
     dispatch_async(_webProxyDispatchQueue, ^{
         if (cacheKey)
         {
-            id cachedData = [[JSCache instance] cachedObjectForKey:cacheKey];
+            id cachedData = [[JSCache sharedCache] cachedObjectForKey:cacheKey];
             if (cachedData)
             {
                 dispatch_sync(dispatch_get_main_queue(), ^{
@@ -116,7 +117,7 @@
                         parsedData = parsingBlock(parsedData);
                     
                     if (cacheKey)
-                        [[JSCache instance] cacheObject:parsedData forKey:cacheKey];
+                        [[JSCache sharedCache] cacheObject:parsedData forKey:cacheKey];
 
                     if (successCallback)
                         successCallback(parsedData, NO);            
