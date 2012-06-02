@@ -14,7 +14,7 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceProxyMock.h"
+#import "JSFakeRESTClient.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
 
@@ -22,9 +22,9 @@
 
 #define kShouldSleepBeforeReturningData YES
 
-@implementation JSWebServiceProxyMock
+@implementation JSFakeRESTClient
 
-- (void)runRequest:(JSWebServiceRequest *)request
+- (void)runRequest:(JSRequest *)request
            success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success
            failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure
 {
@@ -40,7 +40,7 @@
     });
 }
 
-- (void)makeRequest:(JSWebServiceRequest *)request withCacheKey:(NSString *)cacheKey parseBlock:(JSProxyDataParsingBlock)parsingBlock success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSRequest *)request withCacheKey:(NSString *)cacheKey parseBlock:(JSProxyDataParsingBlock)parsingBlock success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
 {
     static const CGFloat kMockRequestMaxDurationInSeconds = 1.4f;
     static const NSInteger kMockRequestFailuresPerHundred = 5;
@@ -52,7 +52,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if (cacheKey)
         {
-            id cachedObject = [[JSCache instance] cachedObjectForKey:cacheKey];
+            id cachedObject = [[JSCache sharedCache] cachedObjectForKey:cacheKey];
             
             if (cachedObject)
             {
@@ -75,7 +75,7 @@
                         parsedData = parsingBlock(parsedData);
                     
                     if (cacheKey)
-                        [[JSCache instance] cacheObject:parsedData forKey:cacheKey];
+                        [[JSCache sharedCache] cacheObject:parsedData forKey:cacheKey];
                     
                     if (successCallback)
                         successCallback(parsedData, NO);            
@@ -95,7 +95,7 @@
     });
 }
 
-- (void)makeRequest:(JSWebServiceRequest *)wsRequest success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSRequest *)wsRequest success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
 {
     [self makeRequest:wsRequest withCacheKey:nil parseBlock:NULL success:successCallback error:errorCallback];
 }

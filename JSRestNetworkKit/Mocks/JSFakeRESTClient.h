@@ -14,8 +14,8 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceProxy.h"
+#import "JSRESTClient.h"
 
-@interface JSWebServiceProxyMock : JSWebServiceProxy
+@interface JSFakeRESTClient : JSRESTClient
 
 @end

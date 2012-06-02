@@ -14,15 +14,15 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceRequestParameters.h"
+#import "JSRequestParameters.h"
 
-@implementation JSWebServiceRequestParameters
+@implementation JSRequestParameters
 
 @synthesize parametersDictionary = _parametersDictionary;
 
-+ (JSWebServiceRequestParameters *)emptyRequestParameters
++ (JSRequestParameters *)emptyRequestParameters
 {
-    JSWebServiceRequestParameters *requestParameters = [[JSWebServiceRequestParameters alloc] init];
+    JSRequestParameters *requestParameters = [[JSRequestParameters alloc] init];
     
     return [requestParameters autorelease];
 }

@@ -20,8 +20,8 @@
 
 @property (nonatomic, retain) NSString *presignatureURLString;
 
-- (NSString *)signatureBaseStringForRequest:(JSWebServiceRequest *)request withTimestamp:(NSString *)timestamp nonce:(NSString *)nonce;
-- (NSURL *)URLWithRequest:(JSWebServiceRequest *)request;
+- (NSString *)signatureBaseStringForRequest:(JSRequest *)request withTimestamp:(NSString *)timestamp nonce:(NSString *)nonce;
+- (NSURL *)URLWithRequest:(JSRequest *)request;
 - (NSString *)URLStringWithoutQueryFromURL:(NSURL *)url;
 - (NSString *)signClearText:(NSString *)text withSecret:(NSString *)secret;
 - (NSString *)URLEncodedString:(NSString *)string;
@@ -67,9 +67,9 @@
     [super dealloc];
 }
 
-#pragma mark - JSWebServiceRequestSigning
+#pragma mark - JSRequestSigning
 
-- (void)signRequest:(JSWebServiceRequest *)request
+- (void)signRequest:(JSRequest *)request
 {
     NSString *consumerSecret = [self URLEncodedString:self.consumerSecret];
 	NSString	 *tokenSecret = [self URLEncodedString:self.tokenSecret];
@@ -107,7 +107,7 @@
     return [NSString stringWithFormat:@"%@=%@", name, [self URLEncodedString:value]];
 }
 
-- (NSString *)signatureBaseStringForRequest:(JSWebServiceRequest *)request withTimestamp:(NSString *)timestamp nonce:(NSString *)nonce
+- (NSString *)signatureBaseStringForRequest:(JSRequest *)request withTimestamp:(NSString *)timestamp nonce:(NSString *)nonce
 {
     // OAuth Spec, Section 9.1.1 "Normalize Request Parameters"
     // build a sorted array of both request parameters and OAuth header parameters
@@ -145,7 +145,7 @@
 	return ret;
 }
 
-- (NSURL *)URLWithRequest:(JSWebServiceRequest *)request
+- (NSURL *)URLWithRequest:(JSRequest *)request
 {
     return [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", self.baseURL, request.path]];
 }

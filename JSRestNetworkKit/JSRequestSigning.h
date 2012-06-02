@@ -16,12 +16,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "JSWebServiceRequestParameters.h"
+#import "JSRequestParameters.h"
 
-@class JSWebServiceRequest;
+@class JSRequest;
 
-@protocol JSWebServiceRequestSigning <NSObject>
+@protocol JSRequestSigning <NSObject>
 
-- (void)signRequest:(JSWebServiceRequest *)request;
+- (void)signRequest:(JSRequest *)request;
 
 @end

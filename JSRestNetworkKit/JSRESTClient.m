@@ -14,12 +14,12 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceProxy.h"
+#import "JSRESTClient.h"
 
-#import "JSWebServiceRequest.h"
+#import "JSRequest.h"
 #import "JSCache.h"
 
-#import "JSWebServiceRequestSigning.h"
+#import "JSRequestSigning.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
 #import "AFJSONRequestOperation.h"
@@ -32,20 +32,20 @@
     #define WebServiceProxyDebugLog(s,...)
 #endif
 
-@interface JSWebServiceProxy ()
+@interface JSRESTClient ()
 {
     dispatch_queue_t _webProxyDispatchQueue;
 }
-- (AFHTTPRequestOperation *)operationForRequest:(JSWebServiceRequest *)request
+- (AFHTTPRequestOperation *)operationForRequest:(JSRequest *)request
                                         success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success
                                         failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure;
 
-- (void)runRequest:(JSWebServiceRequest *)request
+- (void)runRequest:(JSRequest *)request
            success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success
            failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure;
 @end
 
-@implementation JSWebServiceProxy
+@implementation JSRESTClient
 @synthesize requestSigner = _requestSigner;
 @synthesize responseParser = _responseParser;
 
@@ -62,8 +62,8 @@
 }
 
 - (id)initWithBaseURL:(NSURL *)baseURL
-        requestSigner:(id<JSWebServiceRequestSigning>)requestSigner
-       responseParser:(id<JSWebServiceResponseParser>)responseParser
+        requestSigner:(id<JSRequestSigning>)requestSigner
+       responseParser:(id<JSResponseParser>)responseParser
 {
     if ((self = [self initWithBaseURL:baseURL]))
     {
@@ -78,14 +78,14 @@
 }
 
 - (id)initWithBaseURL:(NSURL *)baseURL
-       responseParser:(id<JSWebServiceResponseParser>)responseParser
+       responseParser:(id<JSResponseParser>)responseParser
 {
     return [self initWithBaseURL:baseURL requestSigner:nil responseParser:responseParser];
 }
 
 #pragma mark - Request
 
-- (void)makeRequest:(JSWebServiceRequest *)request
+- (void)makeRequest:(JSRequest *)request
        withCacheKey:(NSString *)cacheKey
          parseBlock:(JSProxyDataParsingBlock)parsingBlock
             success:(JSProxySuccessCallback)successCallback
@@ -94,7 +94,7 @@
     dispatch_async(_webProxyDispatchQueue, ^{
         if (cacheKey)
         {
-            id cachedData = [[JSCache instance] cachedObjectForKey:cacheKey];
+            id cachedData = [[JSCache sharedCache] cachedObjectForKey:cacheKey];
             if (cachedData)
             {
                 dispatch_sync(dispatch_get_main_queue(), ^{
@@ -116,7 +116,7 @@
                         parsedData = parsingBlock(parsedData);
                     
                     if (cacheKey)
-                        [[JSCache instance] cacheObject:parsedData forKey:cacheKey];
+                        [[JSCache sharedCache] cacheObject:parsedData forKey:cacheKey];
 
                     if (successCallback)
                         successCallback(parsedData, NO);            
@@ -135,7 +135,7 @@
     });
 }
 
-- (void)makeRequest:(JSWebServiceRequest *)request
+- (void)makeRequest:(JSRequest *)request
             success:(JSProxySuccessCallback)successCallback 
               error:(JSProxyErrorCallback)errorCallback
 {
@@ -144,7 +144,7 @@
 
 #pragma mark - Build request Operation
 
-- (AFHTTPRequestOperation *)operationForRequest:(JSWebServiceRequest *)request
+- (AFHTTPRequestOperation *)operationForRequest:(JSRequest *)request
                                         success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success
                                         failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure;
 {
@@ -174,7 +174,7 @@
     return operation;
 }
 
-- (void)runRequest:(JSWebServiceRequest *)request
+- (void)runRequest:(JSRequest *)request
            success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success
                       failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure
 {

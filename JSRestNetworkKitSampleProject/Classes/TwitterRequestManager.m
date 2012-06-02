@@ -7,8 +7,8 @@
 //
 
 #import "TwitterRequestManager.h"
-#import "JSWebServiceRequest.h"
-#import "JSWebServiceRequestParameters.h"
+#import "JSRequest.h"
+#import "JSRequestParameters.h"
 
 #import "TwitterRequestSigner.h"
 #import "TwitterResponseParser.h"
@@ -18,7 +18,7 @@
 
 @interface TwitterRequestManager ()
 {
-    JSWebServiceProxy *_webProxy;
+    JSRESTClient *_webProxy;
 }
 @end
 
@@ -37,7 +37,7 @@
                                                                                    tokenKey:@"579275196-4mkKjxoiIwP1HDyJwD8f2JVXK70pdx6JHJQL5vml"
                                                                                 tokenSecret:@"4NCaeKXp3GIQmCQSh4IUPiZHZo9dYXxt2yASdd4uaqc"];
         
-        _webProxy = [[JSWebServiceProxy alloc] initWithBaseURL:[NSURL URLWithString:baseURL] requestSigner:requestSigner responseParser:responseParser];
+        _webProxy = [[JSRESTClient alloc] initWithBaseURL:[NSURL URLWithString:baseURL] requestSigner:requestSigner responseParser:responseParser];
         
         [requestSigner release];
         [responseParser release];
@@ -67,10 +67,10 @@
 
 - (void)requestTimelineWithSuccessCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error;
 {
-    JSWebServiceRequestParameters *parameters = [JSWebServiceRequestParameters emptyRequestParameters];
+    JSRequestParameters *parameters = [JSRequestParameters emptyRequestParameters];
     
     // I create a GET request object with the path and parameters.
-    JSWebServiceRequest *request = [[JSWebServiceRequest alloc] initWithType:JSWebServiceRequestTypeGET path:@"1/statuses/home_timeline.json" parameters:parameters];
+    JSRequest *request = [[JSRequest alloc] initWithType:JSRequestTypeGET path:@"1/statuses/home_timeline.json" parameters:parameters];
     
     /* - I make the request passing a cache key. If another request is made with the same cache key, the successCallback will be called inmediately with the last saved cached data
      - The parse block has to be implemented so that, taking the raw dictionary, it returns parsed data ready to be cached and returned
@@ -87,10 +87,10 @@
 /* https://dev.twitter.com/docs/api/1/get/users/show */
 - (void)requestUser:(TwitterUser *)user successCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error
 {
-    JSWebServiceRequestParameters *parameters = [JSWebServiceRequestParameters emptyRequestParameters];
+    JSRequestParameters *parameters = [JSRequestParameters emptyRequestParameters];
     [parameters setValue:user.userID forKey:@"user_id"];
     
-    JSWebServiceRequest *request = [[JSWebServiceRequest alloc] initWithType:JSWebServiceRequestTypeGET path:@"1/users/show.json" parameters:parameters];
+    JSRequest *request = [[JSRequest alloc] initWithType:JSRequestTypeGET path:@"1/users/show.json" parameters:parameters];
 
     NSString *userCacheKey = [NSString stringWithFormat:@"twitter_user_cache_%@", user.userID];
     
@@ -105,10 +105,10 @@
 /* https://dev.twitter.com/docs/api/1/get/statuses/user_timeline */
 - (void)requestUserTimeline:(TwitterUser *)user successCallback:(TwitterRequestManagerSucessCallback)success errorCallback:(TwitterRequestManagerErrorCallback)error
 {
-    JSWebServiceRequestParameters *parameters = [JSWebServiceRequestParameters emptyRequestParameters];
+    JSRequestParameters *parameters = [JSRequestParameters emptyRequestParameters];
     [parameters setValue:user.userID forKey:@"user_id"];
     
-    JSWebServiceRequest *request = [[JSWebServiceRequest alloc] initWithType:JSWebServiceRequestTypeGET path:@"1/statuses/user_timeline.json" parameters:parameters];
+    JSRequest *request = [[JSRequest alloc] initWithType:JSRequestTypeGET path:@"1/statuses/user_timeline.json" parameters:parameters];
     
     NSString *userCacheKey = [NSString stringWithFormat:@"twitter_user_timeline_cache_%@", user.userID];
     

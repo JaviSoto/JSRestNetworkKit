@@ -14,36 +14,36 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceResponseParser.h"
+#import "JSResponseParser.h"
 #import "AFHTTPClient.h"
 
 typedef void (^JSProxySuccessCallback)(id data, BOOL cached);
 typedef void (^JSProxyErrorCallback)();
 typedef id (^JSProxyDataParsingBlock)(id data);
 
-@class JSWebServiceRequest;
-@protocol JSWebServiceRequestSigning;
+@class JSRequest;
+@protocol JSRequestSigning;
 
-@interface JSWebServiceProxy : AFHTTPClient
+@interface JSRESTClient : AFHTTPClient
 
 /* Optional: set to be able to sign a request (by modifying its headers) before it's performed */
-@property (nonatomic, retain) id<JSWebServiceRequestSigning>requestSigner;
+@property (nonatomic, retain) id<JSRequestSigning>requestSigner;
 
 /* Optional: set to be able to distinguish a successful and a failing request according to the response content */
-@property (nonatomic, retain) id<JSWebServiceResponseParser>responseParser;
+@property (nonatomic, retain) id<JSResponseParser>responseParser;
 
 - (id)initWithBaseURL:(NSURL *)baseURL
-        requestSigner:(id<JSWebServiceRequestSigning>)requestSigner
-       responseParser:(id<JSWebServiceResponseParser>)responseParser;
+        requestSigner:(id<JSRequestSigning>)requestSigner
+       responseParser:(id<JSResponseParser>)responseParser;
 
 - (id)initWithBaseURL:(NSURL *)baseURL
-       responseParser:(id<JSWebServiceResponseParser>)responseParser;
+       responseParser:(id<JSResponseParser>)responseParser;
 
-- (void)makeRequest:(JSWebServiceRequest *)request
+- (void)makeRequest:(JSRequest *)request
             success:(JSProxySuccessCallback)successCallback 
               error:(JSProxyErrorCallback)errorCallback;
 
-- (void)makeRequest:(JSWebServiceRequest *)request
+- (void)makeRequest:(JSRequest *)request
        withCacheKey:(NSString *)cacheKey
          parseBlock:(JSProxyDataParsingBlock)parsingBlock
             success:(JSProxySuccessCallback)successCallback 

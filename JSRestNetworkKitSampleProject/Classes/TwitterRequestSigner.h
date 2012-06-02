@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TwitterRequestSigner : NSObject <JSWebServiceRequestSigning>
+@interface TwitterRequestSigner : NSObject <JSRequestSigning>
 
 - (id)initWithBaseURL:(NSString *)baseURL
           consumerKey:(NSString *)consumerKey

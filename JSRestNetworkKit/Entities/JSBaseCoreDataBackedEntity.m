@@ -76,10 +76,8 @@
             fetchRequest.fetchLimit = 1;
             fetchRequest.predicate = [NSPredicate predicateWithFormat:@"%K == %@", primaryKeyProperty.localPropertyKey, objectId];
 
-            NSArray *fetchResult=[managedObjectContext executeFetchRequest:fetchRequest error:nil];
-            if(fetchResult==nil){
-                NSLog(@"error");
-            }
+            NSArray *fetchResult = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+
             JSBaseCoreDataBackedEntity *matchedObject = [fetchResult lastObject];
                         
             if (matchedObject)
@@ -104,9 +102,7 @@
     NSDictionary *randomDictionary = [self randomEntityDictionaryWithDepth:depth];
     return [self updateOrInsertIntoManagedObjectContext:managedObjectContext withDictionary:randomDictionary];
 }
-+ (void)failedExecutingFetchRequestWithError:(NSError*)error{
 
-}
 #pragma mark - Setting values from a relation
 
 
