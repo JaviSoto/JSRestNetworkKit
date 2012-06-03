@@ -68,13 +68,13 @@
     
     if (primaryKeyProperty != kCoreDataEntityNoPrimaryKey)
     {
-        NSString *objectId = [dictionary valueForKey:primaryKeyProperty.apiPropertyKey];
+        NSString *objectId = [dictionary valueForKey:primaryKeyProperty.apiPropertyKeyPath];
         
         if (objectId)
         {
             NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:entityName];
             fetchRequest.fetchLimit = 1;
-            fetchRequest.predicate = [NSPredicate predicateWithFormat:@"%K == %@", primaryKeyProperty.localPropertyKey, objectId];
+            fetchRequest.predicate = [NSPredicate predicateWithFormat:@"%K == %@", primaryKeyProperty.entityPropertyKey, objectId];
 
             NSArray *fetchResult = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
 
@@ -116,7 +116,7 @@
     {
         if ([p isKindOfClass:[JSEntityPropertyRelationshipOneToMany class]])
         {
-            if ([p.localPropertyKey isEqualToString:key])
+            if ([p.entityPropertyKey isEqualToString:key])
             {
                 isKeyOfRelationOneToMany = YES;
                 propertyOfKeyBeingSet = p;
@@ -127,10 +127,10 @@
     
     if (isKeyOfRelationOneToMany)
     {
-        NSString *removeObjectsSelectorName = [NSString stringWithFormat:@"remove%@:", [propertyOfKeyBeingSet.localPropertyKey stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[propertyOfKeyBeingSet.localPropertyKey substringToIndex:1] capitalizedString]]];
+        NSString *removeObjectsSelectorName = [NSString stringWithFormat:@"remove%@:", [propertyOfKeyBeingSet.entityPropertyKey stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[propertyOfKeyBeingSet.entityPropertyKey substringToIndex:1] capitalizedString]]];
         SEL removeObjectsSelector = NSSelectorFromString(removeObjectsSelectorName);
         
-        NSString *addObjectsSelectorName = [NSString stringWithFormat:@"add%@:", [propertyOfKeyBeingSet.localPropertyKey stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[propertyOfKeyBeingSet.localPropertyKey substringToIndex:1] capitalizedString]]];
+        NSString *addObjectsSelectorName = [NSString stringWithFormat:@"add%@:", [propertyOfKeyBeingSet.entityPropertyKey stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[propertyOfKeyBeingSet.entityPropertyKey substringToIndex:1] capitalizedString]]];
         SEL addObjectsSelector = NSSelectorFromString(addObjectsSelectorName);
         
         if ([self respondsToSelector:removeObjectsSelector])

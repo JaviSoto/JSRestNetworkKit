@@ -25,12 +25,12 @@
     dispatch_once(&onceToken, ^{
         entityProperties = [[NSMutableArray alloc] init];
         
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"id" andLocalKey:@"userID" propertyType:JSEntityPropertyTypeString]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"id" entityPropertyKey:@"userID" propertyType:JSEntityPropertyTypeString]];
         [entityProperties addObject:[JSEntityProperty entityPropertyWithKey:@"name" propertyType:JSEntityPropertyTypeString]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"screen_name" andLocalKey:@"screenName" propertyType:JSEntityPropertyTypeString]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"profile_image_url" andLocalKey:@"avatarURL" propertyType:JSEntityPropertyTypeURL]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"followers_count" andLocalKey:@"followers" propertyType:JSEntityPropertyTypeInt]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"statuses_count" andLocalKey:@"tweets" propertyType:JSEntityPropertyTypeInt]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"screen_name" entityPropertyKey:@"screenName" propertyType:JSEntityPropertyTypeString]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"profile_image_url" entityPropertyKey:@"avatarURL" propertyType:JSEntityPropertyTypeURL]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"followers_count" entityPropertyKey:@"followers" propertyType:JSEntityPropertyTypeInt]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"statuses_count" entityPropertyKey:@"tweets" propertyType:JSEntityPropertyTypeInt]];
     });
     
     return entityProperties;

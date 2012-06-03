@@ -26,7 +26,7 @@
     [entityProperties enumerateObjectsUsingBlock:^(JSEntityProperty *property, NSUInteger idx, BOOL *stop) {
         NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 		id value = [property randomValueWithDepth:depth - 1];
-		[randomDictionary setValue:value forKey:property.apiPropertyKey];
+		[randomDictionary setValue:value forKey:property.apiPropertyKeyPath];
         [pool drain];
 	}];
     
