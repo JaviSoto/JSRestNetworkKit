@@ -35,9 +35,4 @@
     return [NSNumber randomNumberBetweenNumber:0 andNumber:1300000000];
 }
 
-- (BOOL)needsRelease
-{
-    return YES;
-}
-
 @end

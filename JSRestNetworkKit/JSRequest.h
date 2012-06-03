@@ -14,25 +14,27 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceProxy.h"
+#import "JSRestClient.h"
 
 typedef enum {
-    JSWebServiceRequestTypeGET,
-    JSWebServiceRequestTypePOST,
-} JSWebServiceRequestType;
+    JSRequestTypeGET,
+    JSRequestTypePOST,
+    JSRequestTypePUT,
+    JSRequestTypeDELETE
+} JSRequestType;
 
-@class JSWebServiceRequestParameters;
+@class JSRequestParameters;
 
-@interface JSWebServiceRequest : NSObject <NSCoding>
+@interface JSRequest : NSObject <NSCoding>
 
-@property (atomic, assign) JSWebServiceRequestType type;
+@property (atomic, assign) JSRequestType type;
 @property (nonatomic, copy) NSString *path;
-@property (atomic, retain) JSWebServiceRequestParameters *parameters;
+@property (atomic, retain) JSRequestParameters *parameters;
 @property (atomic, retain) NSMutableDictionary *headerFields;
 
-- (id)initWithType:(JSWebServiceRequestType)method
+- (id)initWithType:(JSRequestType)method
               path:(NSString *)path
-        parameters:(JSWebServiceRequestParameters *)parameters;
+        parameters:(JSRequestParameters *)parameters;
 
 - (NSString *)requestTypeString;
 

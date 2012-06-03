@@ -6,6 +6,6 @@
 //  Copyright (c) 2012 JavierSoto. All rights reserved.
 //
 
-@interface TwitterResponseParser : NSObject <JSWebServiceResponseParser>
+@interface TwitterResponseParser : NSObject <JSResponseParser>
 
 @end

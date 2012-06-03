@@ -16,10 +16,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSWebServiceRequestParameters : NSObject <NSCoding>
+@interface JSRequestParameters : NSObject <NSCoding>
 
 @property (nonatomic, readonly) NSDictionary *parametersDictionary;
 
-+ (JSWebServiceRequestParameters *)emptyRequestParameters;
++ (JSRequestParameters *)emptyRequestParameters;
 
 @end

@@ -18,16 +18,16 @@
 
 @protocol JSBaseEntity <NSObject>
 
-// Takes the dictionary and sets the corresponding properties of the entity object according to the values in it.
+/* Takes the dictionary and sets the corresponding properties of the entity object according to the values in it. */
 - (void)parseDictionary:(NSDictionary *)feed inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
-// Returns a dictionary filled with random data, like the one the API would return for this entity.
+/* Returns a dictionary filled with random data, like the one the API would return for this entity. */
 + (NSDictionary *)randomEntityDictionaryWithDepth:(NSInteger)depth;
 
-// Returns an autoreleased entity object with random values for the properties. Should be implemented in each subclass.
+/* Returns an autoreleased entity object with random values for the properties. Should be implemented in each subclass. */
 + (id)randomEntityObjectWithDepth:(NSInteger)depth;
 
-// subclasses only need to implement this method and return an NSArray of JSEntityProperty instances.
+/* Required: subclasses only need to implement this method and return an NSArray of JSEntityProperty instances. */
 + (NSArray *)entityProperties;
 
 /* No need to override. Returns the name of the class (useful for fetches */

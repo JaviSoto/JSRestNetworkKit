@@ -59,9 +59,4 @@
     }
 }
 
-- (BOOL)needsRelease
-{
-    return YES;
-}
-
 @end

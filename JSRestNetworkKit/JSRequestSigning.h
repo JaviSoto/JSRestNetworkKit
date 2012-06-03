@@ -14,8 +14,14 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceProxy.h"
+#import <Foundation/Foundation.h>
 
-@interface JSWebServiceProxyMock : JSWebServiceProxy
+#import "JSRequestParameters.h"
+
+@class JSRequest;
+
+@protocol JSRequestSigning <NSObject>
+
+- (void)signRequest:(JSRequest *)request;
 
 @end
