@@ -37,4 +37,9 @@
     return [[imageURLs objectAtIndex:[NSNumber randomIntBetweenNumber:0 andNumber:imageURLs.count-1]] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
+- (BOOL)needsRelease
+{
+    return YES;
+}
+
 @end

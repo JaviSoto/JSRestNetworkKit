@@ -17,9 +17,9 @@
 #import "JSResponseParser.h"
 #import "AFHTTPClient.h"
 
-typedef void (^JSRestClientSuccessCallback)(id data, BOOL cached);
-typedef void (^JSRestClientErrorCallback)();
-typedef id (^JSRestClientDataParsingBlock)(id data);
+typedef void (^JSProxySuccessCallback)(id data, BOOL cached);
+typedef void (^JSProxyErrorCallback)();
+typedef id (^JSProxyDataParsingBlock)(id data);
 
 @class JSRequest;
 @protocol JSRequestSigning;
@@ -42,13 +42,13 @@ typedef id (^JSRestClientDataParsingBlock)(id data);
        responseParser:(id<JSResponseParser>)responseParser;
 
 - (void)makeRequest:(JSRequest *)request
-            success:(JSRestClientSuccessCallback)successCallback 
-              error:(JSRestClientErrorCallback)errorCallback;
+            success:(JSProxySuccessCallback)successCallback 
+              error:(JSProxyErrorCallback)errorCallback;
 
 - (void)makeRequest:(JSRequest *)request
        withCacheKey:(NSString *)cacheKey
-         parseBlock:(JSRestClientDataParsingBlock)parsingBlock
-            success:(JSRestClientSuccessCallback)successCallback 
-              error:(JSRestClientErrorCallback)errorCallback;
+         parseBlock:(JSProxyDataParsingBlock)parsingBlock
+            success:(JSProxySuccessCallback)successCallback 
+              error:(JSProxyErrorCallback)errorCallback;
 
 @end

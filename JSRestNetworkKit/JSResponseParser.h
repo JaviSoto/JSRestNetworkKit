@@ -16,7 +16,7 @@
 
 @protocol JSResponseParser <NSObject>
 
-/* Allows the Rest Client to know if a 200-returning request is actually a failure */
+/* Allows the proxy to know if a 200-returning request is actually a failure */
 - (BOOL)responseIsSuccessfulWithDictionary:(NSDictionary *)dictionary;
 
 @optional

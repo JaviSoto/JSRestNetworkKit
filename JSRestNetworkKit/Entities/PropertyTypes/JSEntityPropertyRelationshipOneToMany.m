@@ -74,4 +74,9 @@
     return objects;
 }
 
+- (BOOL)needsRelease
+{
+    return YES;
+}
+
 @end

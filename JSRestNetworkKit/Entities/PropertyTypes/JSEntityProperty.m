@@ -34,20 +34,20 @@
 
 + (JSEntityProperty *)entityPropertyWithKey:(NSString *)key propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self entityPropertyWithAPIKeyPath:key entityPropertyKeyPath:key relationClass:nil propertyType:propertyType];
+    return [self entityPropertyWithApiKey:key andLocalKey:key relationClass:nil propertyType:propertyType];
 }
 
-+ (JSEntityProperty *)entityPropertyWithAPIKeyPath:(NSString *)apiKey entityPropertyKeyPath:(NSString *)localKey propertyType:(JSEntityPropertyType)propertyType
++ (JSEntityProperty *)entityPropertyWithApiKey:(NSString *)apiKey andLocalKey:(NSString *)localKey propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self entityPropertyWithAPIKeyPath:apiKey entityPropertyKeyPath:localKey relationClass:nil propertyType:propertyType];
+    return [self entityPropertyWithApiKey:apiKey andLocalKey:localKey relationClass:nil propertyType:propertyType];
 }
 
 + (JSEntityProperty *)entityPropertyWithKey:(NSString *)key relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self entityPropertyWithAPIKeyPath:key entityPropertyKeyPath:key relationClass:relationClass propertyType:propertyType];
+    return [self entityPropertyWithApiKey:key andLocalKey:key relationClass:relationClass propertyType:propertyType];
 }
 
-+ (JSEntityProperty *)entityPropertyWithAPIKeyPath:(NSString *)apiKey entityPropertyKeyPath:(NSString *)localKey relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
++ (JSEntityProperty *)entityPropertyWithApiKey:(NSString *)apiKey andLocalKey:(NSString *)localKey relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
 {
     JSEntityProperty *property = nil;
     
@@ -92,6 +92,7 @@
     return nil;
 }
 
+// think what would happen with recursive relationdships. Probable infinite loop. Perhaps add a maxdepth parameter for this method
 - (id)randomValueWithDepth:(NSInteger)depth
 {
     // Abstract implementation
@@ -102,6 +103,12 @@
 {
     return [NSString stringWithFormat:@"%@ with local key: %@ api key: %@ relation with class: %@", NSStringFromClass(self.class), self.localPropertyKey, self.apiPropertyKey, self.entityRelationClass.class];
 }
+
+- (BOOL)needsRelease
+{
+    return NO;
+}
+
 - (void)dealloc
 {
 	[_apiPropertyKey release];

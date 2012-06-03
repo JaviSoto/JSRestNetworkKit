@@ -37,4 +37,9 @@
     return [NSString randomStringWithLengthBetween:2 and:20];
 }
 
+- (BOOL)needsRelease
+{
+    return YES;
+}
+
 @end

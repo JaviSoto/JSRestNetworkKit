@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 JavierSoto. All rights reserved.
 //
 
-typedef JSRestClientSuccessCallback TwitterRequestManagerSucessCallback;
-typedef JSRestClientErrorCallback TwitterRequestManagerErrorCallback;
+typedef JSProxySuccessCallback TwitterRequestManagerSucessCallback;
+typedef JSProxyErrorCallback TwitterRequestManagerErrorCallback;
 
 @class TwitterUser;
 
