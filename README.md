@@ -1,4 +1,4 @@
-#JSRestNetworkKit v0.5
+#JSRestNetworkKit v0.5.1
 **JSRestNetworkKit** is a lightweight library to manage the backend of your iOS / Mac OSX applications perfect to work against a model-based REST backend.
 It's a framework written on top of [AFNetworking](https://github.com/AFNetworking/AFNetworking) that allows to write the backend code of apps with very little code.
 
@@ -15,7 +15,7 @@ It's a framework written on top of [AFNetworking](https://github.com/AFNetworkin
 - ```JSRequestParameters```: Wrapper on top of NSMutableDictionary to store the parameters of a request.
 - ```JSRequestSigning```: Protocol that you can conform to if you want to have the chance to alter a request just before it's sent off to the network. You can alter the request headers at that point, for example, to add authentication.
 - ```JSResponseParser```: Protocol that you can conform to if you want to help ```JSRestClient``` distinguish between a successful and a failed request depending on the content of the response. For example, checking if the JSON contains an *error* dictionary.
-- ```JSBaseEntity```: Class that your models must inherit to. Just implement the method ```+entityProperties``` and you get the JSON parsing for free.
+- ```JSBaseEntity```: Class that your models must inherit from. Just implement the method ```+entityProperties``` and you get the JSON parsing for free.
 - ```JSBaseCoreDataBackedEntity```: Works the same as ```JSBaseEntity```, but enables you to store the objects in CoreData.
 - ```JSEntityProperty```: Holds the information about an entity field: key in the JSONs returned by the API, key of the property in the corresponding ```JSBaseEntity```/```JSBaseCoreDataBackedEntity``` object, type (numeric, string, relationship...) so it's parsed accordingly.
 
