@@ -13,6 +13,7 @@
 
 @synthesize userID = _userID,
             name = _name,
+            screenName = _screenName,
             avatarURL = _avatarURL,
             followers = _followers,
             tweets = _tweets;

@@ -24,17 +24,17 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "AFJSONRequestOperation.h"
 
-#define WebServiceProxyDebug 1
+#define JSRestClientDebug 1
 
-#if WebServiceProxyDebug
-    #define WebServiceProxyDebugLog(s,...) NSLog(@"%@", [NSString stringWithFormat:@"%@ %@", NSStringFromClass([self class]), [NSString stringWithFormat:s, ##__VA_ARGS__]])
+#if JSRestClientDebug
+    #define JSRestClientDebugLog(s,...) NSLog(@"%@", [NSString stringWithFormat:@"%@ %@", NSStringFromClass([self class]), [NSString stringWithFormat:s, ##__VA_ARGS__]])
 #else
-    #define WebServiceProxyDebugLog(s,...)
+    #define JSRestClientDebugLog(s,...)
 #endif
 
 @interface JSRestClient ()
 {
-    dispatch_queue_t _webProxyDispatchQueue;
+    dispatch_queue_t _restClientQueue;
 }
 - (AFHTTPRequestOperation *)operationForRequest:(JSRequest *)request
                                         success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success
@@ -53,7 +53,7 @@
 {
     if ((self = [super initWithBaseURL:url]))
     {
-        _webProxyDispatchQueue = dispatch_queue_create("JSWebProxyDispatchQueue", DISPATCH_QUEUE_CONCURRENT);
+        _restClientQueue = dispatch_queue_create("es.javisoto.jsrestnetworkkit.restclient", DISPATCH_QUEUE_CONCURRENT);
     }
     
     return self;
@@ -85,11 +85,11 @@
 
 - (void)makeRequest:(JSRequest *)request
        withCacheKey:(NSString *)cacheKey
-         parseBlock:(JSProxyDataParsingBlock)parsingBlock
-            success:(JSProxySuccessCallback)successCallback
-              error:(JSProxyErrorCallback)errorCallback
+         parseBlock:(JSRestClientDataParsingBlock)parsingBlock
+            success:(JSRestClientSuccessCallback)successCallback
+              error:(JSRestClientErrorCallback)errorCallback
 {    
-    dispatch_async(_webProxyDispatchQueue, ^{
+    dispatch_async(_restClientQueue, ^{
         if (cacheKey)
         {
             id cachedData = [[JSCache sharedCache] cachedObjectForKey:cacheKey];
@@ -134,8 +134,8 @@
 }
 
 - (void)makeRequest:(JSRequest *)request
-            success:(JSProxySuccessCallback)successCallback 
-              error:(JSProxyErrorCallback)errorCallback
+            success:(JSRestClientSuccessCallback)successCallback 
+              error:(JSRestClientErrorCallback)errorCallback
 {
     [self makeRequest:request withCacheKey:nil parseBlock:NULL success:successCallback error:errorCallback];
 }
@@ -186,7 +186,7 @@
 
 - (void)dealloc
 {
-    dispatch_release(_webProxyDispatchQueue);
+    dispatch_release(_restClientQueue);
     [_requestSigner release];
     [_responseParser release];
     

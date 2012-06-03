@@ -12,7 +12,8 @@
 
 @implementation Tweet
 
-@synthesize user, text;
+@synthesize user = _user,
+            text = _text;
 
 + (NSArray *)entityProperties
 {
