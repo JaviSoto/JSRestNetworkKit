@@ -35,25 +35,23 @@ typedef enum
 @property (nonatomic, assign) Class entityRelationClass;
 
 + (JSEntityProperty *)entityPropertyWithKey:(NSString *)key
-                             propertyType:(JSEntityPropertyType)propertyType;
+                               propertyType:(JSEntityPropertyType)propertyType;
 
-+ (JSEntityProperty *)entityPropertyWithApiKey:(NSString *)apiKey
-                                 andLocalKey:(NSString *)localKey
-                                propertyType:(JSEntityPropertyType)propertyType;
++ (JSEntityProperty *)entityPropertyWithAPIKeyPath:(NSString *)apiKey
+                             entityPropertyKeyPath:(NSString *)localKey
+                                      propertyType:(JSEntityPropertyType)propertyType;
 
 + (JSEntityProperty *)entityPropertyWithKey:(NSString *)key
-                            relationClass:(Class)relationClass
-                             propertyType:(JSEntityPropertyType)propertyType;
+                              relationClass:(Class)relationClass
+                               propertyType:(JSEntityPropertyType)propertyType;
 
-+ (JSEntityProperty *)entityPropertyWithApiKey:(NSString *)apiKey
-                                 andLocalKey:(NSString *)localKey
-                               relationClass:(Class)relationClass
-                                propertyType:(JSEntityPropertyType)propertyType;
++ (JSEntityProperty *)entityPropertyWithAPIKeyPath:(NSString *)apiKey
+                             entityPropertyKeyPath:(NSString *)localKey
+                                     relationClass:(Class)relationClass
+                                      propertyType:(JSEntityPropertyType)propertyType;
 
 // Second parameter is optional
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 - (id)randomValueWithDepth:(NSInteger)depth;
-
-- (BOOL)needsRelease;
 
 @end

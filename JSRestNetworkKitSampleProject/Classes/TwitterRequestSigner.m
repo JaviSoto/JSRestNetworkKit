@@ -79,7 +79,8 @@
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
     CFRelease(theUUID);
-    NSString *nonce = (NSString *)string;
+    NSString *nonce = [[(NSString *)string retain] autorelease];
+    CFRelease(string);
     
     NSString *signatureBaseString = [self signatureBaseStringForRequest:request
                                                           withTimestamp:timestamp

@@ -12,7 +12,8 @@
 
 @implementation Tweet
 
-@synthesize user, text;
+@synthesize user = _user,
+            text = _text;
 
 + (NSArray *)entityProperties
 {
@@ -27,6 +28,14 @@
     });
     
     return entityProperties;
+}
+
+- (void)dealloc
+{
+    [_user release];
+    [_text release];
+    
+    [super dealloc];
 }
 
 @end

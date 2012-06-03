@@ -18,7 +18,7 @@
 
 @interface TwitterRequestManager ()
 {
-    JSRestClient *_webProxy;
+    JSRestClient *_restClient;
 }
 @end
 
@@ -37,7 +37,7 @@
                                                                                    tokenKey:@"579275196-4mkKjxoiIwP1HDyJwD8f2JVXK70pdx6JHJQL5vml"
                                                                                 tokenSecret:@"4NCaeKXp3GIQmCQSh4IUPiZHZo9dYXxt2yASdd4uaqc"];
         
-        _webProxy = [[JSRestClient alloc] initWithBaseURL:[NSURL URLWithString:baseURL] requestSigner:requestSigner responseParser:responseParser];
+        _restClient = [[JSRestClient alloc] initWithBaseURL:[NSURL URLWithString:baseURL] requestSigner:requestSigner responseParser:responseParser];
         
         [requestSigner release];
         [responseParser release];
@@ -46,7 +46,7 @@
     return self;
 }
 
-- (JSProxyDataParsingBlock)parseBlockForArrayOfTweets
+- (JSRestClientDataParsingBlock)parseBlockForArrayOfTweets
 {
     return [[^id(NSArray *tweetDictionaries) {        
         NSMutableArray *tweets = [NSMutableArray array];
@@ -75,7 +75,7 @@
     /* - I make the request passing a cache key. If another request is made with the same cache key, the successCallback will be called inmediately with the last saved cached data
      - The parse block has to be implemented so that, taking the raw dictionary, it returns parsed data ready to be cached and returned
      - This is where most of the code is saved, as I only need to call - initWithDictionary: and the model class knows how to instantiate itself just because the attributes are defined (see Tweet.m) */
-    [_webProxy makeRequest:request
+    [_restClient makeRequest:request
               withCacheKey:@"timeline"
                 parseBlock:[self parseBlockForArrayOfTweets]
                    success:success
@@ -94,7 +94,7 @@
 
     NSString *userCacheKey = [NSString stringWithFormat:@"twitter_user_cache_%@", user.userID];
     
-    [_webProxy makeRequest:request withCacheKey:userCacheKey parseBlock:^id(NSDictionary *userInfo) {
+    [_restClient makeRequest:request withCacheKey:userCacheKey parseBlock:^id(NSDictionary *userInfo) {
         [user parseDictionary:userInfo];
         return user;
     } success:success error:error];
@@ -112,7 +112,7 @@
     
     NSString *userCacheKey = [NSString stringWithFormat:@"twitter_user_timeline_cache_%@", user.userID];
     
-    [_webProxy makeRequest:request
+    [_restClient makeRequest:request
               withCacheKey:userCacheKey
                 parseBlock:[self parseBlockForArrayOfTweets]
                    success:success
@@ -125,7 +125,7 @@
 
 - (void)dealloc
 {
-    [_webProxy release];
+    [_restClient release];
     
     [super dealloc];
 }

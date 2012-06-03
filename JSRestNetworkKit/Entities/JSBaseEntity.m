@@ -110,18 +110,4 @@
     return NSStringFromClass(self);
 }
 
-#ifndef JSRestNetworkKitDisableAutoDeallocImplementationOfEntities
-- (void)dealloc
-{
-    [[[self class] entityProperties] enumerateObjectsUsingBlock:^(JSEntityProperty *property, NSUInteger idx, BOOL *stop) {
-        if ([property needsRelease])
-        {
-            [self setValue:nil forKey:property.localPropertyKey];
-        }
-    }];
-    
-    [super dealloc];
-}
-#endif
-
 @end

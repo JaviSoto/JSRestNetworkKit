@@ -13,6 +13,7 @@
 
 @synthesize userID = _userID,
             name = _name,
+            screenName = _screenName,
             avatarURL = _avatarURL,
             followers = _followers,
             tweets = _tweets;
@@ -25,15 +26,25 @@
     dispatch_once(&onceToken, ^{
         entityProperties = [[NSMutableArray alloc] init];
         
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"id" andLocalKey:@"userID" propertyType:JSEntityPropertyTypeString]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"id" entityPropertyKeyPath:@"userID" propertyType:JSEntityPropertyTypeString]];
         [entityProperties addObject:[JSEntityProperty entityPropertyWithKey:@"name" propertyType:JSEntityPropertyTypeString]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"screen_name" andLocalKey:@"screenName" propertyType:JSEntityPropertyTypeString]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"profile_image_url" andLocalKey:@"avatarURL" propertyType:JSEntityPropertyTypeURL]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"followers_count" andLocalKey:@"followers" propertyType:JSEntityPropertyTypeInt]];
-        [entityProperties addObject:[JSEntityProperty entityPropertyWithApiKey:@"statuses_count" andLocalKey:@"tweets" propertyType:JSEntityPropertyTypeInt]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"screen_name" entityPropertyKeyPath:@"screenName" propertyType:JSEntityPropertyTypeString]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"profile_image_url" entityPropertyKeyPath:@"avatarURL" propertyType:JSEntityPropertyTypeURL]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"followers_count" entityPropertyKeyPath:@"followers" propertyType:JSEntityPropertyTypeInt]];
+        [entityProperties addObject:[JSEntityProperty entityPropertyWithAPIKeyPath:@"statuses_count" entityPropertyKeyPath:@"tweets" propertyType:JSEntityPropertyTypeInt]];
     });
     
     return entityProperties;
+}
+
+- (void)dealloc
+{
+    [_userID release];
+    [_name release];
+    [_screenName release];
+    [_avatarURL release];
+    
+    [super dealloc];
 }
 
 @end

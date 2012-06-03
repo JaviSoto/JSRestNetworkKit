@@ -40,7 +40,7 @@
     });
 }
 
-- (void)makeRequest:(JSRequest *)request withCacheKey:(NSString *)cacheKey parseBlock:(JSProxyDataParsingBlock)parsingBlock success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSRequest *)request withCacheKey:(NSString *)cacheKey parseBlock:(JSRestClientDataParsingBlock)parsingBlock success:(JSRestClientSuccessCallback)successCallback error:(JSRestClientErrorCallback)errorCallback
 {
     static const CGFloat kMockRequestMaxDurationInSeconds = 1.4f;
     static const NSInteger kMockRequestFailuresPerHundred = 5;
@@ -95,7 +95,7 @@
     });
 }
 
-- (void)makeRequest:(JSRequest *)wsRequest success:(JSProxySuccessCallback)successCallback error:(JSProxyErrorCallback)errorCallback
+- (void)makeRequest:(JSRequest *)wsRequest success:(JSRestClientSuccessCallback)successCallback error:(JSRestClientErrorCallback)errorCallback
 {
     [self makeRequest:wsRequest withCacheKey:nil parseBlock:NULL success:successCallback error:errorCallback];
 }
