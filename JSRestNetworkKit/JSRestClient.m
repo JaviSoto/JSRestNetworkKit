@@ -49,8 +49,6 @@
 @synthesize requestSigner = _requestSigner;
 @synthesize responseParser = _responseParser;
 
-#pragma mark - Singleton
-
 - (id)initWithBaseURL:(NSURL *)url
 {
     if ((self = [super initWithBaseURL:url]))

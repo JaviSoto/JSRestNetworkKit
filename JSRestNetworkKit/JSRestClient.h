@@ -32,6 +32,8 @@ typedef id (^JSProxyDataParsingBlock)(id data);
 /* Optional: set to be able to distinguish a successful and a failing request according to the response content */
 @property (nonatomic, retain) id<JSResponseParser>responseParser;
 
+- (id)initWithBaseURL:(NSURL *)url;
+
 - (id)initWithBaseURL:(NSURL *)baseURL
         requestSigner:(id<JSRequestSigning>)requestSigner
        responseParser:(id<JSResponseParser>)responseParser;
