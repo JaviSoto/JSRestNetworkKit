@@ -16,6 +16,6 @@
 
 #import "JSRestClient.h"
 
-@interface JSFakeRestClient : JSRestTClient
+@interface JSFakeRestClient : JSRestClient
 
 @end

@@ -32,7 +32,7 @@
     #define WebServiceProxyDebugLog(s,...)
 #endif
 
-@interface JSRestTClient ()
+@interface JSRestClient ()
 {
     dispatch_queue_t _webProxyDispatchQueue;
 }
@@ -45,7 +45,7 @@
            failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure;
 @end
 
-@implementation JSRestTClient
+@implementation JSRestClient
 @synthesize requestSigner = _requestSigner;
 @synthesize responseParser = _responseParser;
 

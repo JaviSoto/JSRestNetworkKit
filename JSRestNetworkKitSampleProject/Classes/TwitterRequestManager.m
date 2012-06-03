@@ -18,7 +18,7 @@
 
 @interface TwitterRequestManager ()
 {
-    JSRestTClient *_webProxy;
+    JSRestClient *_webProxy;
 }
 @end
 
@@ -37,7 +37,7 @@
                                                                                    tokenKey:@"579275196-4mkKjxoiIwP1HDyJwD8f2JVXK70pdx6JHJQL5vml"
                                                                                 tokenSecret:@"4NCaeKXp3GIQmCQSh4IUPiZHZo9dYXxt2yASdd4uaqc"];
         
-        _webProxy = [[JSRestTClient alloc] initWithBaseURL:[NSURL URLWithString:baseURL] requestSigner:requestSigner responseParser:responseParser];
+        _webProxy = [[JSRestClient alloc] initWithBaseURL:[NSURL URLWithString:baseURL] requestSigner:requestSigner responseParser:responseParser];
         
         [requestSigner release];
         [responseParser release];
