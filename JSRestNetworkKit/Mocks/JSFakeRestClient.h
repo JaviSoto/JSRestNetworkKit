@@ -14,14 +14,8 @@
  limitations under the License. 
  */
 
-#import <Foundation/Foundation.h>
+#import "JSRestClient.h"
 
-#import "JSWebServiceRequestParameters.h"
-
-@class JSWebServiceRequest;
-
-@protocol JSWebServiceRequestSigning <NSObject>
-
-- (void)signRequest:(JSWebServiceRequest *)request;
+@interface JSFakeRestClient : JSRestClient
 
 @end

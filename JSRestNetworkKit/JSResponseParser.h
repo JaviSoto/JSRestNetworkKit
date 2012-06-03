@@ -14,9 +14,9 @@
  limitations under the License. 
  */
 
-@protocol JSWebServiceResponseParser <NSObject>
+@protocol JSResponseParser <NSObject>
 
-/* Allows the proxy to know if a 200-returning request is actually a failure */
+/* Allows the Rest Client to know if a 200-returning request is actually a failure */
 - (BOOL)responseIsSuccessfulWithDictionary:(NSDictionary *)dictionary;
 
 @optional

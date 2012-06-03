@@ -12,7 +12,8 @@
 
 @implementation Tweet
 
-@synthesize user, text;
+@synthesize user = _user,
+            text = _text;
 
 + (NSArray *)entityProperties
 {
@@ -32,6 +33,14 @@
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<%@> %@: %@", NSStringFromClass([self class]), self.user.screenName, self.text];
+}
+
+- (void)dealloc
+{
+    [_user release];
+    [_text release];
+    
+    [super dealloc];
 }
 
 @end

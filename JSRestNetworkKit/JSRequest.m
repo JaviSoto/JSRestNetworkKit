@@ -14,18 +14,18 @@
  limitations under the License. 
  */
 
-#import "JSWebServiceRequest.h"
+#import "JSRequest.h"
 
-@implementation JSWebServiceRequest
+@implementation JSRequest
 
 @synthesize type = _type;
 @synthesize path = _path;
 @synthesize parameters = _parameters;
 @synthesize headerFields = _headerFields;
 
-- (id)initWithType:(JSWebServiceRequestType)type
+- (id)initWithType:(JSRequestType)type
                path:(NSString *)path
-        parameters:(JSWebServiceRequestParameters *)parameters
+        parameters:(JSRequestParameters *)parameters
 {
     if ((self = [super init]))
     {
@@ -62,15 +62,28 @@
 
 - (NSString *)requestTypeString
 {
-    return (self.type == JSWebServiceRequestTypeGET) ? @"GET" : @"POST";
+    switch (self.type)
+    {
+        case JSRequestTypeGET:
+            return @"GET";
+        case JSRequestTypePOST:
+            return @"POST";
+        case JSRequestTypePUT:
+            return @"PUT";
+        case JSRequestTypeDELETE:
+            return @"DELETE";
+    }
 }
 
 - (void)setPath:(NSString *)path
 {
     @synchronized(self)
     {
-        [_path release];
-        _path = [[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] copy];
+        if (path != _path)
+        {
+            [_path release];
+            _path = [[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] copy];
+        }
     }
 }
 

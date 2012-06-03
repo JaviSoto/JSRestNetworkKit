@@ -18,8 +18,6 @@
 
 @interface JSBaseCoreDataBackedEntity : NSManagedObject <JSBaseEntity>
 
-+ (void)failedExecutingFetchRequestWithError:(NSError*)error;
-
 /* Parse the dictionary and save into the passed managed object context */
 + (id)updateOrInsertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary;
 
