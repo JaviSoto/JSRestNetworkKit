@@ -1,4 +1,4 @@
-#JSRestNetworkKit v0.5.1
+#JSRestNetworkKit v0.5.2
 **JSRestNetworkKit** is a lightweight library to manage the backend of your iOS / Mac OSX applications perfect to work against a model-based REST backend.
 It's a framework written on top of [AFNetworking](https://github.com/AFNetworking/AFNetworking) that allows to write the backend code of apps with very little code.
 
@@ -20,10 +20,15 @@ It's a framework written on top of [AFNetworking](https://github.com/AFNetworkin
 - ```JSEntityProperty```: Holds the information about an entity field: key in the JSONs returned by the API, key of the property in the corresponding ```JSBaseEntity```/```JSBaseCoreDataBackedEntity``` object, type (numeric, string, relationship...) so it's parsed accordingly.
 
 ##How to use it:
-- Get the code.
-- Add ```JSRestNetworkKit``` to your Xcode project
-- Import ```JSRestNetworkKit.h```
-- Start playing with it (check out the sample project)
+- Clone the repo.
+- Update the submodules recursively:
+
+```bash
+$ git submodule update --init --recursive
+```
+- Add ```JSRestNetworkKit``` to your Xcode project.
+- Import ```JSRestNetworkKit.h```.
+- Start playing with it (check out the sample project).
 
 ## Sample snippets
 
