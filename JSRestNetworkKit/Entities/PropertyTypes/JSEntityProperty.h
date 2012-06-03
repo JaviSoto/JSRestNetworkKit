@@ -54,6 +54,4 @@ typedef enum
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 - (id)randomValueWithDepth:(NSInteger)depth;
 
-- (BOOL)needsRelease;
-
 @end

@@ -29,4 +29,12 @@
     return entityProperties;
 }
 
+- (void)dealloc
+{
+    [_user release];
+    [_text release];
+    
+    [super dealloc];
+}
+
 @end

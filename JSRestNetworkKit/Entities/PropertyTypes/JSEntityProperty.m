@@ -103,12 +103,6 @@
 {
     return [NSString stringWithFormat:@"%@ with local key: %@ api key: %@ relation with class: %@", NSStringFromClass(self.class), self.localPropertyKey, self.apiPropertyKey, self.entityRelationClass.class];
 }
-
-- (BOOL)needsRelease
-{
-    return NO;
-}
-
 - (void)dealloc
 {
 	[_apiPropertyKey release];
