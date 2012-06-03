@@ -1,0 +1,6 @@
+[submodule "JSRestNetworkKit/Vendor/UIImageView-AFNetworkingJSAdditions"]
+	path = JSRestNetworkKit/Vendor/UIImageView-AFNetworkingJSAdditions
+	url = git@github.com:JaviSoto/UIImageView-AFNetworkingJSAdditions.git
+[submodule "JSRestNetworkKit/Vendor/JSCache"]
+	path = JSRestNetworkKit/Vendor/JSCache
+	url = git@github.com:JaviSoto/JSCache.git
