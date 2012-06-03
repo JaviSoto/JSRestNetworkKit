@@ -92,7 +92,6 @@
     return nil;
 }
 
-// think what would happen with recursive relationdships. Probable infinite loop. Perhaps add a maxdepth parameter for this method
 - (id)randomValueWithDepth:(NSInteger)depth
 {
     // Abstract implementation

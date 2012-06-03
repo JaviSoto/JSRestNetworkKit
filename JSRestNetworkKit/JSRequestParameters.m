@@ -59,13 +59,9 @@
 - (void)setValue:(id)value forKey:(NSString *)parameterName
 {
     if (value)
-    {
         [_parametersDictionary setValue:value forKey:parameterName];
-    }
     else
-    {
         NSLog(@"Tried to set a nil value for parameter %@", parameterName);
-    }
 }
 
 - (NSString *)description
