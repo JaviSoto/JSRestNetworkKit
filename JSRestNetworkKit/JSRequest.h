@@ -14,7 +14,7 @@
  limitations under the License. 
  */
 
-#import "JSRESTClient.h"
+#import "JSRestClient.h"
 
 typedef enum {
     JSRequestTypeGET,

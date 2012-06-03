@@ -14,7 +14,7 @@
  limitations under the License. 
  */
 
-#import "JSFakeRESTClient.h"
+#import "JSFakeRestClient.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
 
@@ -22,7 +22,7 @@
 
 #define kShouldSleepBeforeReturningData YES
 
-@implementation JSFakeRESTClient
+@implementation JSFakeRestClient
 
 - (void)runRequest:(JSRequest *)request
            success:(void (^)(NSURLRequest *request, NSURLResponse *response, id JSON))success

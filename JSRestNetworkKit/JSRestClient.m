@@ -14,7 +14,7 @@
  limitations under the License. 
  */
 
-#import "JSRESTClient.h"
+#import "JSRestClient.h"
 
 #import "JSRequest.h"
 #import "JSCache.h"
@@ -32,7 +32,7 @@
     #define WebServiceProxyDebugLog(s,...)
 #endif
 
-@interface JSRESTClient ()
+@interface JSRestTClient ()
 {
     dispatch_queue_t _webProxyDispatchQueue;
 }
@@ -45,7 +45,7 @@
            failure:(void (^)(NSURLRequest *request, NSURLResponse *response, NSError *error))failure;
 @end
 
-@implementation JSRESTClient
+@implementation JSRestTClient
 @synthesize requestSigner = _requestSigner;
 @synthesize responseParser = _responseParser;
 
@@ -180,7 +180,7 @@
 {
     AFHTTPRequestOperation *operation = [self operationForRequest:request success:success failure:failure];
 
-    NSAssert(operation != nil, @"Couldn't create an operation for request %@", request);
+    NSAssert(operation, @"Couldn't create an operation for request %@", request);
     [self.operationQueue addOperation:operation];
 }
 

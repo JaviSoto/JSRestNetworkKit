@@ -24,7 +24,7 @@ typedef id (^JSProxyDataParsingBlock)(id data);
 @class JSRequest;
 @protocol JSRequestSigning;
 
-@interface JSRESTClient : AFHTTPClient
+@interface JSRestTClient : AFHTTPClient
 
 /* Optional: set to be able to sign a request (by modifying its headers) before it's performed */
 @property (nonatomic, retain) id<JSRequestSigning>requestSigner;

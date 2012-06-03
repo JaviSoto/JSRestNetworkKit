@@ -14,8 +14,8 @@
  limitations under the License. 
  */
 
-#import "JSRESTClient.h"
+#import "JSRestClient.h"
 
-@interface JSFakeRESTClient : JSRESTClient
+@interface JSFakeRestClient : JSRestTClient
 
 @end

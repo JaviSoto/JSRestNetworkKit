@@ -8,8 +8,8 @@
 
 #import "JSBaseEntity.h"
 #import "JSEntityProperty.h"
-#import "JSRESTClient.h"
-#import "JSFakeRESTClient.h"
+#import "JSRestClient.h"
+#import "JSFakeRestClient.h"
 #import "JSRequest.h"
 #import "JSRequestParameters.h"
 #import "JSRequestSigning.h"

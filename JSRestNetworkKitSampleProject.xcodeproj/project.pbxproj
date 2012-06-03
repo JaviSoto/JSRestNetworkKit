@@ -46,10 +46,10 @@
 		1D905314156027B100999226 /* TwitterRequestSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D905313156027B100999226 /* TwitterRequestSigner.m */; };
 		1D91E3F215576D8600532996 /* TwitterRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E3F115576D8600532996 /* TwitterRequestManager.m */; };
 		1D963230153248BC00501145 /* JSReachabilityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F2153248BC00501145 /* JSReachabilityService.m */; };
-		1D963231153248BC00501145 /* JSRESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F3153248BC00501145 /* JSRESTClient.m */; };
+		1D963231153248BC00501145 /* JSRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F3153248BC00501145 /* JSRestClient.m */; };
 		1D963232153248BC00501145 /* JSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F4153248BC00501145 /* JSRequest.m */; };
 		1D963234153248BC00501145 /* JSRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F6153248BC00501145 /* JSRequestParameters.m */; };
-		1D963245153248BC00501145 /* JSFakeRESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321A153248BC00501145 /* JSFakeRESTClient.m */; };
+		1D963245153248BC00501145 /* JSFakeRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D96321A153248BC00501145 /* JSFakeRestClient.m */; };
 		1DA302BD15602FF9001E6F46 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302BC15602FF9001E6F46 /* hmac.c */; };
 		1DA302C01560304F001E6F46 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302BF1560304F001E6F46 /* sha1.c */; };
 		1DA302C215603092001E6F46 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DA302C115603092001E6F46 /* Base64Transcoder.c */; };
@@ -142,17 +142,17 @@
 		1D91E3F015576D8600532996 /* TwitterRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterRequestManager.h; path = Classes/TwitterRequestManager.h; sourceTree = "<group>"; };
 		1D91E3F115576D8600532996 /* TwitterRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterRequestManager.m; path = Classes/TwitterRequestManager.m; sourceTree = "<group>"; };
 		1D9631F2153248BC00501145 /* JSReachabilityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSReachabilityService.m; path = JSRestNetworkKit/JSReachabilityService.m; sourceTree = SOURCE_ROOT; };
-		1D9631F3153248BC00501145 /* JSRESTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = JSRESTClient.m; path = JSRestNetworkKit/JSRESTClient.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D9631F3153248BC00501145 /* JSRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = JSRestClient.m; path = JSRestNetworkKit/JSRestClient.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1D9631F4153248BC00501145 /* JSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSRequest.m; path = JSRestNetworkKit/JSRequest.m; sourceTree = SOURCE_ROOT; };
 		1D9631F6153248BC00501145 /* JSRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSRequestParameters.m; path = JSRestNetworkKit/JSRequestParameters.m; sourceTree = SOURCE_ROOT; };
-		1D963219153248BC00501145 /* JSFakeRESTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSFakeRESTClient.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		1D96321A153248BC00501145 /* JSFakeRESTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSFakeRESTClient.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D963219153248BC00501145 /* JSFakeRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSFakeRestClient.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D96321A153248BC00501145 /* JSFakeRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSFakeRestClient.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1D963228153248BC00501145 /* JSReachabilityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSReachabilityService.h; path = JSRestNetworkKit/JSReachabilityService.h; sourceTree = SOURCE_ROOT; };
-		1D963229153248BC00501145 /* JSRESTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = JSRESTClient.h; path = JSRestNetworkKit/JSRESTClient.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		1D96322A153248BC00501145 /* JSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; name = JSRequest.h; path = JSRestNetworkKit/JSRequest.h; sourceTree = SOURCE_ROOT; };
-		1D96322C153248BC00501145 /* JSRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; name = JSRequestParameters.h; path = JSRestNetworkKit/JSRequestParameters.h; sourceTree = SOURCE_ROOT; };
-		1D96322E153248BC00501145 /* JSRequestSigning.h */ = {isa = PBXFileReference; fileEncoding = 4; name = JSRequestSigning.h; path = JSRestNetworkKit/JSRequestSigning.h; sourceTree = SOURCE_ROOT; };
-		1D96322F153248BC00501145 /* JSResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; name = JSResponseParser.h; path = JSRestNetworkKit/JSResponseParser.h; sourceTree = SOURCE_ROOT; };
+		1D963229153248BC00501145 /* JSRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; name = JSRestClient.h; path = JSRestNetworkKit/JSRestClient.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D96322A153248BC00501145 /* JSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSRequest.h; path = JSRestNetworkKit/JSRequest.h; sourceTree = SOURCE_ROOT; };
+		1D96322C153248BC00501145 /* JSRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSRequestParameters.h; path = JSRestNetworkKit/JSRequestParameters.h; sourceTree = SOURCE_ROOT; };
+		1D96322E153248BC00501145 /* JSRequestSigning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSRequestSigning.h; path = JSRestNetworkKit/JSRequestSigning.h; sourceTree = SOURCE_ROOT; };
+		1D96322F153248BC00501145 /* JSResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSResponseParser.h; path = JSRestNetworkKit/JSResponseParser.h; sourceTree = SOURCE_ROOT; };
 		1DA302BB15602FED001E6F46 /* hmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = Classes/hmac.h; sourceTree = "<group>"; };
 		1DA302BC15602FF9001E6F46 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = Classes/hmac.c; sourceTree = "<group>"; };
 		1DA302BE15603044001E6F46 /* sha1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = Classes/sha1.h; sourceTree = "<group>"; };
@@ -399,8 +399,8 @@
 				1D17810615576C5C0011C13C /* JSRestNetworkKit.h */,
 				1D963228153248BC00501145 /* JSReachabilityService.h */,
 				1D9631F2153248BC00501145 /* JSReachabilityService.m */,
-				1D963229153248BC00501145 /* JSRESTClient.h */,
-				1D9631F3153248BC00501145 /* JSRESTClient.m */,
+				1D963229153248BC00501145 /* JSRestClient.h */,
+				1D9631F3153248BC00501145 /* JSRestClient.m */,
 				1D96322A153248BC00501145 /* JSRequest.h */,
 				1D9631F4153248BC00501145 /* JSRequest.m */,
 				1D96322C153248BC00501145 /* JSRequestParameters.h */,
@@ -418,8 +418,8 @@
 		1D963218153248BC00501145 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				1D963219153248BC00501145 /* JSFakeRESTClient.h */,
-				1D96321A153248BC00501145 /* JSFakeRESTClient.m */,
+				1D963219153248BC00501145 /* JSFakeRestClient.h */,
+				1D96321A153248BC00501145 /* JSFakeRestClient.m */,
 			);
 			name = Mocks;
 			path = JSRestNetworkKit/Mocks;
@@ -612,10 +612,10 @@
 				1D8448BC1532443000F99DE1 /* JSAppDelegate.m in Sources */,
 				1D8448BF1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld in Sources */,
 				1D963230153248BC00501145 /* JSReachabilityService.m in Sources */,
-				1D963231153248BC00501145 /* JSRESTClient.m in Sources */,
+				1D963231153248BC00501145 /* JSRestClient.m in Sources */,
 				1D963232153248BC00501145 /* JSRequest.m in Sources */,
 				1D963234153248BC00501145 /* JSRequestParameters.m in Sources */,
-				1D963245153248BC00501145 /* JSFakeRESTClient.m in Sources */,
+				1D963245153248BC00501145 /* JSFakeRestClient.m in Sources */,
 				1D44D07415324A3500BADD37 /* JSMethodSwizzler.m in Sources */,
 				1D44D07715324ABB00BADD37 /* JSClassDescendantOfClass.m in Sources */,
 				1D44D07B153251CD00BADD37 /* NSNumber+JSRandomValues.m in Sources */,
