@@ -62,15 +62,28 @@
 
 - (NSString *)requestTypeString
 {
-    return (self.type == JSRequestTypeGET) ? @"GET" : @"POST";
+    switch (self.type)
+    {
+        case JSRequestTypeGET:
+            return @"GET";
+        case JSRequestTypePOST:
+            return @"POST";
+        case JSRequestTypePUT:
+            return @"PUT";
+        case JSRequestTypeDELETE:
+            return @"DELETE";
+    }
 }
 
 - (void)setPath:(NSString *)path
 {
     @synchronized(self)
     {
-        [_path release];
-        _path = [[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] copy];
+        if (path != _path)
+        {
+            [_path release];
+            _path = [[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] copy];
+        }
     }
 }
 

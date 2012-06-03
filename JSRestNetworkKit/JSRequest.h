@@ -19,6 +19,8 @@
 typedef enum {
     JSRequestTypeGET,
     JSRequestTypePOST,
+    JSRequestTypePUT,
+    JSRequestTypeDELETE
 } JSRequestType;
 
 @class JSRequestParameters;
