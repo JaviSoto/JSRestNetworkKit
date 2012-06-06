@@ -37,7 +37,7 @@
 	{
 		[[[entityObject class] entityProperties] enumerateObjectsUsingBlock:^(JSEntityProperty *property, NSUInteger idx, BOOL *stop) {
             NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-			id value = [dictionary valueForKeyPath:property.apiPropertyKeyPath];
+            id value = (property.isKeyPath) ? [dictionary valueForKeyPath:property.apiPropertyKey] : [dictionary valueForKey:property.apiPropertyKey];
             if (value)
             {
                 id parsedSafeValue = [property parsedValueForObject:value inManagedObjectContext:managedObjectContext];

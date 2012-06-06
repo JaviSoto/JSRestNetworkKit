@@ -30,12 +30,20 @@ typedef enum
 
 @interface JSEntityProperty : NSObject
 
+@property (nonatomic, assign) BOOL isKeyPath;
 @property (nonatomic, copy) NSString *apiPropertyKey;
 @property (nonatomic, copy) NSString *entityPropertyKey;
 @property (nonatomic, assign) Class entityRelationClass;
 
 + (JSEntityProperty *)entityPropertyWithKey:(NSString *)key
                                propertyType:(JSEntityPropertyType)propertyType;
+
++ (JSEntityProperty *)entityPropertyWithKeyPath:(NSString *)key
+                                   propertyType:(JSEntityPropertyType)propertyType;
+
++ (JSEntityProperty *)entityPropertyWithAPIKey:(NSString *)apiKey
+                             entityPropertyKey:(NSString *)localKey
+                                  propertyType:(JSEntityPropertyType)propertyType;
 
 + (JSEntityProperty *)entityPropertyWithAPIKeyPath:(NSString *)apiKey
                                  entityPropertyKey:(NSString *)localKey
@@ -45,10 +53,9 @@ typedef enum
                               relationClass:(Class)relationClass
                                propertyType:(JSEntityPropertyType)propertyType;
 
-+ (JSEntityProperty *)entityPropertyWithAPIKeyPath:(NSString *)apiKey
-                                 entityPropertyKey:(NSString *)localKey
-                                     relationClass:(Class)relationClass
-                                      propertyType:(JSEntityPropertyType)propertyType;
++ (JSEntityProperty *)entityPropertyWithKeyPath:(NSString *)key
+                                  relationClass:(Class)relationClass
+                                   propertyType:(JSEntityPropertyType)propertyType;
 
 // Second parameter is optional
 - (id)parsedValueForObject:(id)object inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
