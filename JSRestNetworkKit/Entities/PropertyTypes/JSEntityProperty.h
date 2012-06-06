@@ -30,7 +30,7 @@ typedef enum
 
 @interface JSEntityProperty : NSObject
 
-@property (nonatomic, copy) NSString *apiPropertyKeyPath;
+@property (nonatomic, copy) NSString *apiPropertyKey;
 @property (nonatomic, copy) NSString *entityPropertyKey;
 @property (nonatomic, assign) Class entityRelationClass;
 

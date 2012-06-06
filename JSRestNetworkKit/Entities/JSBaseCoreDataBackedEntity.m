@@ -68,7 +68,7 @@
     
     if (primaryKeyProperty != kCoreDataEntityNoPrimaryKey)
     {
-        NSString *objectId = [dictionary valueForKey:primaryKeyProperty.apiPropertyKeyPath];
+        NSString *objectId = [dictionary valueForKey:primaryKeyProperty.apiPropertyKey];
         
         if (objectId)
         {

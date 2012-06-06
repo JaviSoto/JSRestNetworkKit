@@ -27,7 +27,7 @@
 
 @implementation JSEntityProperty
 
-@synthesize apiPropertyKeyPath = _apiPropertyKey;
+@synthesize apiPropertyKey = _apiPropertyKey;
 @synthesize entityPropertyKey = _localPropertyKey;
 @synthesize entityRelationClass = _entityRelationClass;
 
@@ -79,7 +79,8 @@
         default:
             break;
     }
-    property.apiPropertyKeyPath = apiKey;
+    property.isKeyPath = isKeyPath;
+    property.apiPropertyKey = apiKey;
     property.entityPropertyKey = localKey;
     property.entityRelationClass = relationClass;
     
@@ -100,7 +101,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ with local key: %@ api key: %@ relation with class: %@", NSStringFromClass(self.class), self.entityPropertyKey, self.apiPropertyKeyPath, self.entityRelationClass.class];
+    return [NSString stringWithFormat:@"%@ with local key: %@ api key: %@ relation with class: %@", NSStringFromClass(self.class), self.entityPropertyKey, self.apiPropertyKey, self.entityRelationClass.class];
 }
 - (void)dealloc
 {
