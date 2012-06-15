@@ -72,6 +72,7 @@
         
         if (objectId)
         {
+            // Check in Disk
             NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:entityName];
             fetchRequest.fetchLimit = 1;
             fetchRequest.predicate = [NSPredicate predicateWithFormat:@"%K == %@", primaryKeyProperty.entityPropertyKey, objectId];
@@ -85,6 +86,23 @@
                 noPreviouslyExistintObject = NO;
                 newObject = matchedObject;
             }
+            
+            // Check in ManagedObjectContext
+            if (!newObject){ 
+                int i=0;
+                NSArray *registeredObjects=[managedObjectContext.registeredObjects allObjects];
+                while(i<registeredObjects.count && !newObject){
+                    id contextObject=[registeredObjects objectAtIndex:i];
+                    if([contextObject isKindOfClass:[self class]]){
+                        if([[NSString stringWithFormat:@"%@",[contextObject valueForKeyPath:primaryKeyProperty.localPropertyKey]] isEqualToString:objectId]){ 
+                            newObject=contextObject;
+                            noPreviouslyExistintObject=NO;
+                        }
+                    }
+                    i++;
+                }
+            }
+            
         }
     }
 
