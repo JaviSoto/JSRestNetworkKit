@@ -32,7 +32,6 @@
 		1D5EC78515327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77815327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m */; };
 		1D5EC78615327D7200C1D182 /* JSEntityPropertyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77A15327D7200C1D182 /* JSEntityPropertyString.m */; };
 		1D5EC78715327D7200C1D182 /* JSEntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC77C15327D7200C1D182 /* JSEntityPropertyURL.m */; };
-		1D5EC78B15327E6600C1D182 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC78A15327E6600C1D182 /* Reachability.m */; };
 		1D5EC78E1532825C00C1D182 /* JSEntityDictionaryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC78D1532825C00C1D182 /* JSEntityDictionaryParser.m */; };
 		1D5EC7911532833700C1D182 /* JSRandomDictionaryGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5EC7901532833700C1D182 /* JSRandomDictionaryGenerator.m */; };
 		1D8448AA1532443000F99DE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8448A91532443000F99DE1 /* UIKit.framework */; };
@@ -45,7 +44,6 @@
 		1D8448BF1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D8448BD1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld */; };
 		1D905314156027B100999226 /* TwitterRequestSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D905313156027B100999226 /* TwitterRequestSigner.m */; };
 		1D91E3F215576D8600532996 /* TwitterRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E3F115576D8600532996 /* TwitterRequestManager.m */; };
-		1D963230153248BC00501145 /* JSReachabilityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F2153248BC00501145 /* JSReachabilityService.m */; };
 		1D963231153248BC00501145 /* JSRestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F3153248BC00501145 /* JSRestClient.m */; };
 		1D963232153248BC00501145 /* JSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F4153248BC00501145 /* JSRequest.m */; };
 		1D963234153248BC00501145 /* JSRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9631F6153248BC00501145 /* JSRequestParameters.m */; };
@@ -119,8 +117,6 @@
 		1D5EC77A15327D7200C1D182 /* JSEntityPropertyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyString.m; sourceTree = "<group>"; };
 		1D5EC77B15327D7200C1D182 /* JSEntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEntityPropertyURL.h; sourceTree = "<group>"; };
 		1D5EC77C15327D7200C1D182 /* JSEntityPropertyURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityPropertyURL.m; sourceTree = "<group>"; };
-		1D5EC78915327E6600C1D182 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		1D5EC78A15327E6600C1D182 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1D5EC78C1532825C00C1D182 /* JSEntityDictionaryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEntityDictionaryParser.h; sourceTree = "<group>"; };
 		1D5EC78D1532825C00C1D182 /* JSEntityDictionaryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEntityDictionaryParser.m; sourceTree = "<group>"; };
 		1D5EC78F1532833700C1D182 /* JSRandomDictionaryGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRandomDictionaryGenerator.h; sourceTree = "<group>"; };
@@ -141,14 +137,12 @@
 		1D905313156027B100999226 /* TwitterRequestSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterRequestSigner.m; path = Classes/TwitterRequestSigner.m; sourceTree = "<group>"; };
 		1D91E3F015576D8600532996 /* TwitterRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterRequestManager.h; path = Classes/TwitterRequestManager.h; sourceTree = "<group>"; };
 		1D91E3F115576D8600532996 /* TwitterRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterRequestManager.m; path = Classes/TwitterRequestManager.m; sourceTree = "<group>"; };
-		1D9631F2153248BC00501145 /* JSReachabilityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSReachabilityService.m; path = JSRestNetworkKit/JSReachabilityService.m; sourceTree = SOURCE_ROOT; };
 		1D9631F3153248BC00501145 /* JSRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = JSRestClient.m; path = JSRestNetworkKit/JSRestClient.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1D9631F4153248BC00501145 /* JSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSRequest.m; path = JSRestNetworkKit/JSRequest.m; sourceTree = SOURCE_ROOT; };
 		1D9631F6153248BC00501145 /* JSRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSRequestParameters.m; path = JSRestNetworkKit/JSRequestParameters.m; sourceTree = SOURCE_ROOT; };
-		1D963219153248BC00501145 /* JSFakeRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = JSFakeRestClient.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D963219153248BC00501145 /* JSFakeRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JSFakeRestClient.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1D96321A153248BC00501145 /* JSFakeRestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JSFakeRestClient.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D963228153248BC00501145 /* JSReachabilityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSReachabilityService.h; path = JSRestNetworkKit/JSReachabilityService.h; sourceTree = SOURCE_ROOT; };
-		1D963229153248BC00501145 /* JSRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; name = JSRestClient.h; path = JSRestNetworkKit/JSRestClient.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D963229153248BC00501145 /* JSRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = JSRestClient.h; path = JSRestNetworkKit/JSRestClient.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1D96322A153248BC00501145 /* JSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSRequest.h; path = JSRestNetworkKit/JSRequest.h; sourceTree = SOURCE_ROOT; };
 		1D96322C153248BC00501145 /* JSRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSRequestParameters.h; path = JSRestNetworkKit/JSRequestParameters.h; sourceTree = SOURCE_ROOT; };
 		1D96322E153248BC00501145 /* JSRequestSigning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSRequestSigning.h; path = JSRestNetworkKit/JSRequestSigning.h; sourceTree = SOURCE_ROOT; };
@@ -314,15 +308,6 @@
 			path = PropertyTypes;
 			sourceTree = "<group>";
 		};
-		1D5EC78815327E6600C1D182 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				1D5EC78915327E6600C1D182 /* Reachability.h */,
-				1D5EC78A15327E6600C1D182 /* Reachability.m */,
-			);
-			path = Reachability;
-			sourceTree = "<group>";
-		};
 		1D84489A1532443000F99DE1 = {
 			isa = PBXGroup;
 			children = (
@@ -397,8 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				1D17810615576C5C0011C13C /* JSRestNetworkKit.h */,
-				1D963228153248BC00501145 /* JSReachabilityService.h */,
-				1D9631F2153248BC00501145 /* JSReachabilityService.m */,
 				1D963229153248BC00501145 /* JSRestClient.h */,
 				1D9631F3153248BC00501145 /* JSRestClient.m */,
 				1D96322A153248BC00501145 /* JSRequest.h */,
@@ -430,7 +413,6 @@
 			children = (
 				D07393D6155F3DF000ECB907 /* UIImageView-AFNetworkingJSAdditions */,
 				D07394B8155F3F2300ECB907 /* JSCache */,
-				1D5EC78815327E6600C1D182 /* Reachability */,
 			);
 			name = Vendor;
 			path = JSRestNetworkKit/Vendor;
@@ -611,7 +593,6 @@
 				1D8448B81532443000F99DE1 /* main.m in Sources */,
 				1D8448BC1532443000F99DE1 /* JSAppDelegate.m in Sources */,
 				1D8448BF1532443000F99DE1 /* JSRestNetworkKitSampleProject.xcdatamodeld in Sources */,
-				1D963230153248BC00501145 /* JSReachabilityService.m in Sources */,
 				1D963231153248BC00501145 /* JSRestClient.m in Sources */,
 				1D963232153248BC00501145 /* JSRequest.m in Sources */,
 				1D963234153248BC00501145 /* JSRequestParameters.m in Sources */,
@@ -632,7 +613,6 @@
 				1D5EC78515327D7200C1D182 /* JSEntityPropertyRelationshipOneToOne.m in Sources */,
 				1D5EC78615327D7200C1D182 /* JSEntityPropertyString.m in Sources */,
 				1D5EC78715327D7200C1D182 /* JSEntityPropertyURL.m in Sources */,
-				1D5EC78B15327E6600C1D182 /* Reachability.m in Sources */,
 				1D5EC78E1532825C00C1D182 /* JSEntityDictionaryParser.m in Sources */,
 				1D5EC7911532833700C1D182 /* JSRandomDictionaryGenerator.m in Sources */,
 				1D1780F9155768230011C13C /* TimelineViewController.m in Sources */,
