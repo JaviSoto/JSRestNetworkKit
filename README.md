@@ -93,3 +93,7 @@ See the License for the specific language governing permissions and
  limitations under the License. 
 
 Attribution is not required, but appreciated.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/JaviSoto/jsrestnetworkkit/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
