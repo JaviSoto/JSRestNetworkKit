@@ -27,27 +27,43 @@
 
 @implementation JSEntityProperty
 
-@synthesize apiPropertyKeyPath = _apiPropertyKey;
+@synthesize isKeyPath = _isKeyPath;
+@synthesize apiPropertyKey = _apiPropertyKey;
 @synthesize entityPropertyKey = _localPropertyKey;
 @synthesize entityRelationClass = _entityRelationClass;
 
 
 + (JSEntityProperty *)entityPropertyWithKey:(NSString *)key propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self entityPropertyWithAPIKeyPath:key entityPropertyKey:key relationClass:nil propertyType:propertyType];
+    return [self entityPropertyWithAPIKey:key checkForPropertyKeyPath:NO entityPropertyKey:key relationClass:nil propertyType:propertyType];
+}
+
++ (JSEntityProperty *)entityPropertyWithKeyPath:(NSString *)key propertyType:(JSEntityPropertyType)propertyType
+{
+    return [self entityPropertyWithAPIKey:key checkForPropertyKeyPath:YES entityPropertyKey:key relationClass:nil propertyType:propertyType];
+}
+
++ (JSEntityProperty *)entityPropertyWithAPIKey:(NSString *)apiKey entityPropertyKey:(NSString *)localKey propertyType:(JSEntityPropertyType)propertyType
+{
+    return [self entityPropertyWithAPIKey:apiKey checkForPropertyKeyPath:NO entityPropertyKey:localKey relationClass:nil propertyType:propertyType];
 }
 
 + (JSEntityProperty *)entityPropertyWithAPIKeyPath:(NSString *)apiKey entityPropertyKey:(NSString *)localKey propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self entityPropertyWithAPIKeyPath:apiKey entityPropertyKey:localKey relationClass:nil propertyType:propertyType];
+    return [self entityPropertyWithAPIKey:apiKey checkForPropertyKeyPath:YES entityPropertyKey:localKey relationClass:nil propertyType:propertyType];
 }
 
 + (JSEntityProperty *)entityPropertyWithKey:(NSString *)key relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
 {
-    return [self entityPropertyWithAPIKeyPath:key entityPropertyKey:key relationClass:relationClass propertyType:propertyType];
+    return [self entityPropertyWithAPIKey:key checkForPropertyKeyPath:NO entityPropertyKey:key relationClass:relationClass propertyType:propertyType];
 }
 
-+ (JSEntityProperty *)entityPropertyWithAPIKeyPath:(NSString *)apiKey entityPropertyKey:(NSString *)localKey relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
++ (JSEntityProperty *)entityPropertyWithKeyPath:(NSString *)key relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
+{
+    return [self entityPropertyWithAPIKey:key checkForPropertyKeyPath:YES entityPropertyKey:key relationClass:relationClass propertyType:propertyType];
+}
+
++ (JSEntityProperty *)entityPropertyWithAPIKey:(NSString *)apiKey checkForPropertyKeyPath:(BOOL)isKeyPath entityPropertyKey:(NSString *)localKey relationClass:(Class)relationClass propertyType:(JSEntityPropertyType)propertyType
 {
     JSEntityProperty *property = nil;
     
@@ -79,7 +95,8 @@
         default:
             break;
     }
-    property.apiPropertyKeyPath = apiKey;
+    property.isKeyPath = isKeyPath;
+    property.apiPropertyKey = apiKey;
     property.entityPropertyKey = localKey;
     property.entityRelationClass = relationClass;
     
@@ -100,7 +117,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ with local key: %@ api key: %@ relation with class: %@", NSStringFromClass(self.class), self.entityPropertyKey, self.apiPropertyKeyPath, self.entityRelationClass.class];
+    return [NSString stringWithFormat:@"%@ with local key: %@ api key: %@ relation with class: %@", NSStringFromClass(self.class), self.entityPropertyKey, self.apiPropertyKey, self.entityRelationClass.class];
 }
 - (void)dealloc
 {
